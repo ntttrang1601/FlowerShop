@@ -1,0 +1,79 @@
+﻿@model CuaHangHoa.Models.SanPham
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="myaccount-content">
+    <div class="account-details-form">
+        <h3>Bạn có chắc muốn xóa sản phẩm này không?</h3>
+        <div>
+            <h4>Sản phẩm </h4>
+            <dl class="row">
+                <dt class="col-sm-2">
+                    Tên
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Ten)
+                </dd>
+                <dt class="col-sm-2">
+                    Mô tả
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Mota)
+                </dd>
+                <dt class="col-sm-2">
+                    Đơn vị tính
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Donvitinh)
+                </dd>
+                <dt class="col-sm-2">
+                    Đơn giá
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Dongia)
+                </dd>
+                <dt class="col-sm-2">
+                    Phần trăm giảm giá
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.PhanTramGiamGia) &#37;
+                </dd>
+                <dt class="col-sm-2">
+                    Giá giảm
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.GiaSauGiamGia)
+                </dd>
+                <dt class="col-sm-2">
+                    Số lượng kho
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Soluongkho)
+                </dd>
+                <dt class="col-sm-2">
+                    Ngừng bán
+                </dt>
+                <dd class="col-sm-10">
+                    @* @Html.DisplayFor(model => model.Ngungban) *@
+                    <input type="checkbox" style="display: inline-block;" disabled="disabled" @(Model.Ngungban ? "checked" : "") />
+                </dd>
+                <dt class="col-sm-2">
+                    Tên loại
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.LoaiSP.TenLoai)
+                </dd>
+            </dl>
+
+            <form asp-action="Delete">
+                <input type="hidden" asp-for="Id" />
+                <input class="btn flosun-button secondary-btn theme-color rounded-0" type="submit" value="Xóa ngay" class="btn btn-danger" /> |
+                <a class="btn flosun-button secondary-btn theme-color rounded-0" asp-action="Index">Quay lại</a>
+            </form>
+        </div>
+
+    </div>
+</div>
+

@@ -1,0 +1,272 @@
+﻿@model IEnumerable<CuaHangHoa.Models.ChiTietDH>
+
+@{
+    ViewData["Title"] = "OrderDetails";
+    Layout = "~/Views/Shared/_Profile.cshtml";
+}
+
+<style>
+	.star-rating {
+		display: flex;
+		gap: 5px;
+		cursor: pointer;
+	}
+
+		.star-rating .fa-star {
+			font-size: 2rem;
+			color: #ccc; /* Ngôi sao không chọn sẽ xám */
+			transition: color 0.3s ease-in-out;
+		}
+
+			.star-rating .fa-star.selected,
+			.star-rating .fa-star:hover,
+			.star-rating .fa-star:hover ~ .fa-star {
+				color: gold; /* Ngôi sao chọn sẽ vàng */
+			}
+
+	
+</style>
+<div class="myaccount-content">
+    <h3>Chi tiết đơn hàng</h3>
+	<div class="widget dashboard-container my-adslist">
+		<h2 class="widget-header">Thông tin đơn hàng</h2>
+		<dl class="row mt-2">
+			<dt class="col-sm-3">
+				Mã đơn hàng
+			</dt>
+			<dd class="col-sm-9">
+				@ViewBag.DonHang.Id
+			</dd>
+			<dt class="col-sm-3">
+				Ngày đặt
+			</dt>
+			<dd class="col-sm-9">
+				@ViewBag.DonHang.NgayTao
+			</dd>
+			<dt class="col-sm-3">
+				Phương thức
+			</dt>
+			<dd class="col-sm-9">
+				@ViewBag.DonHang.TenCachThanhToan
+			</dd>
+			<dt class="col-sm-3">
+				Trạng thái
+			</dt>
+			<dd class="col-sm-9">
+				@ViewBag.DonHang.TenTrangThai
+			</dd>
+			<dt class="col-sm-3">
+				Phí vận chuyển
+			</dt>
+			<dd class="col-sm-9">
+				@ViewBag.DonHang.PhiVanChuyen.ToString("#,##") &#x0111
+			</dd>
+			<dt class="col-sm-3">
+				Đã thanh toán
+			</dt>
+			<dd class="col-sm-9">
+				@ViewBag.DonHang.DaThanhToan
+			</dd>
+			<dt class="col-sm-3">
+				Tổng tiền
+			</dt>
+			<dd class="col-sm-9">
+				@ViewBag.DonHang.TongTien.ToString("#,##") &#x0111
+			</dd>
+		</dl>
+
+		<h2 class="widget-header">Thông tin giao hàng</h2>
+		<dl class="row mt-2">
+			<dt class="col-sm-3">
+				Địa chỉ nhận hàng
+			</dt>
+			<dd class="col-sm-9">
+				@ViewBag.DonHang.DchiGiaoHang
+			</dd>
+			<dt class="col-sm-3">
+				Người nhận
+			</dt>
+			<dd class="col-sm-9">
+				@ViewBag.DonHang.NguoiNhan
+			</dd>
+
+		</dl>
+		<div class="d-flex">
+			@if (ViewBag.DonHang.TenTrangThai == "Đang xử lý")
+			{
+				<form asp-action="CancelOrder" asp-controller="Cart" method="post">
+					@Html.AntiForgeryToken()
+					<input type="hidden" name="orderId" value="@ViewBag.DonHang.Id" />
+					<button type="submit" class=" btn flosun-button secondary-btn theme-color rounded-0">Huỷ đơn</button>
+				</form>
+			}
+			@if (ViewBag.DonHang.TenCachThanhToan == "VNPay" && ViewBag.DonHang.DaThanhToan == false
+					&& ViewBag.DonHang.TenTrangThai != "Đã hủy")
+			{
+				<form asp-action="Repayment" asp-controller="Cart" method="post">
+					@Html.AntiForgeryToken()
+					<input type="hidden" name="orderId" value="@ViewBag.DonHang.Id" />
+					<button type="submit" class="btn flosun-button secondary-btn theme-color rounded-0">Thanh toán ngay</button>
+				</form>
+			}
+		</div>
+		@if (ViewBag.DonHang.TenTrangThai == "Đã giao hàng" && ViewBag.DanhGia == null)
+		{
+			<!-- Hiển thị nút đánh giá nếu đơn hàng đã giao và chưa có đánh giá -->
+			<button type="button" class="btn flosun-button secondary-btn theme-color rounded-0" data-bs-toggle="modal" data-bs-target="#reviewModal">
+				Đánh giá đơn hàng
+			</button>
+		}
+		else if(ViewBag.DanhGia != null)
+		{
+			<!-- Hiển thị thông tin đánh giá nếu đã có -->
+			<div class="review-info mt-3">
+				<h3>Đánh giá đơn hàng</h3>
+
+				<!-- Hiển thị điểm đánh giá bằng sao -->
+				<p>
+@* 					<strong>Điểm: </strong>
+ *@					<span class="star-rating">
+						@for (int i = 1; i <= ViewBag.DanhGia.Diem; i++)
+						{
+							<i class="fa fa-star text-warning"></i> <!-- Sao vàng -->
+						}
+						@for (int i = ViewBag.DanhGia.Diem + 1; i <= 5; i++)
+						{
+							<i class="fa fa-star text-secondary"></i> <!-- Sao xám -->
+						}
+					</span>
+				</p>
+
+				<p><strong>Nhận xét: </strong>@ViewBag.DanhGia.NhanXet</p>
+				<p><strong>Ngày đánh giá: </strong>@ViewBag.DanhGia.NgayDanhGia.ToString("dd/MM/yyyy")</p>
+			</div>
+
+		}
+		<h3 class="widget-header">Danh sách sản phẩm</h3>
+		<table class="table table-responsive product-dashboard-table">
+			<thead>
+				<tr>
+					<th class="text-center">
+
+					</th>
+					<th class="text-center">
+						Sản phẩm
+					</th>
+					<th class="text-center">
+						Số lượng
+					</th>
+					<th class="text-center">
+						Đơn giá
+					</th>
+					<th class="text-center">
+						Thành tiền
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var item in Model)
+				{
+					<tr>
+						<td class="product-thumb">
+							<img width="100px" height="auto" src="~/images/SanPham/@item.SanPham.Hinhs.First().Url" alt="image description">
+						</td>
+						<td class="text-center">
+							@item.SanPham.Ten
+						</td>
+						<td class="text-center">
+							@item.SoLuong
+						</td>
+						<td class="text-center">
+							@item.GiaSP.ToString("#,##") &#x0111
+						</td>
+						<td class="text-center">
+							@item.TongGia.ToString("#,##") &#x0111
+						</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+
+		<!-- Modal đánh giá -->
+		<!-- Modal đánh giá -->
+		<div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="reviewModalLabel">Đánh giá đơn hàng</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						</hr>
+						<form asp-action="SubmitReview" asp-controller="User" method="post">
+							@Html.AntiForgeryToken()
+							<input type="hidden" name="donHangId" value="@ViewBag.DonHang.Id" />
+
+							<!-- Điểm đánh giá -->
+							<div class="mb-3">
+								<div id="starRating" class="star-rating">
+									@for (int i = 1; i <= 5; i++)
+									{
+										<i class="fa fa-star" data-value="@i"></i>
+									}
+								</div>
+								<input type="hidden" id="ratingInput" name="diem" value="0" />
+							</div>
+
+							<!-- Nhận xét -->
+							<div class="mb-3">
+								<label for="nhanXet" class="form-label">Nhận xét</label>
+								<textarea class="form-control" id="nhanXet" name="nhanXet" rows="3" required></textarea>
+							</div>
+
+							<!-- Nút lưu đánh giá -->
+							<div class="modal-footer">
+								<button type="button" class="btn flosun-button secondary-btn theme-color rounded-0" data-bs-dismiss="modal">Đóng</button>
+								<button type="submit" class="btn flosun-button secondary-btn theme-color rounded-0">Lưu đánh giá</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Button trigger modal -->
+	
+
+	</div>
+
+        
+</div>
+
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+		const stars = document.querySelectorAll("#starRating .fa-star");
+		const ratingInput = document.getElementById("ratingInput");
+		const reviewModal = document.getElementById("reviewModal");
+		const nhanXetInput = document.getElementById("nhanXet");
+
+		stars.forEach((star, index) => {
+			star.addEventListener("click", () => {
+				// Đặt màu cho các ngôi sao
+				stars.forEach((s, i) => {
+					s.classList.toggle("selected", i <= index);
+				});
+				// Lưu giá trị điểm vào input ẩn
+				ratingInput.value = index + 1;
+			});
+		});
+
+		// Đặt lại dữ liệu khi modal đóng
+		reviewModal.addEventListener("hidden.bs.modal", () => {
+			// Reset số sao
+			stars.forEach(star => star.classList.remove("selected"));
+			ratingInput.value = 0;
+
+			// Reset nhận xét
+			nhanXetInput.value = "";
+		});
+	});
+
+
+</script>

@@ -1,0 +1,247 @@
+﻿@model CuaHangHoa.Models.PXSPTonKho
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Thêm phiếu xuất hàng tồn kho</h2>
+<div class="myaccount-content">
+    <div class="row">
+        <div class="col-md-6">
+            <form asp-action="Create" method="post">
+                <input type="hidden" asp-for="StaffId" id="StaffId" />
+                <!-- Ngày xuất -->
+                <div class="form-group">
+                    Ngày xuất
+                    <input asp-for="NgayXuat" type="datetime-local" class="form-control"
+                           value="@DateTime.Now.ToString("yyyy-MM-ddTHH:mm")" />
+                </div>
+
+                <!-- Ghi chú -->
+                <div class="form-group">
+                    Ghi chú
+                    <textarea asp-for="GhiChu" class="form-control"></textarea>
+                </div>
+
+                <h3>Chọn Sản Phẩm</h3>
+                <div class="form-inline">
+                    <select id="LoaiSanPham" class="form-control">
+                        <option value="">Chọn loại sản phẩm</option>
+                        @foreach (var item in ViewBag.LoaiSPs)
+                        {
+                            <option value="@item.Value">@item.Text</option>
+                        }
+                    </select>
+                    <select id="SanPham" class="form-control ml-2">
+                        <option value="">Chọn sản phẩm</option>
+                    </select>
+
+                    <input type="number" id="SoLuong" class="form-control ml-2" placeholder="Số lượng" min="1" />
+                    <button type="button" class="btn flosun-button secondary-btn theme-color rounded-0" id="btnAddProduct">Thêm sản phẩm</button>
+                </div>
+
+                <table class="table mt-3" id="productTable">
+                    <thead>
+                        <tr>
+                            <th>Sản phẩm</th>
+                            <th>Số lượng</th>
+                            <th>Xóa</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+
+                <!-- Tổng số lượng mặt hàng -->
+                <div class="form-group">
+                    Tổng số lượng
+                    <input asp-for="TongSoLuong" id="TongSoLuong" name="TongSoLuong" class="form-control" readonly />
+                </div>
+
+
+                <div class="form-group">
+                    <input type="submit" value="Lưu Phiếu Xuất" class="btn flosun-button secondary-btn theme-color rounded-0" />
+                    <a asp-action="Index" class="btn flosun-button secondary-btn theme-color rounded-0">Quay lại</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            let totalAmount = 0;
+
+            // Hàm cập nhật tổng số lượng mặt hàng
+            function updateTotalItemsCount() {
+                let totalItemsCount = 0;
+
+                $('#productTable tbody tr').each(function () {
+                    const soLuong = parseInt($(this).find('input[name*=".SoLuong"]').val()) || 0;
+                    totalItemsCount += soLuong;
+                });
+
+                $('#TongSoLuong').val(totalItemsCount); // Cập nhật tổng số lượng
+                console.log(`Tổng số lượng (View): ${totalItemsCount}`); // Log giá trị
+            }
+
+            // Khi chọn loại sản phẩm, lấy danh sách sản phẩm theo loại
+            $('#LoaiSanPham').change(function () {
+                const categoryId = $(this).val();
+                if (categoryId) {
+                    $.getJSON(`/PXSPTonKho/GetProductsByCategory?categoryId=${categoryId}`, function (data) {
+                        $('#SanPham').empty().append('<option value="">Chọn sản phẩm</option>');
+
+                        // Duyệt qua mỗi sản phẩm trong dữ liệu và thêm vào `select`
+                        data.forEach(item => {
+                            $('#SanPham').append(`<option value="${item.id}">${item.ten}</option>`);
+                        });
+                    });
+                } else {
+                    $('#SanPham').empty().append('<option value="">Chọn sản phẩm</option>');
+                }
+            });
+
+            function loadProductsByCategory(categoryId) {
+                $.ajax({
+                    url: '/PXSPTonKho/GetProductsByCategory',
+                    type: 'GET',
+                    data: { categoryId: categoryId },
+                    success: function (data) {
+                        var select = $('#SanPham');
+                        select.empty(); // Xóa các tùy chọn cũ
+                        select.append('<option value="">Chọn sản phẩm</option>');
+
+                        // Thêm sản phẩm vào danh sách
+                        data.forEach(function (products) {
+                            select.append('<option value="' + products.id + '">' + products.ten + '</option>');
+                        });
+                    },
+                    error: function () {
+                        alert("Failed to load products.");
+                    }
+                });
+            }
+
+
+            // Khi bấm thêm mặt hàng
+            $('#btnAddProduct').click(function () {
+                const sanPhamId = $('#SanPham').val();
+                const sanPhamText = $('#SanPham option:selected').text();
+                const soLuong = parseInt($('#SoLuong').val());
+
+                if (sanPhamId && soLuong > 0) {
+                    
+                    // Tạo dòng mới trong bảng sản phẩm
+                    $('#productTable tbody').append(`
+                            <tr>
+                                <td>
+                                            <input type="hidden" name="CTPXSPTonKhos[${$('#productTable tbody tr').length}].SanPhamId" value="${sanPhamId}" />
+                                    ${sanPhamText}
+                                </td>
+                                <td>
+                                            <input type="hidden" name="CTPXSPTonKhos[${$('#productTable tbody tr').length}].SoLuong" value="${soLuong}" />${soLuong}
+                                </td>
+                                <td><button type="button" class="btn flosun-button secondary-btn theme-color rounded-0 btnRemove">Xóa</button></td>
+                            </tr>
+                        `);
+
+                    // Cập nhật tổng tiền hiển thị trong input
+                    
+                    // Cập nhật số lượng mặt hàng
+                    //$('#SoLuongMatHang').val($('#productTable tbody tr').length);
+                    updateTotalItemsCount();
+                    // Reset các ô input
+                    $('#SoLuong').val('');
+                }
+            });
+
+
+
+            $('#productTable').on('click', '.btnRemove', function () {
+                const row = $(this).closest('tr');
+
+                
+                // Xóa dòng sản phẩm
+                row.remove();
+
+                // Cập nhật tổng số lượng mặt hàng
+                updateTotalItemsCount();
+            });
+
+
+
+
+
+        });
+
+    </script>
+}
+
+@* @section Scripts {
+    <script>
+        $(document).ready(function () {
+            let totalQuantity = 0; // Tổng số lượng mặt hàng
+
+            // Khi chọn loại sản phẩm, lấy danh sách sản phẩm theo loại
+            $('#LoaiSanPham').change(function () {
+                const categoryId = $(this).val();
+                if (categoryId) {
+                    $.getJSON(`/PXSPTonKho/GetProductsByCategory?categoryId=${categoryId}`, function (data) {
+                        $('#SanPham').empty().append('<option value="">Chọn sản phẩm</option>');
+                        data.forEach(item => {
+                            $('#SanPham').append(`<option value="${item.id}">${item.ten}</option>`);
+                        });
+                    });
+                } else {
+                    $('#SanPham').empty().append('<option value="">Chọn sản phẩm</option>');
+                }
+            });
+
+            // Thêm sản phẩm vào bảng
+            $('#btnAddProduct').click(function () {
+                const sanPhamId = $('#SanPham').val();
+                const soLuong = parseInt($('#SoLuong').val());
+
+                if (sanPhamId && soLuong > 0) {
+                    totalQuantity += soLuong;
+
+                    $('#productTable tbody').append(`
+                    <tr>
+                        <td>
+                            <input type="hidden" name="CTPXSPTonKhos[${$('#productTable tbody tr').length}].SanPhamId" value="${sanPhamId}" />
+                            ${$('#SanPham option:selected').text()}
+                        </td>
+                        <td>
+                            <input type="hidden" name="CTPXSPTonKhos[${$('#productTable tbody tr').length}].SoLuong" value="${soLuong}" />
+                            ${soLuong}
+                        </td>
+                        <td>
+                            <button type="button" class="btn btnRemove flosun-button secondary-btn theme-color rounded-0">Xóa</button>
+                        </td>
+                    </tr>
+                `);
+
+                    // Cập nhật Tổng số lượng
+                    $('#TongSoLuong').val(totalQuantity);
+                    $('#SoLuong').val(''); // Reset số lượng nhập vào
+                }
+            });
+
+            // Xóa sản phẩm
+            $('#productTable').on('click', '.btnRemove', function () {
+                const row = $(this).closest('tr');
+                const soLuong = parseInt(row.find('td:eq(1)').text());
+
+                // Cập nhật lại tổng số lượng sau khi xóa
+                totalQuantity -= soLuong;
+                row.remove();
+                $('#TongSoLuong').val(totalQuantity);
+            });
+        });
+
+        console.log('Total Quantity:', totalQuantity);
+        $('#TongSoLuong').val(totalQuantity);
+    </script>
+} *@

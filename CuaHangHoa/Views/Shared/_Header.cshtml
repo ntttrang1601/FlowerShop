@@ -1,0 +1,476 @@
+﻿
+<!-- Header Area Start Here -->
+<header class="main-header-area">
+    <!-- Main Header Area Start -->
+    <div class="main-header header-sticky">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-lg-2 col-xl-2 col-sm-6 col-6 col-custom">
+                    <div class="header-logo d-flex align-items-center">
+                        <a href="index.html">
+                            <img class="img-full" src="~/images/logo/logo.png" alt="Header Logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-10 col-xl-10 col-sm-6 col-6 position-static d-flex justify-content-end col-custom">
+                    <nav class="main-nav mr-5 d-none d-lg-flex">
+                        <ul class="nav">
+                            @if (User.IsInRole("Admin") || User.IsInRole("Staff"))
+                            {
+                                
+                                <li>
+                                    <a href="@Url.Action("Index", "DonHangs")">
+                                        <span class="menu-text"> Đơn hàng</span>
+                                        <i class="fa fa-angle-down"></i>
+                                    </a>
+                                    <ul class="dropdown-submenu dropdown-hover">
+                                        <li>
+                                            <a  href="@Url.Action("Index", "DonHangs")">
+                                                <span class="menu-text">Sản phẩm</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a  href="@Url.Action("Index", "DangKyDichVus")">
+                                                <span class="menu-text">Dịch vụ</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a  href="@Url.Action("Index", "PhieuNhaps")">
+                                        <span class="menu-text"> Nhập/Xuất</span>
+                                        <i class="fa fa-angle-down"></i>
+                                    </a>
+                                    <ul class="dropdown-submenu dropdown-hover">
+                                        <li>
+                                            <a  href="@Url.Action("Index", "PhieuNhaps")">
+                                                <span class="menu-text">Phiếu nhập</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a  href="@Url.Action("Index", "PhieuXuats")">
+                                                <span class="menu-text">Phiếu xuất</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="@Url.Action("Index", "PXSPTonKho")">
+                                                <span class="menu-text">Phiếu xuất hàng tồn</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a  href="@Url.Action("Index", "LienHes")">
+                                        <span class="menu-text">Liên hệ</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a  href="@Url.Action("Index", "Customers")">
+                                        <span class="menu-text">Khách hàng</span>
+                                    </a>
+                                </li>
+                                @if (User.IsInRole("Admin"))
+                                {
+                                    <li>
+                                        <a href="@Url.Action("Index", "SanPhams")">
+                                            <span class="menu-text"> Danh mục</span>
+                                            <i class="fa fa-angle-down"></i>
+                                        </a>
+                                        <ul class="dropdown-submenu dropdown-hover">
+                                            <li>
+                                                <a href="@Url.Action("Index", "SanPhams")">
+                                                    <span class="menu-text">Sản phẩm</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="@Url.Action("Index", "DichVus")">
+                                                    <span class="menu-text">Dịch vụ</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="@Url.Action("Index", "NhaCungCaps")">
+                                                    <span class="menu-text">Nhà cung cấp</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li>
+                                        <a href="@Url.Action("Index", "ThongKe")">
+                                            <span class="menu-text">Thống kê</span>
+                                            <i class="fa fa-angle-down"></i>
+                                        </a>
+                                        <ul class="dropdown-submenu dropdown-hover">
+                                            
+                                            <li>
+                                                <a href="@Url.Action("Index", "ThongKe")">
+                                                    <span class="menu-text">Tổng quan</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="@Url.Action("ThongKeSanPham", "ThongKe")">
+                                                    <span class="menu-text">Thống kê sản phẩm bán chạy</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="@Url.Action("LoiNhuanTheoThang", "ThongKe")">
+                                                    <span class="menu-text">Thống kê lợi nhuận</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("Index", "NhanVien")">
+                                            <span class="menu-text">Nhân viên</span>
+                                        </a>
+                                    </li>
+
+                                }
+                                <li>
+                                    @if (User.Identity!.IsAuthenticated)
+                                    {
+                                        <a href="#">
+                                            <span class="menu-text">@User.Identity.Name</span>
+                                            <i class="fa fa-angle-down"></i>
+                                        </a>
+                                        <ul class="dropdown-submenu dropdown-hover">
+                                            <li><a href="@Url.Action("Account", "User")">Tài khoản của bạn</a></li>
+                                            <li><a asp-action="Logout" asp-controller="Account">Đăng xuất</a></li>
+                                        </ul>
+                                    }
+                                    else
+                                    {
+                                        <a href="@Url.Action("Login", "Account")">
+                                            <span class="menu-text">Đăng nhập</span>
+                                        </a>
+                                    }
+                                </li>
+                            }
+                            else
+                            {
+                                <li>
+                                    <a href="@Url.Action("Index", "Home")">
+                                        <span class="menu-text"> Trang chủ</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Index", "Product")">
+                                        <span class="menu-text">Sản phẩm</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Index", "Service")">
+                                        <span class="menu-text">Dịch vụ</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("AboutUs", "Home")">
+                                        <span class="menu-text"> Về chúng tôi</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Contact", "Home")">
+                                        <span class="menu-text"> Liên hệ</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    @if (User.Identity!.IsAuthenticated)
+                                    {
+
+                                        <a href="#">
+                                            <span class="menu-text">@User.Identity.Name</span>
+                                            <i class="fa fa-angle-down"></i>
+                                        </a>
+                                        <ul class="dropdown-submenu dropdown-hover">
+                                            <li><a href="@Url.Action("Account", "User")">Tài khoản của bạn</a></li>
+                                            <li><a asp-action="Logout" asp-controller="Account">Đăng xuất</a></li>
+                                        </ul>
+
+                                    }
+                                    else
+                                    {
+                                        <a href="@Url.Action("Login", "Account")">
+                                            <span class="menu-text">Đăng nhập</span>
+                                        </a>
+                                    }
+
+                                </li>
+                            }
+                        </ul>                       
+                    </nav>
+                    <div class="header-right-area main-nav">
+                        <ul class="nav">
+                            <li class="minicart-wrap">
+                                <div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti">
+                                    <a href="@Url.Action("ShoppingCart", "Cart")" class="minicart-btn toolbar-btn">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        <span class="cart-item_count">0</span>
+                                    </a>
+                                </div>
+                                
+                            </li>
+                            @* <li class="sidemenu-wrap">
+                                <a href="#"><i class="fa fa-search"></i> </a>
+                                <ul class="dropdown-sidemenu dropdown-hover-2 dropdown-search">
+                                    <li>
+                                        <form action="#">
+                                            <input name="search" id="search" placeholder="Tìm kiếm" type="text">
+                                            <button type="submit"><i class="fa fa-search"></i></button>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li> *@
+                            <li class="account-menu-wrap d-none d-lg-flex">
+                                <a href="#" class="off-canvas-menu-btn">
+                                    <i class="fa fa-bars"></i>
+                                </a>
+                            </li>
+                            <li class="mobile-menu-btn d-lg-none">
+                                <a class="off-canvas-btn" href="#">
+                                    <i class="fa fa-bars"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>              
+            </div>
+        </div>
+    </div>
+    <!-- Main Header Area End -->
+    <!-- off-canvas menu start -->
+    <aside class="off-canvas-wrapper" id="mobileMenu">
+        <div class="off-canvas-overlay"></div>
+        <div class="off-canvas-inner-content">
+            <div class="btn-close-off-canvas">
+                <i class="fa fa-times"></i>
+            </div>
+            <div class="off-canvas-inner">
+                @* <div class="search-box-offcanvas">
+                    <form>
+                        <input type="text" placeholder="Tìm kiếm sản phẩm">
+                        <button class="search-btn"><i class="fa fa-search"></i></button>
+                    </form>
+                </div> *@
+                <!-- mobile menu start -->
+                <div class="mobile-navigation">
+                    <!-- mobile menu navigation start -->
+                    <nav>
+                        <ul class="mobile-menu">
+                            @if (User.IsInRole("Admin") || User.IsInRole("Staff"))
+                            {                               
+                                <li>
+                                    <a href="@Url.Action("Index", "DonHangs")">
+                                        <span class="menu-text">Đơn hàng</span>
+                                    </a>
+                                </li>                               
+                                <li>
+                                    <a href="@Url.Action("Index", "DangKyDichVus")">
+                                        <span class="menu-text">Đơn hàng dịch vụ</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Index", "PhieuNhaps")">
+                                        <span class="menu-text">Phiếu nhập</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Index", "PhieuXuats")">
+                                        <span class="menu-text">Phiếu xuất</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Index", "PXSPTonKho")">
+                                        <span class="menu-text">Phiếu xuất hàng tồn</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Index", "LienHes")">
+                                        <span class="menu-text">Liên hệ</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Index", "Customers")">
+                                        <span class="menu-text">Khách hàng</span>
+                                    </a>
+                                </li>
+                                @if (User.IsInRole("Admin"))
+                                {
+                                    <li>
+                                        <a href="@Url.Action("Index", "SanPhams")">
+                                            <span class="menu-text">Sản phẩm</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("Index", "DichVus")">
+                                            <span class="menu-text">Dịch vụ</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("Index", "NhaCungCaps")">
+                                            <span class="menu-text">Nhà cung cấp</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("Index", "ThongKe")">
+                                            <span class="menu-text">Thống kê tổng quan</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("ThongKeSanPham", "ThongKe")">
+                                            <span class="menu-text">Thống kê sản phẩm bán chạy</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("LoiNhuanTheoThang", "ThongKe")">
+                                            <span class="menu-text">Thống kê lợi nhuận</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("Index", "NhanVien")">
+                                            <span class="menu-text">Nhân viên</span>
+                                        </a>
+                                    </li>
+                                }
+                                <li>
+                                    @if (User.Identity!.IsAuthenticated)
+                                    {
+
+                                        <a asp-action="Logout" asp-controller="Account">
+                                            <span class="menu-text">@User.Identity.Name</span>
+                                            <i class="fa fa-angle-down"></i>
+                                        </a>
+                                        <ul class="dropdown-submenu dropdown-hover">
+                                            <li><a href="@Url.Action("Account", "User")">Tài khoản của bạn</a></li>
+                                            <li><a asp-action="Logout" asp-controller="Account">Đăng xuất</a></li>
+                                        </ul>
+
+                                    }
+                                    else
+                                    {
+                                        <a href="@Url.Action("Login", "Account")">
+                                            <span class="menu-text">Đăng nhập</span>
+                                        </a>
+                                    }
+
+                                </li>
+                            }
+                            else
+                            {
+                                <li>
+                                    <a href="@Url.Action("Index", "Home")">
+                                        <span class="menu-text"> Trang chủ</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Index", "Product")">
+                                        <span class="menu-text">Sản phẩm</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Index", "Service")">
+                                        <span class="menu-text">Dịch vụ</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("AboutUs", "Home")">
+                                        <span class="menu-text"> Về chúng tôi</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Contact", "Home")">
+                                        <span class="menu-text"> Liên hệ</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    @if (User.Identity!.IsAuthenticated)
+                                    {
+
+                                        <a href="@Url.Action("Account", "User")">
+                                            <span class="menu-text">@User.Identity.Name</span>
+                                            <i class="fa fa-angle-down"></i>
+                                        </a>
+                                        <ul class="dropdown-submenu dropdown-hover">
+                                            <li><a href="@Url.Action("Account", "User")">Tài khoản của bạn</a></li>
+                                            <li><a asp-action="Logout" asp-controller="Account">Đăng xuất</a></li>
+                                        </ul>
+                                        
+
+                                    }
+                                    else
+                                    {
+                                        <a href="@Url.Action("Login", "Account")">
+                                            <span class="menu-text">Đăng nhập</span>
+                                        </a>
+                                    }
+
+                                </li>
+                            }
+                            
+                        </ul>
+                    </nav>
+                    <!-- mobile menu navigation end -->
+                </div>
+                <!-- mobile menu end -->
+            </div>
+        </div>
+    </aside>
+    <aside class="off-canvas-menu-wrapper" id="sideMenu">
+        <div class="off-canvas-overlay"></div>
+        <div class="off-canvas-inner-content">
+            <div class="off-canvas-inner">
+                <div class="btn-close-off-canvas">
+                    <i class="fa fa-times"></i>
+                </div>
+                <!-- offcanvas widget area start -->
+                <div class="offcanvas-widget-area">
+                    <ul class="menu-top-menu">
+                        <li><a href="about-us.html">Về chúng tôi</a></li>
+                    </ul>
+                    <p class="desc-content">
+                        Tuy chỉ mới góp mặt trên thị trường hoa tươi một thời gian gần đây, nhưng đã lấy được sự tín nhiệm của một bộ phận quý khách hàng, đó là một niềm vui, một niềm hạnh phúc không nhỏ mà anh (chị) em Hoa tươi FloSun nhận được của quý khách hàng.
+
+                        Đáp lại sự tín nhiệm này, chúng tôi luôn luôn không ngừng cố gắng nâng cao chất lượng phục vụ, cũng như chất lượng sản phẩm để trao đến tay quý khách hàng những lẵng hoa tươi đẹp, những “món quà”,.. và hơn hết là những giá trị tinh thần mà không phải món quà nào cũng có thể so sánh với hoa tươi.
+
+                        Khách hàng dù thân hay sơ, chúng tôi đều mong muốn mang lại một chất lượng phục vụ hiệu quả, thân thiện, với 100% nhiệt huyết.
+                    </p>
+                    <div class="top-info-wrap text-left text-black">
+                        <ul class="address-info">
+                            <li>
+                                <i class="fa fa-phone"></i>
+                                <a href="info%40yourdomain.html">0123 456 789</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-envelope"></i>
+                                <a href="info%40yourdomain.html">thuytrangnguyenthibt16@gmail.com</a>
+                            </li>
+                        </ul>
+                        <div class="widget-social">
+                            <a class="facebook-color-bg" title="Facebook-f" href="#"><i class="fa fa-facebook-f"></i></a>
+                            <a class="twitter-color-bg" title="Twitter" href="#"><i class="fa fa-twitter"></i></a>
+                            <a class="linkedin-color-bg" title="Linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+                            <a class="youtube-color-bg" title="Youtube" href="#"><i class="fa fa-youtube"></i></a>
+                            <a class="vimeo-color-bg" title="Vimeo" href="#"><i class="fa fa-vimeo"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- offcanvas widget area end -->
+            </div>
+        </div>
+    </aside>
+    <!-- off-canvas menu end -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            updateCartItemCount();
+        });
+
+        function updateCartItemCount() {
+            $.get("/Cart/CountCartItem", function (res) {
+                $(".cart-item_count").text(res);
+            });
+        }
+    </script>
+</header>
+<!-- Header Area End Here -->
+

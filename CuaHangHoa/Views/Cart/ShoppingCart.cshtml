@@ -1,0 +1,243 @@
+﻿@model IEnumerable<CuaHangHoa.Models.ChiTietGioHang>
+@{
+    ViewData["Title"] = "ShoppingCart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!doctype html>
+<html class="no-js" lang="en">
+
+
+<!-- Mirrored from htmldemo.net/flosun/flosun/cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 Dec 2022 05:03:26 GMT -->
+
+<body>
+
+    <!-- Breadcrumb Area Start Here -->
+    <div class="breadcrumbs-area position-relative">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="breadcrumb-content position-relative section-content">
+                        <h3 class="title-3">Giỏ hàng</h3>
+                        <ul>
+                            <li><a href="@Url.Action("Index", "Home")">Trang chủ</a></li>
+                            <li>Giỏ hàng</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb Area End Here -->
+    <!-- cart main wrapper start -->
+    <!-- Cart Table Area -->
+    @if (Model.Count() == 0)
+    {
+        <div class="container">
+            <div class="row text-center">
+                <div class="py-5 d-flex flex-col align-items-center">
+                    <h2>Giỏ hàng đang trống</h2>
+                </div>
+                @Html.ActionLink("Mua sắm ngay", "Index", "Home", null, new { @class = "btn flosun-button secondary-btn theme-color rounded-0" })
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="cart-main-wrapper mt-no-text">
+            <div class="container custom-area">
+                <div class="row">
+                    <div class="col-lg-12 col-custom">
+                        <div class="cart-table table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th class="pro-thumbnail">Ảnh</th>
+                                        <th class="pro-title">Sản phẩm</th>
+                                        <th class="pro-price">Giá</th>
+                                        <th class="pro-quantity">Số lượng</th>
+                                        <th class="pro-subtotal">Tổng cộng</th>
+                                        <th class="pro-remove">Xóa</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @{
+                                        double subtotal = 0;
+                                        foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <td class="pro-thumbnail"><a href="#"><img class="img-fluid" src="~/images/SanPham/@item.SanPham.Hinhs.First().Url" alt="Product" /></a></td>
+                                                <td class="pro-title"><a href="#">@item.SanPham.Ten</a></td>
+                                                <td class="pro-price">
+                                                    <span>
+                                                        @item.SanPham.GiaSauGiamGia.ToString("#,##") đ
+                                                    </span>
+                                                </td>
+                                                <td class="pro-quantity">
+                                                    <div class="quantity">
+                                                        <div data-sanphamid="@item.SanPham.Id" class="wrap-num-product">
+                                                            <div class="btn-num-product-down">
+                                                                <i class="fa fa-minus"></i>
+                                                            </div>
+
+                                                            <input class="num-product" data-max-quantity="@item.SanPham.Soluongkho" min="1" type="number" value="@item.SoLuong">
+
+                                                            <div class="btn-num-product-up">
+                                                                <i class="fa fa-plus"></i>
+                                                            </div>
+                                                        </div>
+
+
+                                                    </div>
+                                                </td>
+                                                <td class="pro-subtotal">
+                                                    <span>
+                                                        @{
+                                                            var total = item.SanPham.GiaSauGiamGia * item.SoLuong;
+                                                            subtotal += total;
+                                                            Write(total.ToString("#,##"));
+                                                        } đ
+                                                    </span>
+                                                </td>
+                                                <td class="pro-remove">
+                                                    @using (Html.BeginForm("DeleteCartItem", "Cart", FormMethod.Post))
+                                                    {
+                                                        @Html.AntiForgeryToken()
+                                                        <input type="hidden" name="sanphamId" value="@item.SanPham.Id" />
+
+                                                        <button type="submit">
+                                                            <i class="lnr lnr-trash"></i>
+                                                        </button>
+                                                    }
+                                                </td>
+
+                                            </tr>
+
+                                        }
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- Cart Update Option -->
+                        <div class="cart-update-option d-block d-md-flex justify-content-between">
+                            <form action="@Url.Action("DeleteAllCartItem","Cart")" method="post">
+                                @Html.AntiForgeryToken()
+                                <button type="submit">
+                                    <div class=" btn flosun-button primary-btn rounded-0 black-btn">
+                                        Xóa tất cả sản phẩm
+                                    </div>
+                                </button>
+                            </form>
+
+
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-5 ml-auto col-custom">
+                                <!-- Cart Calculation Area -->
+                                <div class="cart-calculator-wrapper">
+                                    <div class="cart-calculate-items">
+                                        <h3>Giỏ hàng</h3>
+                                        <div class="table-responsive">
+                                            <table class="table">
+
+                                                <tr class="total">
+                                                    <td>Tổng tiền</td>
+                                                    <td class="total-amount">@subtotal.ToString("#,##") &#x0111</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <a href="@Url.Action("Checkout", "Cart")" class="btn flosun-button primary-btn rounded-0 black-btn w-100">Đặt hàng</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+
+
+
+
+
+
+
+    <!-- cart main wrapper end -->
+
+</body>
+
+@* <div class="cart-plus-minus" data-sanphamid="@item.SanPham.Id">
+    <input class="cart-plus-minus-box" min="1" type="number" value="@item.SoLuong">
+    <div class="dec qtybutton">-</div>
+    <div class="inc qtybutton">+</div>
+
+</div>
+ *@
+<!-- Mirrored from htmldemo.net/flosun/flosun/cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 Dec 2022 05:03:26 GMT -->
+</html>
+
+@section Scripts {
+    <script>
+        $('header').addClass('header-v4')
+
+        $(".num-product").on('keyup', function () {
+            // var value = $(this).val();
+            // if (value < 1) {
+            //     $(this).val(1);
+            // }
+            var value = parseInt($(".num-product").val());
+
+            var sanphamId = parseInt($(this).parent().data("sanphamid"));
+            var data = {
+                sanphamId: sanphamId,
+                sl: value
+            };
+            $.post('/Cart/ChangeQuantity', data, () => {
+                location.reload();
+            }).fail(() => { alert("Số lượng phải lớn hơn 0"); })
+
+
+        });
+
+        $('.btn-num-product-down').on('click', function () {
+            var numProduct = Number($(this).next().val());
+            if (numProduct > 1) {
+                $(this).next().val(numProduct - 1);
+                var sanphamId = parseInt($(this).parent().data("sanphamid"));
+                var quantity = parseInt(numProduct - 1)
+                var data = { sanphamId: sanphamId, sl: quantity }
+
+                $.post('/Cart/ChangeQuantity', data, () => {
+                    console.log('Success');
+                    location.reload()
+                })
+            }
+        });
+
+        $('.btn-num-product-up').on('click', function () {
+            var inputElement = $(this).prev('.num-product');
+            var numProduct = Number(inputElement.val());
+            var maxQuantity = Number(inputElement.data("max-quantity")); // Số lượng tối đa cho phép
+
+            if (numProduct >= maxQuantity) {
+                alert("Số lượng sản phẩm vượt quá số lượng trong kho!");
+                return;
+            }
+
+            inputElement.val(numProduct + 1);
+
+            var sanphamId = parseInt($(this).parent().data("sanphamid"));
+            var quantity = parseInt(numProduct + 1);
+            var data = { sanphamId: sanphamId, sl: quantity };
+
+            $.post('/Cart/ChangeQuantity', data, () => {
+                location.reload();
+            }).fail(() => {
+                alert("Số lượng vượt quá số lượng trong kho");
+            });
+        });
+    </script>
+
+}

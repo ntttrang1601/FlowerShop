@@ -1,0 +1,54 @@
+﻿@model IEnumerable<dynamic>
+@{
+    ViewData["Title"] = "LoiNhuanTheoThang";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var labels = Newtonsoft.Json.JsonConvert.SerializeObject(Model.Select(x => $"Tháng {x.Month}"));
+    var dataLoiNhuan = Newtonsoft.Json.JsonConvert.SerializeObject(Model.Select(x => x.LoiNhuan));
+}
+<div class="container">
+    <h2>Lợi Nhuận Theo Tháng - Năm @ViewBag.SelectedYear</h2>
+
+    <form method="get" asp-action="LoiNhuanTheoThang">
+        <label for="year">Chọn Năm:</label>
+        <select id="year" name="year" asp-items="ViewBag.Years" onchange="this.form.submit()">
+        </select>
+    </form>
+
+    <canvas id="loiNhuanChart" width="800" height="400"></canvas>
+
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        var labels = @Html.Raw(labels);
+        var dataLoiNhuan = @Html.Raw(dataLoiNhuan);
+
+        var ctx = document.getElementById('loiNhuanChart').getContext('2d');
+        var chart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Lợi Nhuận (VND)',
+                    data: dataLoiNhuan,
+                    backgroundColor: dataLoiNhuan.map(value => value >= 0 ? 'rgba(54, 162, 235, 0.5)' : 'rgba(255, 99, 132, 0.5)'),
+                    borderColor: dataLoiNhuan.map(value => value >= 0 ? 'rgba(54, 162, 235, 1)' : 'rgba(255, 99, 132, 1)'),
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    },
+                    x: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+}
+
+

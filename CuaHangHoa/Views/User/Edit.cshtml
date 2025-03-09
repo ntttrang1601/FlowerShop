@@ -1,0 +1,55 @@
+﻿@model CuaHangHoa.ViewModels.UserViewModel
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Profile.cshtml";
+}
+
+<div class="myaccount-content">
+    <h3>Chỉnh sửa thông tin cá nhân</h3>
+    <div class="account-details-form">
+        <form asp-controller="User" asp-action="Edit" method="post">
+            <div class="row">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="col-lg-6 col-custom">
+                    <div class="single-input-item mb-3">
+                        <label for="first-name" class="required mb-1">Họ</label>
+                        <input asp-for="FirstName" name="FirstName" class="form-control" id="first-name" value="@Model.FirstName">
+                        <span asp-validation-for="FirstName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-custom">
+                    <div class="single-input-item mb-3">
+                        <label for="last-name" class="required mb-1">Tên</label>
+                        <input asp-for="LastName" name="LastName" class="form-control" id="last-name" value="@Model.LastName">
+                        <span asp-validation-for="LastName" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="single-input-item mb-3">
+                <label for="full-name" class="required mb-1">Tên đầy đủ</label>
+                <input asp-for="FullName" name="FullName" class="form-control" id="full-name" value="@Model.FullName">
+                <span asp-validation-for="FullName" class="text-danger"></span>
+            </div>
+            <div class="single-input-item mb-3">
+                <label for="city" class="required mb-1">Tỉnh/Thành phố</label>
+                <input asp-for="City" name="City" class="form-control" id="city" value="@Model.City">
+                <span asp-validation-for="City" class="text-danger"></span>
+            </div>
+            
+            <div class="single-input-item mb-3">
+                <label for="email" class="required mb-1">Email</label>
+                <input asp-for="Email" name="Email" class="form-control" id="email" value="@Model.Email" readonly>
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="single-input-item mb-3">
+                <label for="phone-number" class="required mb-1">Số điện thoại</label>
+                <input asp-for="PhoneNumber" name="PhoneNumber" class="form-control" id="phone-number" value="@Model.PhoneNumber">
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn flosun-button secondary-btn theme-color rounded-0">Lưu</button>
+
+        </form>
+    </div>
+</div>
+

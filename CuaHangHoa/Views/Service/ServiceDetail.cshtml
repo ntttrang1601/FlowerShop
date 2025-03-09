@@ -1,0 +1,106 @@
+﻿@model CuaHangHoa.Models.DichVu
+@{
+    ViewData["Title"] = "ServiceDetail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!doctype html>
+<html class="no-js" lang="en">
+
+
+<!-- Mirrored from htmldemo.net/flosun/flosun/product-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 Dec 2022 05:03:18 GMT -->
+<body>
+
+    <!-- Breadcrumb Area Start Here -->
+    <div class="breadcrumbs-area position-relative">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="breadcrumb-content position-relative section-content">
+                        <h3 class="title-3">Chi tiết dịch vụ</h3>
+                        <ul>
+                            <li><a href="@Url.Action("Index", "Home")">Trang chủ</a></li>
+                            <li>Chi tiết dịch vụ</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb Area End Here -->
+    <!-- Single Product Main Area Start -->
+    <section class="single-product-main-area">
+        <div class="container container-default custom-area">
+            <div class="row">
+                <div class="col-lg-5 offset-lg-0 col-md-8 offset-md-2 col-custom">
+                    <div class="product-details-img">
+                        <div class="single-product-img swiper-container gallery-top popup-gallery">
+                            <div class="swiper-wrapper">
+                                @foreach (var item in Model.HinhDVs)
+                                {
+                                    <div class="swiper-slide">
+                                        <a class="w-100" href="#">
+                                            <img class="w-100" src="~/images/DichVu/@item.Url" alt="Product">
+                                        </a>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                        <div class="single-product-thumb swiper-container gallery-thumbs">
+                            <div class="swiper-wrapper">
+                                @foreach (var item in Model.HinhDVs)
+                                {
+                                    <div class="swiper-slide">
+                                        <img class="w-100" src="~/images/DichVu/@item.Url" alt="Product">
+                                    </div>
+                                }
+
+                            </div>
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next swiper-button-white"><i class="lnr lnr-arrow-right"></i></div>
+                            <div class="swiper-button-prev swiper-button-white"><i class="lnr lnr-arrow-left"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-custom">
+                    <div class="product-summery position-relative">
+                        <div class="product-head mb-3">
+                            <h2 class="product-title">@Model.TenDV</h2>
+                        </div>
+                        <div class="price-box mb-2">
+                            <span class="regular-price">@Model.Gia </span>
+                        </div>
+                        <div class="product-rating mb-3">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="desc-content mb-5">@Model.Mota</p>
+                        <div class="quantity-with_btn mb-5">                            
+                            <a href="@Url.Action("RegisterService", "Service", new { id =@Model.Id })" class="btn flosun-button secondary-btn theme-color rounded-0">Đăng ký</a>
+                        </div>                        
+                        <div class="social-share mb-4">
+                            <span>Chia sẻ :</span>
+                            <a href="#"><i class="fa fa-facebook-square facebook-color"></i></a>
+                            <a href="#"><i class="fa fa-twitter-square twitter-color"></i></a>
+                            <a href="#"><i class="fa fa-linkedin-square linkedin-color"></i></a>
+                            <a href="#"><i class="fa fa-pinterest-square pinterest-color"></i></a>
+                        </div>
+                        <div class="payment">
+                            <a href="#"><img class="border" src="~/images/payment/payment-icon.png" alt="Payment"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Single Product Main Area End -->
+
+</body>
+
+
+<!-- Mirrored from htmldemo.net/flosun/flosun/product-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 Dec 2022 05:03:25 GMT -->
+</html>
+

@@ -1,0 +1,2073 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CuaHangHoa.bundle.scp.css",
+      "PackagePath": "staticwebassets\\CuaHangHoa.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\css\\checkout.css",
+      "PackagePath": "staticwebassets\\css\\checkout.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\css\\plugins\\animate.min.css",
+      "PackagePath": "staticwebassets\\css\\plugins\\animate.min.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\css\\plugins\\jquery-ui.min.css",
+      "PackagePath": "staticwebassets\\css\\plugins\\jquery-ui.min.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\css\\plugins\\magnific-popup.css",
+      "PackagePath": "staticwebassets\\css\\plugins\\magnific-popup.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\css\\plugins\\nice-select.min.css",
+      "PackagePath": "staticwebassets\\css\\plugins\\nice-select.min.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\css\\plugins\\swiper-bundle.min.css",
+      "PackagePath": "staticwebassets\\css\\plugins\\swiper-bundle.min.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\css\\vendor\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\vendor\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\css\\vendor\\font.awesome.min.css",
+      "PackagePath": "staticwebassets\\css\\vendor\\font.awesome.min.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\css\\vendor\\linearicons.min.css",
+      "PackagePath": "staticwebassets\\css\\vendor\\linearicons.min.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\fonts\\Linearicons-Free.eot",
+      "PackagePath": "staticwebassets\\fonts\\Linearicons-Free.eot"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\fonts\\Linearicons-Free.svg",
+      "PackagePath": "staticwebassets\\fonts\\Linearicons-Free.svg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\fonts\\Linearicons-Free.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Linearicons-Free.ttf"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\fonts\\Linearicons-Free.woff",
+      "PackagePath": "staticwebassets\\fonts\\Linearicons-Free.woff"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\fonts\\Linearicons-Free.woff2",
+      "PackagePath": "staticwebassets\\fonts\\Linearicons-Free.woff2"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\fonts\\Linearicons-Freed41d.eot",
+      "PackagePath": "staticwebassets\\fonts\\Linearicons-Freed41d.eot"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\fonts\\fontawesome-webfont3e6e.eot",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont3e6e.eot"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\fonts\\fontawesome-webfont3e6e.svg",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont3e6e.svg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\fonts\\fontawesome-webfont3e6e.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont3e6e.ttf"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\fonts\\fontawesome-webfont3e6e.woff",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont3e6e.woff"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\fonts\\fontawesome-webfont3e6e.woff2",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont3e6e.woff2"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\fonts\\fontawesome-webfontd41d.eot",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfontd41d.eot"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\12982ba9-f059-43b3-b498-1e3a584395b4_GiaTienCB2.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\12982ba9-f059-43b3-b498-1e3a584395b4_GiaTienCB2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\13e7b5cf-e595-4969-b59d-5f5370ca2bfa_CongHoaThienNhien.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\13e7b5cf-e595-4969-b59d-5f5370ca2bfa_CongHoaThienNhien.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\186c2465-2f56-44aa-be4e-f512dbfd5ea0_haovamtay2.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\186c2465-2f56-44aa-be4e-f512dbfd5ea0_haovamtay2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\1d30fddd-5de1-4682-ada8-6dab144b5df3_MamQuaHoaTuoi2.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\1d30fddd-5de1-4682-ada8-6dab144b5df3_MamQuaHoaTuoi2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\25713862-7c9b-4546-ad6d-a5d56f77b98b_chucmung2.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\25713862-7c9b-4546-ad6d-a5d56f77b98b_chucmung2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\27e53a8e-24d2-4250-b8b9-571f69570e53_Hoacamtay3.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\27e53a8e-24d2-4250-b8b9-571f69570e53_Hoacamtay3.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\3ba52927-ad8b-4e6c-b766-10d2d2ffc3b2_chucmung1.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\3ba52927-ad8b-4e6c-b766-10d2d2ffc3b2_chucmung1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\3d2daa55-1def-4417-a77f-eb09f6911b6e_MamQuaYC4.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\3d2daa55-1def-4417-a77f-eb09f6911b6e_MamQuaYC4.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\3e6f00af-e468-4c0d-82b9-f84a046382f7_HoaChiaBuon1.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\3e6f00af-e468-4c0d-82b9-f84a046382f7_HoaChiaBuon1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\4106a1f7-2ed7-41da-bc77-1fcefb59d636_Congcuoihoasen2.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\4106a1f7-2ed7-41da-bc77-1fcefb59d636_Congcuoihoasen2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\4519d6f6-b4d8-41ae-a9ff-7a93cd293490_cong-cuoi-hoa-sen1.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\4519d6f6-b4d8-41ae-a9ff-7a93cd293490_cong-cuoi-hoa-sen1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\4668a1fb-3bbd-4463-b128-996086aac647_MamQuaCoBan1.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\4668a1fb-3bbd-4463-b128-996086aac647_MamQuaCoBan1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\49732a12-81d5-4fae-8ca6-6bf5770661c1_hoachiabuon3.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\49732a12-81d5-4fae-8ca6-6bf5770661c1_hoachiabuon3.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\4fcf5623-035f-45ed-a50b-9506a7b4212c_hoaCamtay1.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\4fcf5623-035f-45ed-a50b-9506a7b4212c_hoaCamtay1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\5817d0e5-91e2-4125-9fc6-2785f0630f1d_DamNgo3.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\5817d0e5-91e2-4125-9fc6-2785f0630f1d_DamNgo3.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\58561ec5-4823-43d8-9228-cb17dd762c0b_CongSenTrang.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\58561ec5-4823-43d8-9228-cb17dd762c0b_CongSenTrang.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\7527908f-a0fd-449d-a51a-9839bcbcf6c1_GiaTienNangCao3.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\7527908f-a0fd-449d-a51a-9839bcbcf6c1_GiaTienNangCao3.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\77acc02a-3b96-4265-9a27-6de6356147f5_Hoachiabuon2.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\77acc02a-3b96-4265-9a27-6de6356147f5_Hoachiabuon2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\784b12a2-bf1f-4911-b03b-34010bcc89c1_hoacamtay4.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\784b12a2-bf1f-4911-b03b-34010bcc89c1_hoacamtay4.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\819dc263-4e68-4373-9bc5-c516b4f82073_cong-cuoi-bang-hoa-sen-3.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\819dc263-4e68-4373-9bc5-c516b4f82073_cong-cuoi-bang-hoa-sen-3.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\83af0b2d-d773-4a0b-9285-97161c0d47f4_GiaTienCB1.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\83af0b2d-d773-4a0b-9285-97161c0d47f4_GiaTienCB1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\87cd0f9d-b856-45e6-8a1d-5f7c614698cf_lilyvang2.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\87cd0f9d-b856-45e6-8a1d-5f7c614698cf_lilyvang2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\8b0a097e-0344-4e37-a4e6-ce77ff24bb14_DamNgo1.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\8b0a097e-0344-4e37-a4e6-ce77ff24bb14_DamNgo1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\99a67fa9-6900-40d2-b73b-e6a5be8d2882_DamNgo2.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\99a67fa9-6900-40d2-b73b-e6a5be8d2882_DamNgo2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\9e897c6f-8bb7-44ed-a6c5-172caf8f523c_MamQuaCoBan2.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\9e897c6f-8bb7-44ed-a6c5-172caf8f523c_MamQuaCoBan2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\Cong250.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\Cong250.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\CongHoaThienNhien.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\CongHoaThienNhien.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\CongHoaThienNhien1.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\CongHoaThienNhien1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\CongSenTrang.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\CongSenTrang.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\Congcuoihoasen2.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\Congcuoihoasen2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\DamNgo1.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\DamNgo1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\DamNgo2.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\DamNgo2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\DamNgo3.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\DamNgo3.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\Erd (1).pdf",
+      "PackagePath": "staticwebassets\\images\\DichVu\\Erd (1).pdf"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\GiaTienCB1.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\GiaTienCB1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\GiaTienCB2.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\GiaTienCB2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\GiaTienCB3.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\GiaTienCB3.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\GiaTienNangCao1.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\GiaTienNangCao1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\GiaTienNangCao2.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\GiaTienNangCao2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\GiaTienNangCao3.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\GiaTienNangCao3.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\HoaChiaBuon1.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\HoaChiaBuon1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\Hoacamtay3.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\Hoacamtay3.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\Hoachiabuon2.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\Hoachiabuon2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\MamQuaCoBan1.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\MamQuaCoBan1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\MamQuaCoBan2.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\MamQuaCoBan2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\MamQuaCoBan3.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\MamQuaCoBan3.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\MamQuaHoaTuoi1.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\MamQuaHoaTuoi1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\MamQuaHoaTuoi2.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\MamQuaHoaTuoi2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\MamQuaHoaTuoi3.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\MamQuaHoaTuoi3.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\MamQuaYC1.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\MamQuaYC1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\MamQuaYC2.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\MamQuaYC2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\MamQuaYC3.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\MamQuaYC3.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\MamQuaYC4.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\MamQuaYC4.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\TN300-1.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\TN300-1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\TN300-2.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\TN300-2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\TN300-3.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\TN300-3.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\TN500-1.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\TN500-1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\TN500-2.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\TN500-2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\TN500-3.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\TN500-3.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\a9704edd-0fe4-4012-88b5-52e6eb081ca4_MamQuaHoaTuoi1.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\a9704edd-0fe4-4012-88b5-52e6eb081ca4_MamQuaHoaTuoi1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\afd50105-6dd2-4966-a0ce-f6c47e948ee8_GiaTienCB3.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\afd50105-6dd2-4966-a0ce-f6c47e948ee8_GiaTienCB3.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\b560722d-5978-4de8-9c1e-5f2f5aa51efe_home1-category-3.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\b560722d-5978-4de8-9c1e-5f2f5aa51efe_home1-category-3.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\ba64beed-4051-45f8-b1f9-b5deb5f008a6_MamQuaCoBan3.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\ba64beed-4051-45f8-b1f9-b5deb5f008a6_MamQuaCoBan3.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\c2854f8e-f3e8-4c00-a07a-1f3bd10dff6a_lilyvang1.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\c2854f8e-f3e8-4c00-a07a-1f3bd10dff6a_lilyvang1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\c5debd47-c8f1-4034-9f02-01e04ca477f8_chucmung3.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\c5debd47-c8f1-4034-9f02-01e04ca477f8_chucmung3.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\ca7523e2-3ef4-4343-9b8b-ad98f15d90d3_GiaTienNangCao2.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\ca7523e2-3ef4-4343-9b8b-ad98f15d90d3_GiaTienNangCao2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\ce7376d7-7ff2-4a60-937f-c9ad5739828c_CongSenTrang.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\ce7376d7-7ff2-4a60-937f-c9ad5739828c_CongSenTrang.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\chucmung1.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\chucmung1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\chucmung2.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\chucmung2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\chucmung3.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\chucmung3.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\cong-cuoi-bang-hoa-sen-3.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\cong-cuoi-bang-hoa-sen-3.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\cong-cuoi-hoa-sen1.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\cong-cuoi-hoa-sen1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\d04cd75d-b5a8-43c6-986f-37f9c942660e_MamQuaHoaTuoi3.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\d04cd75d-b5a8-43c6-986f-37f9c942660e_MamQuaHoaTuoi3.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\d437bd33-6cd9-4ab7-b3ac-6d4f8e72f1e4_MamQuaYC2.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\d437bd33-6cd9-4ab7-b3ac-6d4f8e72f1e4_MamQuaYC2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\d668a37d-809e-401d-abf8-0f638756945e_CongHoaThienNhien1.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\d668a37d-809e-401d-abf8-0f638756945e_CongHoaThienNhien1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\da194dbf-1411-4f0e-9f22-41b83e2336c7_MamQuaYC1.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\da194dbf-1411-4f0e-9f22-41b83e2336c7_MamQuaYC1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\e9b51e86-d437-44c4-859d-77ed31626c4d_GiaTienNangCao1.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\e9b51e86-d437-44c4-859d-77ed31626c4d_GiaTienNangCao1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\fd7413bb-34b1-4ed6-a2a1-8e1077b6679b_MamQuaYC3.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\fd7413bb-34b1-4ed6-a2a1-8e1077b6679b_MamQuaYC3.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\haovamtay2.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\haovamtay2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\hoaCamtay1.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\hoaCamtay1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\hoacamtay4.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\hoacamtay4.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\DichVu\\hoachiabuon3.jpg",
+      "PackagePath": "staticwebassets\\images\\DichVu\\hoachiabuon3.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\07d2b483-9fc4-457e-8868-6f8dafb90d44_2.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\07d2b483-9fc4-457e-8868-6f8dafb90d44_2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\10443_cam-tu-cau-hong-canh.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\10443_cam-tu-cau-hong-canh.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\11317_cam-chuong-don-do-20-canh.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\11317_cam-chuong-don-do-20-canh.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\11325_cam-chuong-don-tim-vien-20-canh.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\11325_cam-chuong-don-tim-vien-20-canh.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\11329_cam-chuong-chum-vang-20-canh.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\11329_cam-chuong-chum-vang-20-canh.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\11725_cam-chuong-don-hong-dau-20-canh.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\11725_cam-chuong-don-hong-dau-20-canh.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\11819_cam-tu-cau-5-canh.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\11819_cam-tu-cau-5-canh.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\12934_sen-trang-10-canh.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\12934_sen-trang-10-canh.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\133_mix-hong-xinh-2.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\133_mix-hong-xinh-2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\14438_cam-tu-cau-xanh-duong-canh.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\14438_cam-tu-cau-xanh-duong-canh.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\1594_mix-cam-hong.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\1594_mix-cam-hong.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\1595_mix-cuc-magnum-rainbow.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\1595_mix-cuc-magnum-rainbow.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\1596_mix-cuc-magnum-rainbow.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\1596_mix-cuc-magnum-rainbow.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\1624_lan-thai-trang-12-canh.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\1624_lan-thai-trang-12-canh.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\1a118137-dc05-4720-8319-440b732b41aa_2.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\1a118137-dc05-4720-8319-440b732b41aa_2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\23936faf-6ea6-493e-b676-7df3e1fe62f6_b01c31e9-e758-42f0-b231-66317413659f_8.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\23936faf-6ea6-493e-b676-7df3e1fe62f6_b01c31e9-e758-42f0-b231-66317413659f_8.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\2c55ae04-c859-4d7a-b847-c4137d598488_TN300-3.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\2c55ae04-c859-4d7a-b847-c4137d598488_TN300-3.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\2ccc79a4-0e84-4ee4-98a6-b354f4ba6839_2 - Copy.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\2ccc79a4-0e84-4ee4-98a6-b354f4ba6839_2 - Copy.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\2ccc79a4-0e84-4ee4-98a6-b354f4ba6839_2.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\2ccc79a4-0e84-4ee4-98a6-b354f4ba6839_2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\33a6f8a4-b38f-415d-959a-81ff41b871fa_2.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\33a6f8a4-b38f-415d-959a-81ff41b871fa_2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\36c39532-b74b-41ec-be6a-1e17621ca5d4_6.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\36c39532-b74b-41ec-be6a-1e17621ca5d4_6.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\370_lan-vu-nu-vang-200g-loai-b.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\370_lan-vu-nu-vang-200g-loai-b.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\411_cat-tuong-xanh-500g.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\411_cat-tuong-xanh-500g.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\423_cat-tuong-tim-vien-500g.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\423_cat-tuong-tim-vien-500g.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\424_cat-tuong-tim-vien-500g.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\424_cat-tuong-tim-vien-500g.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\432_cat-tuong-hong-vien-500g.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\432_cat-tuong-hong-vien-500g.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\509_lan-phuong-vy-10-canh.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\509_lan-phuong-vy-10-canh.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\612_cam-chuong-don-tim-vien-20-canh.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\612_cam-chuong-don-tim-vien-20-canh.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\632_cam-chuong-chum-vang-20-canh.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\632_cam-chuong-chum-vang-20-canh.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\644_cam-chuong-don-do-20-canh.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\644_cam-chuong-don-do-20-canh.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\6516_lan-phuong-vy-10-canh.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\6516_lan-phuong-vy-10-canh.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\6523_cat-tuong-hong-vien-500g.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\6523_cat-tuong-hong-vien-500g.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\6531_lan-vu-nu-vang-200g-loai-b.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\6531_lan-vu-nu-vang-200g-loai-b.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\6535_cat-tuong-xanh-500g.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\6535_cat-tuong-xanh-500g.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\6611_lan-thai-trang-12-canh.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\6611_lan-thai-trang-12-canh.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\6c286105-4cb0-41ea-843d-221d4ea600e4_1.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\6c286105-4cb0-41ea-843d-221d4ea600e4_1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\6cc81d71-9519-4c46-b992-9d8a0560fbe3_home1-category-1.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\6cc81d71-9519-4c46-b992-9d8a0560fbe3_home1-category-1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\731_cam-tu-cau-5-canh.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\731_cam-tu-cau-5-canh.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\736_cam-tu-cau-5-canh.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\736_cam-tu-cau-5-canh.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\7690da1b-b9aa-46c3-a992-661407195d33_TN500-2.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\7690da1b-b9aa-46c3-a992-661407195d33_TN500-2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\781_cam-chuong-don-hong-dau-20-canh.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\781_cam-chuong-don-hong-dau-20-canh.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\7fcd8f19-8fa7-4015-bc6f-48643dcc93c6_2.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\7fcd8f19-8fa7-4015-bc6f-48643dcc93c6_2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\8056710c-05c7-43e3-9b2b-d8b2e4b8f570_1.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\8056710c-05c7-43e3-9b2b-d8b2e4b8f570_1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\8315_mix-hong-xinh-2.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\8315_mix-hong-xinh-2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\8317_mix-cam-hong.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\8317_mix-cam-hong.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\8409c8c1-7e1e-4f1d-823c-7b364990b67b_home1-category-4.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\8409c8c1-7e1e-4f1d-823c-7b364990b67b_home1-category-4.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\882bd8e4-a0a9-4485-98d2-272f664d6927_TN300-2.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\882bd8e4-a0a9-4485-98d2-272f664d6927_TN300-2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\8cfbc738-2bdc-4eaf-9a85-23f7d9fdda69_3.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\8cfbc738-2bdc-4eaf-9a85-23f7d9fdda69_3.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\LaLan1.png",
+      "PackagePath": "staticwebassets\\images\\SanPham\\LaLan1.png"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\LaLan2.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\LaLan2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\LaThuyTruc1.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\LaThuyTruc1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\LaThuyTruc2.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\LaThuyTruc2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\LaTrauBa1.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\LaTrauBa1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\LaTrauBa2.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\LaTrauBa2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\Lan.png",
+      "PackagePath": "staticwebassets\\images\\SanPham\\Lan.png"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\LilyLuta1.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\LilyLuta1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\ab64470d-b9f3-4d84-a198-0fce29e742ba_TN500-1.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\ab64470d-b9f3-4d84-a198-0fce29e742ba_TN500-1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\af61d3b2-0cc9-44e8-8a24-21efd86b385b_8409c8c1-7e1e-4f1d-823c-7b364990b67b_home1-category-4.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\af61d3b2-0cc9-44e8-8a24-21efd86b385b_8409c8c1-7e1e-4f1d-823c-7b364990b67b_home1-category-4.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\b01c31e9-e758-42f0-b231-66317413659f_8.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\b01c31e9-e758-42f0-b231-66317413659f_8.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\b52e23b3-2721-44de-b050-65b098810dca_3.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\b52e23b3-2721-44de-b050-65b098810dca_3.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\b7b61c04-e186-4cac-959d-c6ccc1c2d495_TN500-3.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\b7b61c04-e186-4cac-959d-c6ccc1c2d495_TN500-3.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\bb7d09cb-80cd-4e31-a90b-cc0322aa0216_7.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\bb7d09cb-80cd-4e31-a90b-cc0322aa0216_7.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\cuctana1.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\cuctana1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\cuctana2.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\cuctana2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\cuctana3.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\cuctana3.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\cuctim1.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\cuctim1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\cuctim2.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\cuctim2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\cuctim3.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\cuctim3.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\cucvang1.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\cucvang1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\cucvang2.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\cucvang2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\cucvang3.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\cucvang3.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\d37b68fa-4bd9-4a07-9872-2fbf1c9de2f7_bb7d09cb-80cd-4e31-a90b-cc0322aa0216_7.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\d37b68fa-4bd9-4a07-9872-2fbf1c9de2f7_bb7d09cb-80cd-4e31-a90b-cc0322aa0216_7.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\dongtienmix1.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\dongtienmix1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\dongtienmix2.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\dongtienmix2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\dongtienmix3.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\dongtienmix3.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\ee6042ea-aff3-4fc9-ab5b-0a2491a6ae5d_TN300-1.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\ee6042ea-aff3-4fc9-ab5b-0a2491a6ae5d_TN300-1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\ef0b5f37-1d52-498b-a27d-ea540bf3de28_LilyLuta1.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\ef0b5f37-1d52-498b-a27d-ea540bf3de28_LilyLuta1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\f303e4bd-cd0b-4a27-95e7-49e6933969f7_2ccc79a4-0e84-4ee4-98a6-b354f4ba6839_2.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\f303e4bd-cd0b-4a27-95e7-49e6933969f7_2ccc79a4-0e84-4ee4-98a6-b354f4ba6839_2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\f54cfbb8-dfad-49fe-b15a-d11db738a773_1a118137-dc05-4720-8319-440b732b41aa_2.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\f54cfbb8-dfad-49fe-b15a-d11db738a773_1a118137-dc05-4720-8319-440b732b41aa_2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\f7c9f9f7-41b2-4c50-b65e-82561c723288_2.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\f7c9f9f7-41b2-4c50-b65e-82561c723288_2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\hoahddo1.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\hoahddo1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\hoahddo2.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\hoahddo2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\hoahddo3.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\hoahddo3.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\hoahdvang1.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\hoahdvang1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\hoahdvang2.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\hoahdvang2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\hoahdvang3.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\hoahdvang3.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\hoahongdo1.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\hoahongdo1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\hoahongdo2.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\hoahongdo2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\hoahongdo3.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\hoahongdo3.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\hoahongtrang1.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\hoahongtrang1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\hoahongtrang2.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\hoahongtrang2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\hoahongtrang3.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\hoahongtrang3.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\hoahongvang1.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\hoahongvang1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\hoahongvang2.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\hoahongvang2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\hoahongvang3.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\hoahongvang3.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\hoatinhyeu1.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\hoatinhyeu1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\hoatinhyeu2.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\hoatinhyeu2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\lalan1.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\lalan1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\lanTim.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\lanTim.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\lavender1.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\lavender1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\lavender2.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\lavender2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\lilyhong1.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\lilyhong1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\lilyhong2.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\lilyhong2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\lilyhong3.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\lilyhong3.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\lilyvang1.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\lilyvang1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\lilyvang2.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\lilyvang2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\lilyvang3.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\lilyvang3.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\SanPham\\sentrang.jpg",
+      "PackagePath": "staticwebassets\\images\\SanPham\\sentrang.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\about\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\about\\1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\about\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\about\\2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\banner\\1-1.jpg",
+      "PackagePath": "staticwebassets\\images\\banner\\1-1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\banner\\1-2.jpg",
+      "PackagePath": "staticwebassets\\images\\banner\\1-2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\banner\\1-3.jpg",
+      "PackagePath": "staticwebassets\\images\\banner\\1-3.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\bg\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\bg\\1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\bg\\breadcrumb.jpg",
+      "PackagePath": "staticwebassets\\images\\bg\\breadcrumb.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\blog\\blog1.jpg",
+      "PackagePath": "staticwebassets\\images\\blog\\blog1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\blog\\blog2.jpg",
+      "PackagePath": "staticwebassets\\images\\blog\\blog2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\blog\\blog3.jpg",
+      "PackagePath": "staticwebassets\\images\\blog\\blog3.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\brand\\1.png",
+      "PackagePath": "staticwebassets\\images\\brand\\1.png"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\brand\\2.png",
+      "PackagePath": "staticwebassets\\images\\brand\\2.png"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\brand\\3.png",
+      "PackagePath": "staticwebassets\\images\\brand\\3.png"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\brand\\4.png",
+      "PackagePath": "staticwebassets\\images\\brand\\4.png"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\brand\\5.png",
+      "PackagePath": "staticwebassets\\images\\brand\\5.png"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\cart\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\cart\\1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\cart\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\cart\\2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\cart\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\cart\\3.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\category\\hoacatcanh.jpg",
+      "PackagePath": "staticwebassets\\images\\category\\hoacatcanh.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\category\\hoachiabuon.jpg",
+      "PackagePath": "staticwebassets\\images\\category\\hoachiabuon.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\category\\hoachucmung.jpg",
+      "PackagePath": "staticwebassets\\images\\category\\hoachucmung.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\category\\hoacuoi.jpg",
+      "PackagePath": "staticwebassets\\images\\category\\hoacuoi.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\category\\hoacuoihoi.jpg",
+      "PackagePath": "staticwebassets\\images\\category\\hoacuoihoi.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\category\\hoadecor.jpg",
+      "PackagePath": "staticwebassets\\images\\category\\hoadecor.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\category\\hoasukien.jpg",
+      "PackagePath": "staticwebassets\\images\\category\\hoasukien.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\category\\home1-category-1.jpg",
+      "PackagePath": "staticwebassets\\images\\category\\home1-category-1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\category\\home1-category-2.jpg",
+      "PackagePath": "staticwebassets\\images\\category\\home1-category-2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\category\\home1-category-3.jpg",
+      "PackagePath": "staticwebassets\\images\\category\\home1-category-3.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\category\\home1-category-4.jpg",
+      "PackagePath": "staticwebassets\\images\\category\\home1-category-4.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\category\\home1-category-5.jpg",
+      "PackagePath": "staticwebassets\\images\\category\\home1-category-5.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\collection\\1-1.jpg",
+      "PackagePath": "staticwebassets\\images\\collection\\1-1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\collection\\1-2.jpg",
+      "PackagePath": "staticwebassets\\images\\collection\\1-2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\favicon.ico",
+      "PackagePath": "staticwebassets\\images\\favicon.ico"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\icon\\author.png",
+      "PackagePath": "staticwebassets\\images\\icon\\author.png"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\icon\\vnpay.png",
+      "PackagePath": "staticwebassets\\images\\icon\\vnpay.png"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\logo\\logo-footer.png",
+      "PackagePath": "staticwebassets\\images\\logo\\logo-footer.png"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\logo\\logo.png",
+      "PackagePath": "staticwebassets\\images\\logo\\logo.png"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\payment\\payment-icon.png",
+      "PackagePath": "staticwebassets\\images\\payment\\payment-icon.png"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\product\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\product\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\product\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\3.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\product\\4.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\4.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\product\\5.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\5.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\product\\6.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\6.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\product\\7.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\7.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\product\\8.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\8.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\product\\9.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\9.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\product\\large-size\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\large-size\\1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\product\\large-size\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\large-size\\2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\product\\large-size\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\large-size\\3.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\product\\large-size\\4.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\large-size\\4.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\product\\large-size\\5.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\large-size\\5.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\product\\large-size\\6.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\large-size\\6.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\product\\small-size\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\small-size\\1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\product\\small-size\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\small-size\\2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\product\\small-size\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\small-size\\3.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\product\\small-size\\4.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\small-size\\4.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\product\\small-size\\5.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\small-size\\5.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\product\\small-size\\6.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\small-size\\6.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\review\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\review\\1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\slider\\1-1.jpg",
+      "PackagePath": "staticwebassets\\images\\slider\\1-1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\slider\\1-2.jpg",
+      "PackagePath": "staticwebassets\\images\\slider\\1-2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\slider\\2-1.jpg",
+      "PackagePath": "staticwebassets\\images\\slider\\2-1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\slider\\2-2.jpg",
+      "PackagePath": "staticwebassets\\images\\slider\\2-2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\slider\\3-1.jpg",
+      "PackagePath": "staticwebassets\\images\\slider\\3-1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\slider\\3-2.jpg",
+      "PackagePath": "staticwebassets\\images\\slider\\3-2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\team\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\team\\1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\team\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\team\\2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\team\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\team\\3.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\testimonial\\testimonial1.jpg",
+      "PackagePath": "staticwebassets\\images\\testimonial\\testimonial1.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\images\\testimonial\\testimonial2.jpg",
+      "PackagePath": "staticwebassets\\images\\testimonial\\testimonial2.jpg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\js\\plugins\\jquery-ui.min.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\jquery-ui.min.js"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\js\\plugins\\jquery.ajaxchimp.min.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\jquery.ajaxchimp.min.js"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\js\\plugins\\jquery.countdown.min.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\jquery.countdown.min.js"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\js\\plugins\\jquery.magnific-popup.min.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\jquery.magnific-popup.min.js"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\js\\plugins\\nice-select.min.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\nice-select.min.js"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\js\\plugins\\swiper-bundle.min.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\swiper-bundle.min.js"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\js\\vendor\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\js\\vendor\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\js\\vendor\\jquery-3.6.0.min.js",
+      "PackagePath": "staticwebassets\\js\\vendor\\jquery-3.6.0.min.js"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\js\\vendor\\jquery-migrate-3.3.2.min.js",
+      "PackagePath": "staticwebassets\\js\\vendor\\jquery-migrate-3.3.2.min.js"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\js\\vendor\\modernizr-3.7.1.min.js",
+      "PackagePath": "staticwebassets\\js\\vendor\\modernizr-3.7.1.min.js"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sbadmin\\Chart.bundle.js",
+      "PackagePath": "staticwebassets\\sbadmin\\Chart.bundle.js"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sbadmin\\Chart.bundle.min.js",
+      "PackagePath": "staticwebassets\\sbadmin\\Chart.bundle.min.js"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sbadmin\\Chart.js",
+      "PackagePath": "staticwebassets\\sbadmin\\Chart.js"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sbadmin\\Chart.min.js",
+      "PackagePath": "staticwebassets\\sbadmin\\Chart.min.js"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sbadmin\\all.min.css",
+      "PackagePath": "staticwebassets\\sbadmin\\all.min.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sbadmin\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\sbadmin\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sbadmin\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\sbadmin\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sbadmin\\chart-area-demo.js",
+      "PackagePath": "staticwebassets\\sbadmin\\chart-area-demo.js"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sbadmin\\chart-pie-demo.js",
+      "PackagePath": "staticwebassets\\sbadmin\\chart-pie-demo.js"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sbadmin\\jquery.easing.min.js",
+      "PackagePath": "staticwebassets\\sbadmin\\jquery.easing.min.js"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sbadmin\\jquery.min.js",
+      "PackagePath": "staticwebassets\\sbadmin\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sbadmin\\jquery.min.map",
+      "PackagePath": "staticwebassets\\sbadmin\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sbadmin\\sb-admin-2.min.css",
+      "PackagePath": "staticwebassets\\sbadmin\\sb-admin-2.min.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sbadmin\\sb-admin-2.min.js",
+      "PackagePath": "staticwebassets\\sbadmin\\sb-admin-2.min.js"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\.babelrc",
+      "PackagePath": "staticwebassets\\sweetalert-master\\.babelrc"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\.editorconfig",
+      "PackagePath": "staticwebassets\\sweetalert-master\\.editorconfig"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\.gitignore",
+      "PackagePath": "staticwebassets\\sweetalert-master\\.gitignore"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\.travis.yml",
+      "PackagePath": "staticwebassets\\sweetalert-master\\.travis.yml"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\LICENSE.md",
+      "PackagePath": "staticwebassets\\sweetalert-master\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\README.md",
+      "PackagePath": "staticwebassets\\sweetalert-master\\README.md"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\assets\\logotype.png",
+      "PackagePath": "staticwebassets\\sweetalert-master\\assets\\logotype.png"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\assets\\swal.gif",
+      "PackagePath": "staticwebassets\\sweetalert-master\\assets\\swal.gif"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs-src\\assets\\css\\app.styl",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs-src\\assets\\css\\app.styl"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs-src\\assets\\css\\guide.styl",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs-src\\assets\\css\\guide.styl"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs-src\\assets\\css\\header.styl",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs-src\\assets\\css\\header.styl"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs-src\\assets\\css\\highlight.styl",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs-src\\assets\\css\\highlight.styl"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs-src\\assets\\css\\index.styl",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs-src\\assets\\css\\index.styl"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs-src\\assets\\css\\normalize.styl",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs-src\\assets\\css\\normalize.styl"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs-src\\assets\\css\\table.styl",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs-src\\assets\\css\\table.styl"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs-src\\assets\\css\\variables.styl",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs-src\\assets\\css\\variables.styl"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs-src\\assets\\images\\github.svg",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs-src\\assets\\images\\github.svg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs-src\\assets\\images\\heart-icon.svg",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs-src\\assets\\images\\heart-icon.svg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs-src\\assets\\images\\logo-small.svg",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs-src\\assets\\images\\logo-small.svg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs-src\\assets\\images\\logo.svg",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs-src\\assets\\images\\logo.svg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs-src\\assets\\images\\modal-examples.png",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs-src\\assets\\images\\modal-examples.png"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs-src\\assets\\images\\modal-examples@2x.png",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs-src\\assets\\images\\modal-examples@2x.png"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs-src\\assets\\images\\modal-fb-example@2x.png",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs-src\\assets\\images\\modal-fb-example@2x.png"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs-src\\assets\\images\\mood-happy.png",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs-src\\assets\\images\\mood-happy.png"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs-src\\assets\\images\\mood-neutral.png",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs-src\\assets\\images\\mood-neutral.png"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs-src\\assets\\images\\mood-sad.png",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs-src\\assets\\images\\mood-sad.png"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs-src\\assets\\images\\pattern.png",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs-src\\assets\\images\\pattern.png"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs-src\\assets\\images\\pattern@2x.png",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs-src\\assets\\images\\pattern@2x.png"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs-src\\assets\\images\\transition-top.svg",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs-src\\assets\\images\\transition-top.svg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs-src\\assets\\images\\vs.svg",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs-src\\assets\\images\\vs.svg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs-src\\assets\\js\\add-preview-buttons.js",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs-src\\assets\\js\\add-preview-buttons.js"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs-src\\assets\\js\\index.js",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs-src\\assets\\js\\index.js"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs-src\\assets\\js\\landing-text-rotater.js",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs-src\\assets\\js\\landing-text-rotater.js"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs-src\\assets\\sweetalert",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs-src\\assets"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs-src\\docs\\index.md",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs-src\\docs\\index.md"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs-src\\guides\\index.md",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs-src\\guides\\index.md"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs-src\\index.hbs",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs-src\\index.hbs"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs-src\\layout-docs.hbs",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs-src\\layout-docs.hbs"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs-src\\layout-guides.hbs",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs-src\\layout-guides.hbs"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs-src\\layout.hbs",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs-src\\layout.hbs"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs\\CNAME",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs\\assets\\css\\app.css",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs\\assets\\css\\app.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs\\assets\\css\\guide.css",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs\\assets\\css\\guide.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs\\assets\\css\\header.css",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs\\assets\\css\\header.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs\\assets\\css\\highlight.css",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs\\assets\\css\\highlight.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs\\assets\\css\\index.css",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs\\assets\\css\\index.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs\\assets\\css\\normalize.css",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs\\assets\\css\\normalize.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs\\assets\\css\\table.css",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs\\assets\\css\\table.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs\\assets\\css\\variables.css",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs\\assets\\css\\variables.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs\\assets\\images\\github.svg",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs\\assets\\images\\github.svg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs\\assets\\images\\heart-icon.svg",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs\\assets\\images\\heart-icon.svg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs\\assets\\images\\logo-small.svg",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs\\assets\\images\\logo-small.svg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs\\assets\\images\\logo.svg",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs\\assets\\images\\logo.svg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs\\assets\\images\\modal-examples.png",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs\\assets\\images\\modal-examples.png"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs\\assets\\images\\modal-examples@2x.png",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs\\assets\\images\\modal-examples@2x.png"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs\\assets\\images\\modal-fb-example@2x.png",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs\\assets\\images\\modal-fb-example@2x.png"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs\\assets\\images\\mood-happy.png",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs\\assets\\images\\mood-happy.png"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs\\assets\\images\\mood-neutral.png",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs\\assets\\images\\mood-neutral.png"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs\\assets\\images\\mood-sad.png",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs\\assets\\images\\mood-sad.png"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs\\assets\\images\\pattern.png",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs\\assets\\images\\pattern.png"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs\\assets\\images\\pattern@2x.png",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs\\assets\\images\\pattern@2x.png"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs\\assets\\images\\transition-top.svg",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs\\assets\\images\\transition-top.svg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs\\assets\\images\\vs.svg",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs\\assets\\images\\vs.svg"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs\\assets\\js\\add-preview-buttons.js",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs\\assets\\js\\add-preview-buttons.js"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs\\assets\\js\\index.js",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs\\assets\\js\\index.js"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs\\assets\\js\\landing-text-rotater.js",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs\\assets\\js\\landing-text-rotater.js"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs\\assets\\sweetalert\\sweetalert.js.map",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs\\assets\\sweetalert\\sweetalert.js.map"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs\\assets\\sweetalert\\sweetalert.min.js",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs\\assets\\sweetalert\\sweetalert.min.js"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs\\docs\\index.html",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs\\docs\\index.html"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs\\guides\\index.html",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs\\guides\\index.html"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\docs\\index.html",
+      "PackagePath": "staticwebassets\\sweetalert-master\\docs\\index.html"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\package-lock.json",
+      "PackagePath": "staticwebassets\\sweetalert-master\\package-lock.json"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\package.json",
+      "PackagePath": "staticwebassets\\sweetalert-master\\package.json"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\postcss.config.js",
+      "PackagePath": "staticwebassets\\sweetalert-master\\postcss.config.js"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\src\\core.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\src\\core.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\src\\css\\button-loader.css",
+      "PackagePath": "staticwebassets\\sweetalert-master\\src\\css\\button-loader.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\src\\css\\buttons.css",
+      "PackagePath": "staticwebassets\\sweetalert-master\\src\\css\\buttons.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\src\\css\\content.css",
+      "PackagePath": "staticwebassets\\sweetalert-master\\src\\css\\content.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\src\\css\\icons.css",
+      "PackagePath": "staticwebassets\\sweetalert-master\\src\\css\\icons.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\src\\css\\icons\\error.css",
+      "PackagePath": "staticwebassets\\sweetalert-master\\src\\css\\icons\\error.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\src\\css\\icons\\info.css",
+      "PackagePath": "staticwebassets\\sweetalert-master\\src\\css\\icons\\info.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\src\\css\\icons\\success.css",
+      "PackagePath": "staticwebassets\\sweetalert-master\\src\\css\\icons\\success.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\src\\css\\icons\\warning.css",
+      "PackagePath": "staticwebassets\\sweetalert-master\\src\\css\\icons\\warning.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\src\\css\\text.css",
+      "PackagePath": "staticwebassets\\sweetalert-master\\src\\css\\text.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\src\\modules\\actions.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\src\\modules\\actions.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\src\\modules\\class-list\\index.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\src\\modules\\class-list\\index.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\src\\modules\\event-listeners.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\src\\modules\\event-listeners.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\src\\modules\\init\\buttons.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\src\\modules\\init\\buttons.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\src\\modules\\init\\content.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\src\\modules\\init\\content.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\src\\modules\\init\\icon.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\src\\modules\\init\\icon.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\src\\modules\\init\\index.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\src\\modules\\init\\index.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\src\\modules\\init\\modal.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\src\\modules\\init\\modal.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\src\\modules\\init\\overlay.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\src\\modules\\init\\overlay.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\src\\modules\\init\\text.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\src\\modules\\init\\text.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\src\\modules\\markup\\buttons.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\src\\modules\\markup\\buttons.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\src\\modules\\markup\\content.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\src\\modules\\markup\\content.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\src\\modules\\markup\\icons.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\src\\modules\\markup\\icons.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\src\\modules\\markup\\index.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\src\\modules\\markup\\index.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\src\\modules\\markup\\modal.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\src\\modules\\markup\\modal.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\src\\modules\\markup\\overlay.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\src\\modules\\markup\\overlay.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\src\\modules\\options\\buttons.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\src\\modules\\options\\buttons.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\src\\modules\\options\\content.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\src\\modules\\options\\content.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\src\\modules\\options\\deprecations.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\src\\modules\\options\\deprecations.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\src\\modules\\options\\index.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\src\\modules\\options\\index.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\src\\modules\\state.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\src\\modules\\state.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\src\\modules\\utils.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\src\\modules\\utils.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\src\\polyfills.js",
+      "PackagePath": "staticwebassets\\sweetalert-master\\src\\polyfills.js"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\src\\sweetalert.css",
+      "PackagePath": "staticwebassets\\sweetalert-master\\src\\sweetalert.css"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\src\\sweetalert.d.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\src\\sweetalert.d.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\src\\sweetalert.js",
+      "PackagePath": "staticwebassets\\sweetalert-master\\src\\sweetalert.js"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\test\\actions.test.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\test\\actions.test.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\test\\button-options.test.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\test\\button-options.test.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\test\\buttons.test.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\test\\buttons.test.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\test\\content.test.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\test\\content.test.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\test\\icons.test.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\test\\icons.test.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\test\\index.test.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\test\\index.test.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\test\\utils.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\test\\utils.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\tsconfig.json",
+      "PackagePath": "staticwebassets\\sweetalert-master\\tsconfig.json"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\tslint.json",
+      "PackagePath": "staticwebassets\\sweetalert-master\\tslint.json"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\typings\\core.d.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\typings\\core.d.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\typings\\modules\\actions.d.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\typings\\modules\\actions.d.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\typings\\modules\\class-list\\index.d.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\typings\\modules\\class-list\\index.d.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\typings\\modules\\event-listeners.d.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\typings\\modules\\event-listeners.d.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\typings\\modules\\init\\buttons.d.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\typings\\modules\\init\\buttons.d.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\typings\\modules\\init\\content.d.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\typings\\modules\\init\\content.d.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\typings\\modules\\init\\icon.d.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\typings\\modules\\init\\icon.d.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\typings\\modules\\init\\index.d.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\typings\\modules\\init\\index.d.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\typings\\modules\\init\\modal.d.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\typings\\modules\\init\\modal.d.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\typings\\modules\\init\\overlay.d.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\typings\\modules\\init\\overlay.d.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\typings\\modules\\init\\text.d.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\typings\\modules\\init\\text.d.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\typings\\modules\\markup\\buttons.d.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\typings\\modules\\markup\\buttons.d.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\typings\\modules\\markup\\content.d.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\typings\\modules\\markup\\content.d.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\typings\\modules\\markup\\icons.d.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\typings\\modules\\markup\\icons.d.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\typings\\modules\\markup\\index.d.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\typings\\modules\\markup\\index.d.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\typings\\modules\\markup\\modal.d.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\typings\\modules\\markup\\modal.d.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\typings\\modules\\markup\\overlay.d.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\typings\\modules\\markup\\overlay.d.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\typings\\modules\\options\\buttons.d.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\typings\\modules\\options\\buttons.d.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\typings\\modules\\options\\content.d.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\typings\\modules\\options\\content.d.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\typings\\modules\\options\\deprecations.d.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\typings\\modules\\options\\deprecations.d.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\typings\\modules\\options\\index.d.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\typings\\modules\\options\\index.d.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\typings\\modules\\state.d.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\typings\\modules\\state.d.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\typings\\modules\\utils.d.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\typings\\modules\\utils.d.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\typings\\sweetalert.d.ts",
+      "PackagePath": "staticwebassets\\sweetalert-master\\typings\\sweetalert.d.ts"
+    },
+    {
+      "Id": "D:\\CT554-LuanVan\\CuaHangHoa\\CuaHangHoa\\wwwroot\\sweetalert-master\\webpack.config.js",
+      "PackagePath": "staticwebassets\\sweetalert-master\\webpack.config.js"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.CuaHangHoa.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.CuaHangHoa.props",
+      "PackagePath": "build\\CuaHangHoa.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.CuaHangHoa.props",
+      "PackagePath": "buildMultiTargeting\\CuaHangHoa.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.CuaHangHoa.props",
+      "PackagePath": "buildTransitive\\CuaHangHoa.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

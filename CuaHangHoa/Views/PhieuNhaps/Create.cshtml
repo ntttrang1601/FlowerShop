@@ -1,0 +1,223 @@
+﻿@model CuaHangHoa.Models.PhieuNhap
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Thêm Phiếu Nhập</h2>
+<div class="myaccount-content">
+    
+    <div class="row">
+        <div class="col-md-6">
+            <form asp-action="Create" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="UserId" id="UserId" />
+
+                <div class="form-group">                    
+                    Nhà cung cấp                    
+                    <select asp-items="ViewBag.NhaCungCaps" class="form-control" asp-for="NhaCungCapId"></select>
+                </div>
+                
+                <div class="form-group">                    
+                    Ghi chú                    
+                    <textarea asp-for="GhiChu" class="form-control"></textarea>
+                </div>                
+                
+                <div class="form-group">
+                    Ngày nhập
+                    <input asp-for="NgayNhap" class="form-control" type="datetime-local"
+                           value="@DateTime.Now.ToString("yyyy-MM-ddTHH:mm")" />
+                    <span asp-validation-for="NgayNhap" class="text-danger"></span>
+                </div>
+
+                <p></p>
+
+                <h3>Danh Sách Mặt Hàng</h3>
+                <div class="form-inline">
+                    <select id="LoaiSanPham" class="form-control">
+                        <option value="">Chọn loại sản phẩm</option>
+                        @foreach (var item in ViewBag.LoaiSPs)
+                        {
+                            <option value="@item.Value">@item.Text</option>
+                        }
+                    </select>
+
+                    <select id="SanPham" class="form-control ml-2">
+                        <option value="">Chọn sản phẩm</option>
+                    </select>
+
+                    <input type="number" id="SoLuong" class="form-control ml-2" placeholder="Số lượng" min="1" />
+
+                    <input type="number" id="GiaNhap" class="form-control ml-2" placeholder="Giá nhập" min="0" />
+
+                    <button type="button" class="btn flosun-button secondary-btn theme-color rounded-0" id="btnAddProduct">Thêm mặt hàng</button>
+                </div>
+
+                <table class="table mt-3" id="productTable">
+                    <thead>
+                        <tr>
+                            <th>Sản phẩm</th>
+                            <th>Số lượng</th>
+                            <th>Giá nhập</th>
+                            <th>Thành tiền</th>
+                            <th>Xóa</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+
+                <hr />
+                @* <input type="hidden" asp-for="SoLuongMatHang" id="SoLuongMatHang" />
+                <input type="hidden" asp-for="TongTien" id="TongTien" /> *@
+
+                <div class="form-group">                    
+                    Số lượng mặt hàng
+                    @* <input asp-for="SoLuongMatHang" id="SoLuongMatHang" class="form-control" /> *@
+                    <input asp-for="SoLuongMatHang" id="SoLuongMatHang" class="form-control" readonly />
+                    <span asp-validation-for="SoLuongMatHang" class="text-danger"></span>
+                </div>
+               
+                <div class="form-group">
+                    Tổng tiền:
+                    @* <input asp-for="TongTien" id="TongTien" class="form-control" readonly /> *@                    
+                    <input asp-for="TongTien" id="TongTien" class="form-control" readonly />
+                    <span asp-validation-for="TongTien" class="text-danger"></span>
+                </div>
+                <p></p>                
+                <div class="form-group">
+                    <input type="submit" value="Lưu Phiếu Nhập" class="btn flosun-button secondary-btn theme-color rounded-0" />
+                    <a asp-action="Index" class="btn flosun-button secondary-btn theme-color rounded-0">Quay lại</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div> 
+   
+      
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            let totalAmount = 0;
+
+            // Hàm cập nhật tổng số lượng mặt hàng
+            function updateTotalItemsCount() {
+                let totalItemsCount = 0;
+
+                // Duyệt qua từng hàng trong bảng và cộng dồn số lượng từ các ô input ẩn
+                $('#productTable tbody tr').each(function () {
+                    const soLuong = parseInt($(this).find('input[name*=".SoLuong"]').val()) || 0;
+                    totalItemsCount += soLuong;
+                });
+
+                // Cập nhật tổng số lượng vào ô nhập "Số lượng mặt hàng"
+                $('#SoLuongMatHang').val(totalItemsCount);
+            }
+
+            // Khi chọn loại sản phẩm, lấy danh sách sản phẩm theo loại
+            $('#LoaiSanPham').change(function () {
+                const categoryId = $(this).val();
+                if (categoryId) {
+                    $.getJSON(`/PhieuNhaps/GetProductsByCategory?categoryId=${categoryId}`, function (data) {
+                        $('#SanPham').empty().append('<option value="">Chọn sản phẩm</option>');
+
+                        // Duyệt qua mỗi sản phẩm trong dữ liệu và thêm vào `select`
+                        data.forEach(item => {
+                            $('#SanPham').append(`<option value="${item.id}">${item.ten}</option>`);
+                        });
+                    });
+                } else {
+                    $('#SanPham').empty().append('<option value="">Chọn sản phẩm</option>');
+                }
+            });
+
+            function loadProductsByCategory(categoryId) {
+                $.ajax({
+                    url: '/PhieuNhaps/GetProductsByCategory',
+                    type: 'GET',
+                    data: { categoryId: categoryId },
+                    success: function (data) {
+                        var select = $('#SanPham');
+                        select.empty(); // Xóa các tùy chọn cũ
+                        select.append('<option value="">Chọn sản phẩm</option>');
+
+                        // Thêm sản phẩm vào danh sách
+                        data.forEach(function (products) {
+                            select.append('<option value="' + products.id + '">' + products.ten + '</option>');
+                        });
+                    },
+                    error: function () {
+                        alert("Failed to load products.");
+                    }
+                });
+            }
+
+
+            // Khi bấm thêm mặt hàng
+            $('#btnAddProduct').click(function () {
+                const sanPhamId = $('#SanPham').val();
+                const sanPhamText = $('#SanPham option:selected').text();
+                const soLuong = parseInt($('#SoLuong').val());
+                const giaNhap = parseFloat($('#GiaNhap').val());
+
+                if (sanPhamId && soLuong > 0 && giaNhap >= 0) {
+                    const thanhTien = soLuong * giaNhap;
+                    totalAmount += thanhTien;
+
+                    // Tạo dòng mới trong bảng sản phẩm
+                    $('#productTable tbody').append(`
+                    <tr>
+                        <td>
+                            <input type="hidden" name="CTPhieuNhaps[${$('#productTable tbody tr').length}].SanPhamId" value="${sanPhamId}" />
+                            ${sanPhamText}
+                        </td>
+                        <td>
+                            <input type="hidden" name="CTPhieuNhaps[${$('#productTable tbody tr').length}].SoLuong" value="${soLuong}" />${soLuong}
+                        </td>
+                        <td>
+                            <input type="hidden" name="CTPhieuNhaps[${$('#productTable tbody tr').length}].GiaNhap" value="${giaNhap}" />${giaNhap}
+                        </td>
+                        <td>${thanhTien.toLocaleString('vi-VN')} VND</td>
+                        <td><button type="button" class="btn flosun-button secondary-btn theme-color rounded-0 btnRemove">Xóa</button></td>
+                    </tr>
+                `);
+
+                    // Cập nhật tổng tiền hiển thị trong input
+                    //$('#TongTien').val(totalAmount.toLocaleString('vi-VN'));
+                    //$('#TongTien').val(totalAmount.toFixed(2)); // Giữ lại 2 chữ số thập phân
+                    $('#TongTien').val(totalAmount.toFixed(0));
+                    // Cập nhật số lượng mặt hàng
+                    //$('#SoLuongMatHang').val($('#productTable tbody tr').length);
+                    updateTotalItemsCount();
+                    // Reset các ô input
+                    $('#SoLuong, #GiaNhap').val('');
+                }
+            });
+
+
+
+            $('#productTable').on('click', '.btnRemove', function () {
+                const row = $(this).closest('tr');
+
+                // Lấy giá trị thanhTien từ input ẩn
+                const thanhTien = parseFloat(row.find('input[name*=".GiaNhap"]').val()) * parseInt(row.find('input[name*=".SoLuong"]').val());
+
+                // Cập nhật tổng tiền
+                totalAmount -= thanhTien;
+                $('#TongTien').val(totalAmount.toFixed(0));
+
+                // Xóa dòng sản phẩm
+                row.remove();
+
+                // Cập nhật tổng số lượng mặt hàng
+                updateTotalItemsCount();
+            });
+
+
+            
+
+
+        });
+
+    </script>
+}

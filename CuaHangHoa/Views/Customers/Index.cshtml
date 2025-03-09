@@ -1,0 +1,239 @@
+﻿@model CuaHangHoa.ViewModels.UserListViewModel
+@using Microsoft.AspNetCore.Identity
+@inject UserManager<CuaHangHoa.Models.User> UserManager
+@inject SignInManager<CuaHangHoa.Models.User> SignInManager
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var isAdmin = await UserManager.IsInRoleAsync(await UserManager.GetUserAsync(User), "Admin");
+}
+@{
+    var successMessage = TempData["SuccessMessage"];
+    if (successMessage != null)
+    {
+        <div class="alert alert-success" id="successMessage">
+            @successMessage
+        </div>
+        <script>
+            // Đợi 3 giây rồi ẩn thông báo
+            setTimeout(function () {
+                var messageDiv = document.getElementById("successMessage");
+                if (messageDiv) {
+                    messageDiv.style.display = "none";
+                }
+            }, 3000);
+        </script>
+    }
+}
+
+<style>
+    .pagination {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        margin-top: 20px;
+    }
+
+        .pagination a {
+            padding: 8px 16px;
+            text-decoration: none;
+            background-color: #f1f1f1;
+            border: 1px solid #ddd;
+            color: #000;
+        }
+
+            .pagination a:hover {
+                background-color: #ddd;
+            }
+
+        .pagination .current-page {
+            font-weight: bold;
+            background-color: #000;
+            color: white;
+        }
+
+    .search-bar-container {
+        display: flex;
+        justify-content: right;
+        margin-bottom: 15px;
+    }
+
+    .search-bar {
+        display: flex;
+        gap: 10px;
+    }
+
+        .search-bar button {
+            padding: 8px 16px;
+            border: none;
+            background-color: #000;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+    #search-box {
+        width: 100%;
+        padding: 8px 12px;
+        font-size: 14px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+
+    .search-suggestions {
+        border: 1px solid #ddd;
+        background-color: #fff;
+        position: absolute;
+        top: 40px;
+        left: 0;
+        width: 100%;
+        max-height: 200px;
+        overflow-y: auto;
+        z-index: 9999;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .search-suggestions .suggestion-item {
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .search-suggestions .suggestion-item:hover {
+        background-color: #f1f1f1;
+    }
+
+    .search-suggestions .suggestion-item:active {
+        background-color: #ddd;
+    }
+
+</style>
+
+<div class="myaccount-content">
+    <h3>Danh sách khách hàng</h3>
+    <div class="account-details-form">
+        <p>
+            <a asp-action="Create" class="btn flosun-button secondary-btn theme-color rounded-0">Thêm người dùng</a>                       
+        </p>
+        <div class="search-bar-container">
+            <form asp-action="Index" method="get" class="search-bar">
+                <input type="text" name="searchQuery" placeholder="Tìm kiếm khách hàng..." value="@Model.SearchQuery" id="search-box" autocomplete="off" />
+                <button type="submit" >Tìm</button>
+            </form>
+            <div id="search-suggestions" class="search-suggestions" style="display:none;"></div>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Email</th>
+                    <th>Họ</th>
+                    <th>Tên</th>
+                    <th>UserName</th>
+                    <th>Số điện thoại</th>
+                    <th>Tỉnh/Thành phố</th>
+                    <th>Ngày tạo</th>
+                    <th>Ngày khóa tài khoản</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in Model.Users)
+                {
+                    <tr>
+                        <td>@user.Email</td>
+                        <td>@user.LastName</td>
+                        <td>@user.FirstName</td>
+                        <td>@user.UserName</td>
+                        <td>@user.PhoneNumber</td>
+                        <td>@user.City</td>
+                        <td>@user.CreateTime.ToShortDateString()</td>
+                        <td>@user.DeletedAt</td>
+                        <td>
+                            @if (user.DeletedAt == null)
+                            {
+                                <a asp-action="Edit" asp-route-id="@user.Id">Sửa</a>
+                                if (isAdmin)
+                                {
+                                    <a asp-action="Delete" asp-route-id="@user.Id"> | Khóa tài khoản</a>
+                                }
+                            }
+                            else if (user.DeletedAt != null && isAdmin)
+                            {
+                                <form asp-action="Restore" asp-route-id="@user.Id" method="post" style="display:inline;">
+                                    <button type="submit" class="btn btn-link">Khôi phục</button>
+                                </form>
+                            }
+
+                        </td>
+                    </tr>
+                }
+                
+            </tbody>
+        </table>
+        <div class="pagination">
+            <!-- Liên kết đến trang trước -->
+            @if (Model.CurrentPage > 1)
+            {
+                <a asp-action="Index" asp-route-page="@(Model.CurrentPage - 1)">Trước</a>
+            }
+
+            <!-- Các liên kết đến các trang -->
+            @for (int i = 1; i <= Model.TotalPages; i++)
+            {
+                <a asp-action="Index" asp-route-page="@i" class="@(i == Model.CurrentPage ? "current-page" : "")">@i</a>
+            }
+
+            <!-- Liên kết đến trang sau -->
+            @if (Model.CurrentPage < Model.TotalPages)
+            {
+                <a asp-action="Index" asp-route-page="@(Model.CurrentPage + 1)">Sau</a>
+            }
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $("#search-box").on("input", function () {
+            var searchQuery = $(this).val();
+            if (searchQuery.length > 2) { // Tìm kiếm khi có ít nhất 3 ký tự
+                $.ajax({
+                    url: '@Url.Action("SearchSuggestions", "Customers")', // API tìm kiếm gợi ý
+                    data: { searchQuery: searchQuery },
+                    success: function (data) {
+                        if (data && data.length > 0) {
+                            var suggestionHtml = '';
+                            data.forEach(function (user) {
+                                // Kiểm tra nếu FirstName và LastName hợp lệ
+                                if (user.FirstName && user.LastName) {
+                                    suggestionHtml += '<div class="suggestion-item">' + user.FirstName + ' ' + user.LastName + '</div>';
+                                }
+                            });
+                            if (suggestionHtml) {
+                                $("#search-suggestions").html(suggestionHtml).show();
+                            } else {
+                                $("#search-suggestions").hide();
+                            }
+                        } else {
+                            $("#search-suggestions").hide(); // Không có gợi ý
+                        }
+                    },
+                    error: function () {
+                        $("#search-suggestions").hide(); // Ẩn gợi ý nếu có lỗi
+                    }
+                });
+            } else {
+                $("#search-suggestions").hide(); // Ẩn khi không đủ ký tự
+            }
+        });
+
+        // Khi người dùng chọn một gợi ý
+        $(document).on("click", ".suggestion-item", function () {
+            var suggestion = $(this).text();
+            $("#search-box").val(suggestion);  // Điền gợi ý vào ô tìm kiếm
+            $("#search-suggestions").hide();  // Ẩn gợi ý
+        });
+    });
+</script>
+
+
+

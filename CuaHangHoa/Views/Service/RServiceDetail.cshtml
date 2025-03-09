@@ -1,0 +1,61 @@
+﻿@model CuaHangHoa.ViewModels.DKDichVuViewModel
+
+@{
+    ViewData["Title"] = "RServiceDetail";
+    Layout = "~/Views/Shared/_Profile.cshtml";
+}
+
+<h2>Chi tiết đơn hàng dịch vụ</h2>
+
+<div class="card">
+    <div class="card-header">
+        <h3>@Model.TenDV</h3>
+    </div>
+    <div class="card-body">
+        <p><strong>Ngày Đăng Ký:</strong> @Model.NgayDangKy.ToShortDateString()</p>
+        <p><strong>Ngày Tổ Chức:</strong> @Model.NgayToChuc.ToShortDateString()</p>
+        <p><strong>Địa Chỉ Tổ Chức:</strong> @Model.DchiToChuc</p>
+        <p><strong>Ghi Chú:</strong> @Model.GhiChu</p>
+        <p>
+            <strong>Trạng Thái Đăng Ký:</strong>
+            @if (Model.TrangThaiDangKy == TrangThaiDK.DangXuLy)
+            {
+                <span>Đang Xử Lý</span>
+            }
+            else if (Model.TrangThaiDangKy == TrangThaiDK.DaHuy)
+            {
+                <span>Đã Hủy</span>
+            }
+            else if (Model.TrangThaiDangKy == TrangThaiDK.DaHoanThanh)
+            {
+                <span>Đã Hoàn Thành</span>
+            }
+            else
+            {
+                <span>Đã Xác Nhận</span>
+            }
+        </p>
+        <div class="service-image">            
+            <img src="~/images/DichVu/@Url.Content(@Model.Images)" alt="" class="product-image-1" width="150px" height="auto">
+        </div>
+        <!-- Hiển thị nút Hủy nếu trạng thái là Đang Xử Lý -->
+        @if (Model.TrangThaiDangKy == TrangThaiDK.DangXuLy)
+        {
+            <form asp-action="HuyDangKy" asp-controller="Service" method="post">
+                <input type="hidden" name="dangKyId" value="@Model.Id" />
+                @* <button type="submit" class="btn btn-danger">Hủy Đăng Ký</button> *@
+                <button type="submit" class=" btn flosun-button secondary-btn theme-color rounded-0">Hủy Đăng Ký</button>
+            </form>
+        }
+    </div>
+</div>
+@if (Model.TrangThaiDangKy == TrangThaiDK.DaHoanThanh)
+{
+    <a href="@Url.Action("PXuatDetail", "Service", new { id = Model.Id })"
+       class="btn flosun-button secondary-btn theme-color rounded-0">
+        Xem phiếu xuất
+    </a>
+}
+
+<a href="@Url.Action("RServiceList", "Service")" class="btn flosun-button secondary-btn theme-color rounded-0">Quay lại</a>
+

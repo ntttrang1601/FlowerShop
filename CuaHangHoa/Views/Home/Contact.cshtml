@@ -1,0 +1,151 @@
+﻿@model CuaHangHoa.Models.LienHe
+@{
+    ViewData["Title"] = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!doctype html>
+<html class="no-js" lang="en">
+<body>
+    <!-- Breadcrumb Area Start Here -->
+    <div class="breadcrumbs-area position-relative">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="breadcrumb-content position-relative section-content">
+                        <h3 class="title-3">Liên hệ với chúng tôi</h3>
+                        <ul>
+                            <li><a href="@Url.Action("Index","Home")">Trang chủ</a></li>
+                            <li>Liên hệ</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb Area End Here -->
+    <!-- Contact Us Area Start Here -->
+    <div class="contact-us-area mt-no-text">
+        <div class="container custom-area">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-custom">
+                    <div class="contact-info-item">
+                        <div class="con-info-icon">
+                            <i class="lnr lnr-map-marker"></i>
+                        </div>
+                        <div class="con-info-txt">
+                            <h4>Địa chỉ</h4>
+                            <p>đường 30/4, Hưng Lợi, Ninh Kiều, Cần Thơ</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-custom">
+                    <div class="contact-info-item">
+                        <div class="con-info-icon">
+                            <i class="lnr lnr-smartphone"></i>
+                        </div>
+                        <div class="con-info-txt">
+                            <h4>Điện thoại</h4>
+                            <p>0123 456 789</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-custom text-align-center">
+                    <div class="contact-info-item">
+                        <div class="con-info-icon">
+                            <i class="lnr lnr-envelope"></i>
+                        </div>
+                        <div class="con-info-txt">
+                            <h4>Email</h4>
+                            <p>thuytrangnguyenthibt16@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="successMessage" class="alert alert-success" style="display:none;">
+                Gửi thông tin liên hệ thành công!
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-custom">                    
+                    <form asp-action="SubmitContactForm" method="post" id="contactForm">
+                        <div class="comment-box mt-5">
+                            <h5 class="text-uppercase">Liên hệ với chúng tôi</h5>
+                            <div class="row mt-3">
+                                <div class="col-md-6 col-custom">
+                                    <div class="input-item mb-4">
+                                        @* <input class="border-0 rounded-0 w-100 input-area name gray-bg" type="text" name="con_name" id="con_name" placeholder="Name"> *@
+                                        <label for="HoTen">Họ tên</label>
+                                        <input type="text" id="HoTen" name="HoTen" class="border-0 rounded-0 w-100 input-area name gray-bg" required  />
+                                    </div>                                    
+                                </div>
+                                <div class="col-md-6 col-custom">
+                                    <div class="input-item mb-4">
+                                        @* <input class="border-0 rounded-0 w-100 input-area email gray-bg" type="email" name="con_email" id="con_email" placeholder="Email"> *@
+                                        <label for="SDT">Số điện thoại</label>
+                                        <input type="text" id="SDT" name="SDT" class="border-0 rounded-0 w-100 input-area email gray-bg" required />
+                                    </div>
+                                </div>
+                                <div class="col-12 col-custom">
+                                    <div class="input-item mb-4">
+                                        @* <input class="border-0 rounded-0 w-100 input-area email gray-bg" type="text" name="con_content" id="con_content" placeholder="Subject"> *@
+                                        <label for="MatHang">Mặt hàng quan tâm</label>
+                                        <input type="text" id="MatHang" name="MatHang" class="border-0 rounded-0 w-100 input-area email gray-bg" />
+                                    </div>
+                                </div>
+                                <div class="col-12 col-custom">
+                                    <div class="input-item mb-4">
+                                        @* <textarea cols="30" rows="5" class="border-0 rounded-0 w-100 custom-textarea input-area gray-bg" name="con_message" id="con_message" placeholder="Message"></textarea> *@
+                                        <label for="ThongDiep">Bạn cần tư vấn gì?</label>
+                                        <textarea id="ThongDiep" name="ThongDiep" cols="30" rows="5" class="border-0 rounded-0 w-100 custom-textarea input-area gray-bg"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-custom mt-40">
+                                    <button type="submit" id="submit" name="submit" class="btn flosun-button secondary-btn theme-color rounded-0">Gửi </button>
+                                    
+                                </div>
+                                <p class="col-8 col-custom form-message mb-0"></p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Us Area End Here -->
+    <!-- jQuery and Bootstrap JS -->
+
+</body>
+
+<!-- Mirrored from htmldemo.net/flosun/flosun/contact-us.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 Dec 2022 05:03:27 GMT -->
+</html>
+@section Scripts {
+<script>
+        $(document).ready(function () {
+            $('#contactForm').submit(function (e) {
+                e.preventDefault(); // Ngăn chặn hành động gửi form mặc định
+
+                $.ajax({
+                    url: '@Url.Action("SubmitContactForm", "Home")', // URL đến action
+                    type: 'POST',
+                    data: $(this).serialize(),
+                    success: function (response) {
+                        if (response.success) {
+                            // Hiện thông báo thành công và chuyển hướng khi bấm OK
+                            alert("Gửi thông tin thành công!");
+                            window.location.href = '@Url.Action("Index", "Home")';
+                        } else {
+                            // Hiện thông báo lỗi nếu có
+                            alert(response.message);
+                        }
+                    },
+                    error: function () {
+                        alert("Có lỗi xảy ra khi gửi thông tin. Vui lòng thử lại.");
+                    }
+                });
+            });
+        });
+
+</script>
+}
+

@@ -1,0 +1,49 @@
+﻿@model CuaHangHoa.Models.NhaCungCap
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="myaccount-content">
+    <h3>Thêm nhà cung cấp </h3>
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Ten" class="control-label">Tên</label>
+                    <input asp-for="Ten" class="form-control" />
+                    <span asp-validation-for="Ten" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Dchi" class="control-label">Địa chỉ</label>
+                    <input asp-for="Dchi" class="form-control" />
+                    <span asp-validation-for="Dchi" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Sdt" class="control-label">Số điện thoại</label>
+                    <input asp-for="Sdt" class="form-control" />
+                    <span asp-validation-for="Sdt" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label">Email</label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Mota" class="control-label">Mô tả</label>
+                    <input asp-for="Mota" class="form-control" />
+                    <span asp-validation-for="Mota" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Lưu" class="btn flosun-button secondary-btn theme-color rounded-0" />
+                    <a asp-action="Index" class="btn flosun-button secondary-btn theme-color rounded-0">Quay lại</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+

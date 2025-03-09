@@ -1,0 +1,52 @@
+﻿@model IEnumerable<dynamic>
+
+@{
+    ViewData["Title"] = "DoanhThuTheoThang";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var labels = Newtonsoft.Json.JsonConvert.SerializeObject(Model.Select(x => x.Thang));
+    var data = Newtonsoft.Json.JsonConvert.SerializeObject(Model.Select(x => x.TongDoanhThu));
+}
+
+<div class="container">
+    <h3 class="title-1 text-center">Doanh Thu Theo Tháng</h3>
+
+    <!-- Form chọn năm -->
+    <form method="get" asp-action="DoanhThuTheoThang">
+        <label for="nam">Chọn Năm:</label>
+        <select id="nam" name="year" asp-items="ViewBag.Years" onchange="this.form.submit()">
+            <!-- Dùng asp-items để binding với SelectList -->
+        </select>
+    </form>
+
+    <canvas id="doanhThuChart" width="800" height="400"></canvas>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        var labels = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.Select(x => x.Thang)));
+        var data = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.Select(x => x.TongDoanhThu)));
+
+        var ctx = document.getElementById('doanhThuChart').getContext('2d');
+        var doanhThuChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Doanh thu (VND)',
+                    data: data,
+                    backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+}

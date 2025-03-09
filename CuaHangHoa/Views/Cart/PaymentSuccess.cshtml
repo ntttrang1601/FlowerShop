@@ -1,0 +1,38 @@
+﻿@{
+	ViewData["Title"] = "PaymentSuccess";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- breadcrumb -->
+<div class="breadcrumbs-area position-relative">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="breadcrumb-content position-relative section-content">
+                    <h3 class="title-3">Thanh toán thành công</h3>
+                    <ul>
+                        <li><a href="@Url.Action("Index","Home")">Trang chủ</a></li>
+                        <li>Thanh toán thành công</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8 text-center py-5">
+            <h2>ĐẶT HÀNG THÀNH CÔNG</h2>
+            <p class="mt-3">Cảm ơn bạn vì đã tin tưởng mua sắm tại FloSunShop</p>
+            <div class="mt-4">
+                @Html.ActionLink("Xem đơn hàng của tôi", "OrderList", "User", null, new { @class = "btn flosun-button secondary-btn theme-color rounded-0 mx-2" })
+                @Html.ActionLink("Tiếp tục mua sắm", "Index", "Home", null, new { @class = "btn flosun-button secondary-btn theme-color rounded-0 mx-2" })
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

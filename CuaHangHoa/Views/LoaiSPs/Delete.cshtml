@@ -1,0 +1,31 @@
+﻿@model CuaHangHoa.Models.LoaiSP
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="myaccount-content">
+    <div class="account-details-form">
+        <h3>Bạn có chắc muốn xóa loại sản phẩm này không?</h3>
+        <div>
+            <dl class="row">
+                <dt class="col-sm-2">
+                    Tên loại
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.TenLoai)
+                </dd>
+            </dl>
+
+            <form asp-action="Delete">
+                <input type="hidden" asp-for="Id" />
+                <input class="btn flosun-button secondary-btn theme-color rounded-0" type="submit" value="Xóa ngay" /> |
+                <a class="btn flosun-button secondary-btn theme-color rounded-0" asp-action="Index">Quay lại</a>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+

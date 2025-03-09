@@ -1,0 +1,93 @@
+﻿@using CuaHangHoa.ViewModels;
+@model DKDichVuViewModel
+@{
+    ViewData["Title"] = "RegisterService";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!doctype html>
+<html class="no-js" lang="en">
+
+
+<!-- Mirrored from htmldemo.net/flosun/flosun/register.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 Dec 2022 05:03:27 GMT -->
+
+<body>
+
+    <!-- Breadcrumb Area Start Here -->
+    <div class="breadcrumbs-area position-relative">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="breadcrumb-content position-relative section-content">
+                        <h3 class="title-3">Login-Register</h3>
+                        <ul>
+                            <li><a href="@Url.Action("Index", "Home")">Trang chủ</a></li>
+                            <li>Đăng ký dịch vụ</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb Area End Here -->
+    <!-- Register Area Start Here -->
+    <div class="login-register-area mt-no-text">
+        <div class="container container-default-2 custom-area">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-custom">
+                    <div class="login-register-wrapper">
+                        <div class="section-content text-center mb-5">
+                            <h2 class="title-4 mb-2">Đăng ký dịch vụ @Model.TenDV</h2>                            
+                            <p class="desc-content">Sau khi khách hàng đăng ký sẽ có nhân viên liên hệ tư vấn.</p>
+                        </div>    
+                        <div class="service-image">                            
+                            <img src="~/images/DichVu/@Url.Content(@Model.Images)" alt="" class="product-image-1 w-100" width="300px" height="350px">
+                        </div>
+                        <form asp-action="RegisterService" method="post">
+                            @Html.AntiForgeryToken()
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <input type="hidden" asp-for="Images" />
+                            <input type="hidden" asp-for="Id" />
+                            <input type="hidden" asp-for="DichVuId" />
+                            <input type="hidden" asp-for="TenDV" />
+                            <input type="hidden" asp-for="NgayDangKy" />
+                            <input type="hidden" asp-for="TrangThaiDangKy" />
+                            @* <div class="form-group">
+                                <label asp-for="NgayToChuc">Ngày Tổ Chức</label>
+                                <input asp-for="NgayToChuc" id="NgayToChuc" name="NgayToChuc" class="form-control" type="date" />
+                                <span asp-validation-for="NgayToChuc" class="text-danger"></span>
+                            </div> *@
+                            <div class="form-group">
+                                <label asp-for="NgayToChuc">Ngày Tổ Chức</label>
+                                <input asp-for="NgayToChuc" id="NgayToChuc" name="NgayToChuc"
+                                       class="form-control" type="date"
+                                       min="@DateTime.Now.AddDays(3).ToString("yyyy-MM-dd")" />
+                                <span asp-validation-for="NgayToChuc" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="DchiToChuc">Địa Chỉ Tổ Chức</label>
+                                <input asp-for="DchiToChuc" id="DchiToChuc" name="DchiToChuc" class="form-control" />
+                                <span asp-validation-for="DchiToChuc" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="GhiChu">Ghi Chú</label>
+                                <textarea asp-for="GhiChu" id="GhiChu" name="GhiChu" class="form-control"></textarea>
+                                <span asp-validation-for="GhiChu" class="text-danger"></span>
+                            </div>                            
+                            <button type="submit" class="btn flosun-button secondary-btn theme-color rounded-0">Đăng ký</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Register Area End Here -->
+
+</body>
+
+
+<!-- Mirrored from htmldemo.net/flosun/flosun/register.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 Dec 2022 05:03:27 GMT -->
+</html>
+

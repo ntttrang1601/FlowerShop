@@ -1,0 +1,65 @@
+﻿@model IEnumerable<CuaHangHoa.Models.NhaCungCap>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="myaccount-content">
+    <h3>Danh sách nhà cung cấp</h3>
+    <div class="account-details-form">
+        <p>
+            <a asp-action="Create" class="btn flosun-button secondary-btn theme-color rounded-0">Thêm nhà cung cấp</a>
+        </p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        Tên
+                    </th>
+                    <th>
+                        Địa chỉ
+                    </th>
+                    <th>
+                        Số điện thoại
+                    </th>
+                    <th>
+                        Email
+                    </th>
+                    <th>
+                        Mô tả
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Ten)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Dchi)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Sdt)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Email)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Mota)
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Id">Sửa</a> |
+                            @* <a asp-action="Details" asp-route-id="@item.Id">Chi tiết</a> | *@
+                            <a asp-action="Delete" asp-route-id="@item.Id">Xóa</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

@@ -1,0 +1,85 @@
+﻿@model CuaHangHoa.ViewModels.PXSPTonKhoListViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .pagination {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+        .pagination a {
+            padding: 8px 16px;
+            text-decoration: none;
+            background-color: #f1f1f1;
+            border: 1px solid #ddd;
+            color: #000;
+        }
+
+            .pagination a:hover {
+                background-color: #ddd;
+            }
+
+        .pagination .current-page {
+            font-weight: bold;
+            background-color: #000;
+            color: white;
+        }
+
+</style>
+<div class="myaccount-content">
+    <h3>Danh sách phiếu xuất tồn kho</h3>
+    <div class="account-details-form">
+        <a href="@Url.Action("Create", "PXSPTonKho")" class="btn flosun-button secondary-btn theme-color rounded-0">Thêm phiếu xuất tồn kho</a>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nhân viên</th>
+                <th>Tổng số lượng</th>
+                <th>Ngày xuất</th>
+                <th>Ghi chú</th>
+                <th>Chi tiết</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var phieu in Model.PXSPTonKhos)
+            {
+                <tr>
+                    <td>@phieu.Staff?.FirstName @phieu.Staff?.LastName</td>
+                    <td>@phieu.TongSoLuong</td>
+                    <td>@phieu.NgayXuat.ToString("dd/MM/yyyy")</td>
+                    <td>@phieu.GhiChu</td>
+                    <td><a href="@Url.Action("Details", "PXSPTonKho", new { id = phieu.Id })">Xem chi tiết</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <!-- Phân trang -->
+    <div class="pagination">
+        @if (Model.CurrentPage > 1)
+        {
+            <a href="@Url.Action("Index", new { page = Model.CurrentPage - 1 })">Trước</a>
+        }
+
+        @for (int i = 1; i <= Model.TotalPages; i++)
+        {
+            <a href="@Url.Action("Index", new { page = i })" class="@(i == Model.CurrentPage ? "current-page" : "")">@i</a>
+        }
+
+        @if (Model.CurrentPage < Model.TotalPages)
+        {
+            <a href="@Url.Action("Index", new { page = Model.CurrentPage + 1 })">Sau</a>
+        }
+    </div>
+    <!-- Hiển thị phân trang -->
+    
+</div>
+
+
+
+
+

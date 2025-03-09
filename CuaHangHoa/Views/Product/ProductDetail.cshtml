@@ -1,0 +1,267 @@
+﻿@model CuaHangHoa.Models.SanPham
+@{
+    ViewData["Title"] = "ProductDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .old-price {
+        text-decoration: line-through;
+        color: #a0a0a0;
+        margin-right: 10px;
+        font-size: 14px;
+    }
+
+    .regular-price {
+        color: #e60000;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+</style>
+<!doctype html>
+<html class="no-js" lang="en">
+
+
+<!-- Mirrored from htmldemo.net/flosun/flosun/product-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 Dec 2022 05:03:18 GMT -->
+<body>
+
+    <!-- Breadcrumb Area Start Here -->
+    <div class="breadcrumbs-area position-relative">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="breadcrumb-content position-relative section-content">
+                        <h3 class="title-3">Chi tiết sản phẩm</h3>
+                        <ul>
+                            <li><a href="@Url.Action("Index", "Home")">Trang chủ</a></li>
+                            <li>Chi tiết sản phẩm</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb Area End Here -->
+    <!-- Single Product Main Area Start -->
+    <section class="single-product-main-area">
+        <div class="container container-default custom-area">
+            <div class="row">
+                <div class="col-lg-5 offset-lg-0 col-md-8 offset-md-2 col-custom">
+                    <div class="product-details-img">
+                        <div class="single-product-img swiper-container gallery-top popup-gallery">
+                            <div class="swiper-wrapper">
+                                @foreach (var item in Model.Hinhs)
+                                {
+                                    <div class="swiper-slide">
+                                        <a class="w-100" href="#">
+                                            <img class="w-100" src="~/images/SanPham/@item.Url" alt="Product">
+                                        </a>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                        <div class="single-product-thumb swiper-container gallery-thumbs">
+                            <div class="swiper-wrapper">
+                                @foreach (var item in Model.Hinhs)
+                                {
+                                    <div class="swiper-slide">
+                                        <img class="w-100" src="~/images/SanPham/@item.Url" alt="Product">
+                                    </div>
+                                }
+
+                            </div>
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next swiper-button-white"><i class="lnr lnr-arrow-right"></i></div>
+                            <div class="swiper-button-prev swiper-button-white"><i class="lnr lnr-arrow-left"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-custom">
+                    <div class="product-summery position-relative">
+                        <div class="product-head mb-3">
+                            <h2 class="product-title">@Model.Ten</h2>
+                        </div>
+                        <div class="price-box mb-2">
+                            @if (Model.PhanTramGiamGia > 0)
+                            {
+                                <!-- Giá cũ -->
+                                <span class="old-price" style="text-decoration: line-through; color: #a0a0a0;">
+                                    @Model.Dongia.ToString("#,##") đ
+                                </span>
+
+                                <!-- Giá giảm -->
+                                <span class="regular-price" style="color: #e60000; font-weight: bold;">
+                                    @*  @(Model.Dongia * (1 - Model.PhanTramGiamGia / 100)).ToString("#,##") đ *@
+                                    @(double.Round(Model.Dongia * (1 - (double)Model.PhanTramGiamGia / 100), 0).ToString("#,##") + " đ")
+
+                                </span>
+                            }
+                            else
+                            {
+                                <!-- Chỉ hiển thị giá gốc -->
+                                <span class="regular-price" style="color: #e60000; font-weight: bold;">
+                                    @Model.Dongia.ToString("#,##") đ
+                                </span>
+                            }
+                        </div>
+                        <p class="desc-content mb-5">@Model.Mota</p>
+                        <div class="quantity-with_btn mb-5">
+                            @* <div class="quantity">
+                            <div class="cart-plus-minus">
+                            <input class="cart-plus-minus-box" value="1" type="number" id="num-product">
+                            <div class="btn-num-product-down">-</div>
+                            <div class="btn-num-product-up">+</div>
+                            </div>
+                            </div> *@
+                            <div class="quantity">
+                                <div class="wrap-num-product">
+                                    <div class="btn-num-product-down">
+                                        <i class="fa fa-minus"></i>
+                                    </div>
+
+                                    <input class="num-product" data-max-quantity="@Model.Soluongkho" min="1" type="number" value="1">
+
+                                    <div class="btn-num-product-up">
+                                        <i class="fa fa-plus"></i>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            @*  <div class="add-to_cart" id="addToCart">
+                            <a class="btn product-cart button-icon flosun-button dark-btn" href="cart.html">Add to cart</a>
+                            </div> *@
+                            <button id="addToCart" class="btn product-cart button-icon flosun-button dark-btn">
+                                Thêm vào giỏ hàng
+                            </button>
+                        </div>
+                        @* <div class="p-t-33">
+                        <div class="size-204 flex-w flex-m respon6-next d-flex justify-content-center">
+                        <div class="wrap-num-product flex-w m-tb-10">
+                        <div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
+                        <i class="fs-16 zmdi zmdi-minus"></i>
+                        </div>
+
+                        <input class="mtext-104 cl3 txt-center num-product" type="number" name="num-product" value="1">
+
+                        <div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
+                        <i class="fs-16 zmdi zmdi-plus"></i>
+                        </div>
+                        </div>
+                        <button id="addToCart" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail">
+                        Thêm vào giỏ hàng
+                        </button>
+                        </div>
+                        </div> *@
+                        <div class="social-share mb-4">
+                            <span>Chia sẻ :</span>
+                            <a href="#"><i class="fa fa-facebook-square facebook-color"></i></a>
+                            <a href="#"><i class="fa fa-twitter-square twitter-color"></i></a>
+                            <a href="#"><i class="fa fa-linkedin-square linkedin-color"></i></a>
+                            <a href="#"><i class="fa fa-pinterest-square pinterest-color"></i></a>
+                        </div>
+                        <div class="payment">
+                            <a href="#"><img class="border" src="~/images/payment/payment-icon.png" alt="Payment"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Single Product Main Area End -->
+
+</body>
+
+
+<!-- Mirrored from htmldemo.net/flosun/flosun/product-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 Dec 2022 05:03:25 GMT -->
+</html>
+
+
+
+@* @section Scripts {
+    <script>
+        $(document).ready(function () {
+            $("#addToCart").click(function () {
+                var sanphamId = @Model.Id; // Thay thế <sản phẩm ID> bằng mã sản phẩm thích hợp
+                var sl = parseInt($(".cart-plus-minus-box").val());
+
+                $.ajax({
+                    url: "/Cart/AddToCart",
+                    type: "POST",
+                    data: {
+                        sanphamId: sanphamId,
+                        sl: sl
+                    },
+                    success: function () {
+                        // Cập nhật số lượng sản phẩm trong giỏ hàng
+                        $.get("/Cart/CountCartItem", function (res) {
+                            $(".cart-item_count").text(res);
+                        });
+                        // Hiển thị thông báo thành công
+                        alert("Sản phẩm đã được thêm vào giỏ hàng");
+                    },
+                    error: function (err) {
+                        if (err.status == 401) {
+                            // Nếu chưa đăng nhập, chuyển hướng đến trang đăng nhập
+                            window.location.replace("/Account/Login");
+                        } else {
+                            // Xảy ra lỗi khác, hiển thị thông báo lỗi
+                            alert(err.responseText);
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+}
+ *@
+
+@section Scripts {
+    <script>
+        $('header').addClass('header-v4')
+
+        $(".num-product").on('input', function () {
+            var value = $(this).val();
+            if (value < 1) {
+                $(this).val(1);
+            }
+        });
+
+        $('.btn-num-product-down').on('click', function () {
+            var numProduct = Number($(this).next().val());
+            if (numProduct > 1) {
+                $(this).next().val(numProduct - 1);
+            }
+        });
+
+        $('.btn-num-product-up').on('click', function () {
+            var numProduct = Number($(this).prev().val());
+            var maxQuantity = Number($(this).prev().data("max-quantity")); // Số lượng tối đa cho phép
+
+            if (numProduct >= maxQuantity) {
+                alert("Số lượng sản phẩm vượt quá số lượng trong kho!");
+                return;
+            }
+
+            $(this).prev().val(numProduct + 1);
+        });
+
+        $("#addToCart").click(function () {
+            var numProduct = Number($('.num-product').val());
+            var productId = @Model.Id
+                    var data = { sanphamId: productId, sl: numProduct }
+
+            $.post('/Cart/AddToCart', data, () => {
+                alert("Sản phẩm đã được thêm vào giỏ hàng!");
+                $.get("/Cart/CountCartItem", function (res) {
+                    $(".cart-item_count").text(res);
+                })
+            }).fail((err) => {
+                if (err.status == 401) {
+                    window.location.replace("/Account/Login")
+                }
+                else alert("Lỗi khi thêm sản phẩm vào giỏ hàng!");
+            })
+        })
+    </script>
+}

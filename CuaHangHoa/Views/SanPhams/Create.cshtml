@@ -1,0 +1,114 @@
+﻿@model CuaHangHoa.Models.SanPham
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="myaccount-content">
+    <h3>Tạo sản phẩm</h3>
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Ten" class="control-label">Tên</label>
+                    <input asp-for="Ten" class="form-control" />
+                    <span asp-validation-for="Ten" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Mota" class="control-label">Mô tả</label>
+                    <input asp-for="Mota" class="form-control" />
+                    <span asp-validation-for="Mota" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Donvitinh" class="control-label">Đơn vị tính</label>
+                    <input asp-for="Donvitinh" class="form-control" />
+                    <span asp-validation-for="Donvitinh" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Dongia" class="control-label">Đơn giá</label>
+                    <input asp-for="Dongia" class="form-control" />
+                    <span asp-validation-for="Dongia" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PhanTramGiamGia" class="control-label">Phần trăm giảm giá</label>
+                    <input asp-for="PhanTramGiamGia" class="form-control" />
+                    <span asp-validation-for="PhanTramGiamGia" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="GiaSauGiamGia" class="control-label">Giá giảm</label>
+                    <input asp-for="GiaSauGiamGia" class="form-control" />
+                    <span asp-validation-for="GiaSauGiamGia" class="text-danger"></span>
+                </div>
+                @* <div class="form-group">
+                <label asp-for="Soluongkho" class="control-label">Số lượng</label>
+                <input asp-for="Soluongkho" class="form-control" />
+                <span asp-validation-for="Soluongkho" class="text-danger"></span>
+                </div> *@
+                @* <div class="form-group form-check">
+                <label class="form-check-label">
+                <input class="form-check-input custom-checkbox" asp-for="Ngungban" type="hidden" style="display: inline-block; width: 16px; height: 16px; margin-right: 5px;" />
+                </label>
+                </div> *@
+                @* <div class="custom-control custom-checkbox">
+                <label class="custom-control-label">
+                <input type="checkbox" class="custom-control-input" asp-for="Ngungban" /> @Html.DisplayNameFor(model => model.Ngungban)
+                </label>
+                </div> *@
+                <div class="form-group">
+                    <label asp-for="LoaiSPId" class="control-label">Loại sản phẩm</label>
+                    <select asp-for="LoaiSPId" class="form-control" asp-items="ViewBag.LoaiSPId"></select>
+                </div>
+                @* <div class="form-group">
+                <label asp-for="NhaCungCapId" class="control-label">Nhà cung cấp</label>
+                <select asp-for="NhaCungCapId" class="form-control" asp-items="ViewBag.NhaCungCapId"></select>
+                </div> *@
+                <div class="form-group">
+                    <label asp-for="Hinhs" class="control-label">Hình ảnh</label>
+                    <div class="d-flex list-Pic overflow-auto"></div>
+                    <input type="file" name="files" id="fileInput" multiple class="mt-3">
+                </div>
+                <hr />
+                <div class="form-group">
+                    <input type="submit" value="Tạo" class="btn flosun-button secondary-btn theme-color rounded-0" />
+                    <a asp-action="Index" class="btn flosun-button secondary-btn theme-color rounded-0">Quay lại</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        var preview = $('.list-Pic');
+        $('#fileInput').on('change', function () {
+            var files = this.files;
+            preview.children().remove();
+
+            for (var i = 0; i < files.length; i++) {
+                var file = files[i];
+                if (!file.type.startsWith('image/')) {
+                    continue;
+                }
+
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    var img = document.createElement('img');
+                    img.width = 150
+                    img.height = 150
+                    img.src = e.target.result
+                    preview.append(img)
+                };
+                reader.readAsDataURL(file);
+            }
+
+        })
+    </script>
+}
+

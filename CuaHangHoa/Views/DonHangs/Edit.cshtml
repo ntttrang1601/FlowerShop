@@ -1,0 +1,106 @@
+﻿@model CuaHangHoa.Models.DonHang
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="myaccount-content">
+    <h3>Chỉnh sửa đơn hàng</h3>
+    <div class="account-details-form">
+        <div class="row">
+            <div class="col-md-4">
+                <form asp-action="Edit">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="Id" />
+                    @* <div class="form-group">
+                        <label asp-for="UserId" class="control-label"></label>
+                        <input asp-for="UserId" class="form-control" readonly />
+                        <span asp-validation-for="UserId" class="text-danger"></span>
+                    </div> *@
+                    <div class="form-group">
+                        <label asp-for="UserId" class="control-label">Tên</label>
+                        <!-- Hiển thị tên người dùng từ ViewBag -->
+                        <input value="@ViewBag.UserName" class="form-control" readonly />
+                        <input type="hidden" asp-for="UserId" /> <!-- Giữ lại ID để lưu -->
+                        <span asp-validation-for="UserId" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        Ngày đặt hàng
+                        <input asp-for="NgayTao" class="form-control" readonly />
+                        <span asp-validation-for="NgayTao" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        Tổng cộng
+                        <input asp-for="TongTien" class="form-control" readonly />
+                        <span asp-validation-for="TongTien" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        Địa chỉ giao hàng
+                        <input asp-for="DchiGiaoHang" class="form-control" readonly />
+                        <span asp-validation-for="DchiGiaoHang" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        Người nhận
+                        <input asp-for="NguoiNhan" class="form-control" readonly />
+                        <span asp-validation-for="NguoiNhan" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        Phí vận chuyển
+                        <input asp-for="PhiVanChuyen" class="form-control" />
+                        <span asp-validation-for="PhiVanChuyen" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        Phương thức thanh toán
+                        <select asp-for="TenCachThanhToan" class="form-control" asp-items="ViewBag.TenCachThanhToan"></select>
+                        <span asp-validation-for="TenCachThanhToan" class="text-danger"></span>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            @* <input class="form-check-input" asp-for="DaThanhToan" /> Xác nhận đã thanh toán *@
+                            <input class="form-check-input custom-checkbox" asp-for="DaThanhToan" style="display: inline-block; width: 16px; height: 16px; margin-right: 5px;" /> Xác nhận đã thanh toán
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        Trạng thái đơn hàng
+                        <select asp-for="TenTrangThai" class="form-control" asp-items="ViewBag.TenTrangThai"></select>
+                        <span asp-validation-for="TenTrangThai" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input class="btn flosun-button secondary-btn theme-color rounded-0" type="submit" value="Lưu" />
+                        <a class="btn flosun-button secondary-btn theme-color rounded-0" asp-action="Index">Quay lại</a>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <table class="">
+                    <tr class="">
+                        <th class="column-1">Sản phẩm</th>
+                        <th class="column-2"></th>
+                    </tr>
+                    @foreach (var item in Model.ChiTietDHs)
+                    {
+                        <tr class="table_row">
+                            <td class="column-1">
+                                <div class="how-itemcart1">
+                                    <img src="~/images/SanPham/@item.SanPham.Hinhs.First().Url" alt="IMG" width="50px" height="50px">
+                                </div>
+                            </td>
+                            <td class="column-2 pl-2">@item.SanPham.Ten</td>
+                        </tr>
+                    }
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+

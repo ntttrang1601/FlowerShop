@@ -1,0 +1,164 @@
+﻿@model CuaHangHoa.ViewModels.DangKyDichVuListViewModel
+@using Microsoft.AspNetCore.Identity
+@inject UserManager<CuaHangHoa.Models.User> UserManager
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    var currentUser = await UserManager.GetUserAsync(User);
+    bool isAdmin = currentUser != null && await UserManager.IsInRoleAsync(currentUser, "Admin");
+}
+<style>
+    .pagination {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        margin-top: 20px;
+    }
+
+        .pagination a {
+            padding: 8px 16px;
+            text-decoration: none;
+            background-color: #f1f1f1;
+            border: 1px solid #ddd;
+            color: #000;
+        }
+
+            .pagination a:hover {
+                background-color: #ddd;
+            }
+
+        .pagination .current-page {
+            font-weight: bold;
+            background-color: #000;
+            color: white;
+        }
+
+</style>
+<div class="myaccount-content">
+    <h3>Tất cả đơn hàng dịch vụ</h3>
+    <div class="account-details-form">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        Dịch vụ
+                    </th>
+                    <th>
+                        Người đặt
+                    </th>
+                    <th>
+                        Số điện thoại
+                    </th>
+                    <th>
+                        Ngày đăng ký
+                    </th>
+                    <th>
+                        Ngày tổ chức
+                    </th>
+                    <th>
+                        Trạng thái đăng ký
+                    </th>
+                    <th>
+                        Địa chỉ tổ chức
+                    </th>
+                    <th>
+                        Ghi chú
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.DangKyDichVus)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DichVu.TenDV)
+                        </td>
+                        <td>
+                            @item.User.LastName @item.User.FirstName (@item.User.UserName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.User.PhoneNumber)
+                        </td>
+                        <td>
+                            @* @Html.DisplayFor(modelItem => item.NgayDangKy) *@
+                            @item.NgayDangKy.ToShortDateString()
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NgayToChuc)
+                            @item.NgayToChuc.ToShortDateString()
+                        </td>                        
+                        @* <td>
+                            @Html.DisplayFor(modelItem => item.TrangThaiDangKy)
+                        </td> *@
+                        <td>
+                            @if (item.TrangThaiDangKy== TrangThaiDK.DangXuLy)
+                            {
+                                <span>Đang xử lý</span>
+                            }                            
+                            else if (item.TrangThaiDangKy == TrangThaiDK.DaXacNhan)
+                            {
+                                <span>Đã xác nhận</span>
+                            }
+                            else if (item.TrangThaiDangKy == TrangThaiDK.DaHoanThanh)
+                            {
+                                <span>Đã hoàn thành</span>
+                            }
+                            else 
+                            {
+                                <span>Đã hủy</span>
+                            }
+                            
+                        </td>                        
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DchiToChuc)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.GhiChu)
+                        </td>
+                        <td>
+                            @if (item.TrangThaiDangKy == TrangThaiDK.DangXuLy)
+                            {
+                                <a asp-action="Edit" asp-route-id="@item.Id">Sửa |</a>
+                            }
+
+                            <a asp-action="Details" asp-route-id="@item.Id">Chi tiết</a>
+
+                            @* Chỉ hiển thị nút Tạo Phiếu Xuất nếu trạng thái là DaXacNhan *@
+                            @if (item.TrangThaiDangKy == TrangThaiDK.DaXacNhan)
+                            {
+                                <a asp-action="CreatePhieuXuat" asp-controller="DangKyDichVus" asp-route-id="@item.Id">| Tạo Phiếu Xuất</a>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <!-- Phân trang -->
+        <div class="pagination">
+            <!-- Liên kết đến trang trước -->
+            @if (Model.CurrentPage > 1)
+            {
+                <a asp-action="Index" asp-route-page="@(Model.CurrentPage - 1)">Trước</a>
+            }
+
+            <!-- Các liên kết đến các trang -->
+            @for (int i = 1; i <= Model.TotalPages; i++)
+            {
+                <a asp-action="Index" asp-route-page="@i" class="@(i == Model.CurrentPage ? "current-page" : "")">@i</a>
+            }
+
+            <!-- Liên kết đến trang sau -->
+            @if (Model.CurrentPage < Model.TotalPages)
+            {
+                <a asp-action="Index" asp-route-page="@(Model.CurrentPage + 1)">Sau</a>
+            }
+        </div>
+    </div>
+</div>
+
+
+

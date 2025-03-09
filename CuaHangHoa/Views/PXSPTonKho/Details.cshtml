@@ -1,0 +1,65 @@
+﻿@model CuaHangHoa.Models.PXSPTonKho
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="myaccount-content">
+    <div class="account-details-form">
+        <h3>Chi tiết phiếu xuất tồn kho</h3>
+        <div>
+            <h4>Thông tin phiếu xuất hàng tồn</h4>
+            <dl class="row">
+                <dt class="col-sm-2">
+                    Người xuất
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Staff.LastName)
+                    @Html.DisplayFor(model => model.Staff.FirstName)
+                <dt class="col-sm-2">
+                    Ngày xuất
+                </dt>
+                <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.NgayXuat)
+                </dd>
+                <dt class="col-sm-2">
+                    Tổng số lượng
+                </dt>
+                <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.TongSoLuong)
+                </dd>
+                <dt class="col-sm-2">
+                    Ghi chú
+                </dt>
+                <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.GhiChu)
+                </dd>
+                </dd>
+            </dl>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Sản phẩm</th>
+                        <th>Số lượng</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.CTPXSPTonKhos)
+                    {
+                        <tr>
+                            <td>@item.SanPham?.Ten</td>
+                            <td>@item.SoLuong</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <a class="btn flosun-button secondary-btn theme-color rounded-0" asp-action="Index">Quay lại</a>
+    </div>
+</div>
+    
+
+
+

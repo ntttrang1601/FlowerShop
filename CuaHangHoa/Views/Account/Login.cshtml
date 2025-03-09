@@ -1,0 +1,123 @@
+﻿@using CuaHangHoa.ViewModels;
+@model LoginModel
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .btn-login-third {
+        border: 2px solid #000; /* Màu viền */
+        border-radius: 4px; /* Bo góc */
+        display: flex;
+        align-items: center; /* Căn giữa theo chiều dọc */
+        justify-content: center; /* Căn giữa theo chiều ngang */
+        padding: 4px 8px; /* Giảm padding để viền vừa với nội dung */
+        text-decoration: none;
+        color: #000;
+    }
+
+        .btn-login-third img {
+            margin-right: 8px; /* Khoảng cách giữa logo và chữ */
+        }
+
+    .single-input-item {
+        display: flex;
+        justify-content: center; /* Căn giữa theo chiều ngang */
+        align-items: center; /* Căn giữa theo chiều dọc, nếu cần */
+    }
+</style>
+<!doctype html>
+<html class="no-js" lang="en">
+
+
+<!-- Mirrored from htmldemo.net/flosun/flosun/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 Dec 2022 05:03:27 GMT -->
+
+<body>
+  <!-- Breadcrumb Area Start Here -->
+    <div class="breadcrumbs-area position-relative">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="breadcrumb-content position-relative section-content">
+                        <h3 class="title-3">Đăng nhập-Đăng ký</h3>
+                        <ul>
+                            <li><a href="@Url.Action("Index", "Home")">Trang chủ</a></li>
+                            <li>Đăng nhập-Đăng ký</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb Area End Here -->
+    <!-- Login Area Start Here -->
+    <div class="login-register-area mt-no-text">
+        <div class="container custom-area">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-custom">
+                    <div class="login-register-wrapper">
+                        <div class="section-content text-center mb-5">
+                            <h2 class="title-4 mb-2">Đăng nhập</h2>
+                            <p class="desc-content">Vui lòng sử dụng tài khoản đã đăng ký để đăng nhâp.</p>
+                        </div>
+                        <form asp-action="Login" method="post">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="single-input-item mb-3">
+                                <input asp-for="UserName" placeholder="Tên tài khoản">
+                                <span asp-validation-for="UserName" class="text-danger"></span>
+                            </div>
+                            <div class="single-input-item mb-3">
+                                <input asp-for="Password" placeholder="Mật khẩu">
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+                            @* <div class="single-input-item mb-3">
+                                <div class="login-reg-form-meta d-flex align-items-center justify-content-between">
+                                    <div class="remember-meta mb-3">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="rememberMe">
+                                            <label class="custom-control-label" for="rememberMe">Remember Me</label>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="forget-pwd mb-3">Forget Password?</a>
+                                </div>
+                            </div> *@
+                            
+                            @Html.ValidationMessage("ReCaptcha", new { @class = "text-danger" })
+                            <div class="single-input-item mb-3">
+                                <button type="submit" class="btn flosun-button secondary-btn theme-color rounded-0">Đăng nhập</button>
+                            </div>                           
+                            <div class="single-input-item mb-3">
+                                <a class="btn btn-login-third" asp-controller="Account" asp-action="GoogleLogin" asp-route-provider="Google">
+                                    <div class="btn flosun-button ">
+                                        <img src="https://lh3.googleusercontent.com/COxitqgJr1sJnIDe8-jiKhxDx1FrYbtRHKJ9z_hELisAlapwE9LUPh6fcXIfb5vwpbMl4xl9H9TRFPc5NOO8Sb3VSgIBrfRYvW6cUA" alt="Google Logo" width="34" height="34" >
+                                        <span style="padding-left: 5px; font-weight: 500; font-size:15px;"> Google</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="single-input-item">
+                                <a href="@Url.Action("Register", "Account")">Bạn chưa có tài khoản?</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Login Area End Here -->
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <script>
+            window.onload = function () {
+                alert(@Html.Raw(Json.Serialize(TempData["SuccessMessage"])));
+            };
+        </script>
+    }
+    
+</body>
+
+
+<!-- Mirrored from htmldemo.net/flosun/flosun/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 Dec 2022 05:03:27 GMT -->
+</html>
+@section Scripts {
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+}

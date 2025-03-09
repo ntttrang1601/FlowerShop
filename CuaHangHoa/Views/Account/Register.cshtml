@@ -1,0 +1,109 @@
+﻿@using CuaHangHoa.ViewModels;
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+<!doctype html>
+<html class="no-js" lang="en">
+
+
+<!-- Mirrored from htmldemo.net/flosun/flosun/register.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 Dec 2022 05:03:27 GMT -->
+
+<body>
+
+    <!-- Breadcrumb Area Start Here -->
+    <div class="breadcrumbs-area position-relative">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="breadcrumb-content position-relative section-content">
+                        <h3 class="title-3">Đăng nhập-Đăng ký</h3>
+                        <ul>
+                            <li><a href="@Url.Action("Index", "Home")">Trang chủ</a></li>
+                            <li>Đăng nhập-Đăng ký</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb Area End Here -->
+    <!-- Register Area Start Here -->
+    <div class="login-register-area mt-no-text">
+        <div class="container container-default-2 custom-area">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-custom">
+                    <div class="login-register-wrapper">
+                        <div class="section-content text-center mb-5">
+                            <h2 class="title-4 mb-2">Tạo tài khoản mới</h2>
+                            <p class="desc-content">Vui lòng điền các thông tin sau đây.</p>
+                        </div>
+                        <form asp-action="Register" method="post">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="single-input-item mb-3">
+                                <input asp-for="FirstName" placeholder="Họ">
+                                <span asp-validation-for="FirstName" class="text-danger"></span>
+                            </div>
+                            <div class="single-input-item mb-3">
+                                <input asp-for="LastName" placeholder="Tên">
+                                <span asp-validation-for="LastName" class="text-danger"></span>
+                            </div>
+                            <div class="single-input-item mb-3">
+                                <input asp-for="UserName" placeholder="Tên tài khoản">
+                                <span asp-validation-for="UserName" class="text-danger"></span>
+                            </div>
+                            <div class="single-input-item mb-3">
+                                <input asp-for="PhoneNumber" placeholder="Số điện thoại">
+                                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                            </div>
+                            <div class="single-input-item mb-3">
+                                <input asp-for="Email" placeholder="Email">
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                            @* <div class="single-input-item mb-3">
+                                <label asp-for="City" class="form-control mb-4" placeholder="Tỉnh/Thành phố">Tỉnh/Thành phố</label>
+                                <textarea asp-for="City" class="form-control mb-4" rows="2"></textarea>
+                                <span asp-validation-for="City" class="text-danger"></span>
+                            </div> *@
+                            <div class="single-input-item mb-3">
+                                <input asp-for="City" placeholder="Tỉnh/Thành phố">
+                                <span asp-validation-for="City" class="text-danger"></span>
+                            </div>
+                            <div class="single-input-item mb-3">
+                                <input asp-for="Password" placeholder="Mật khẩu">
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+                            <div class="single-input-item mb-3">
+                                <input asp-for="ConfirmPassword" placeholder="Xác nhận mật khẩu">
+                                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                            </div>
+                            @* <div class="single-input-item mb-3">
+                                <input type="password" placeholder="Enter your Password">
+                            </div> *@
+                           @*  <div class="single-input-item mb-3">
+                                <div class="login-reg-form-meta d-flex align-items-center justify-content-between">
+                                    <div class="remember-meta mb-3">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="rememberMe">
+                                            <label class="custom-control-label" for="rememberMe">Subscribe Our Newsletter</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> *@
+                            <div class="single-input-item mb-3">
+                                <button type="submit" class="btn flosun-button secondary-btn theme-color rounded-0">Đăng ký</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Register Area End Here -->
+
+</body>
+
+
+<!-- Mirrored from htmldemo.net/flosun/flosun/register.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 Dec 2022 05:03:27 GMT -->
+</html>

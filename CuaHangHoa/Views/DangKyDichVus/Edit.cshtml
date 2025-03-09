@@ -1,0 +1,91 @@
+﻿@model CuaHangHoa.Models.DangKyDichVu
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="myaccount-content">
+    <h3>Chỉnh sửa dịch vụ đã đăng ký</h3>
+    <div class="account-details-form">
+        <div class="row">
+            <div class="col-md-4">
+                <form asp-action="Edit">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="Id" />                    
+                    <div class="form-group">
+                        <label>Dịch vụ</label>
+                        <input value="@ViewBag.DichVuName" class="form-control" readonly /> <!-- Hiển thị tên dịch vụ -->
+                        <input type="hidden" asp-for="DichVuId" /> <!-- Giữ lại ID dịch vụ -->
+                        <span asp-validation-for="DichVuId" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Người dùng</label>
+                        <input value="@ViewBag.UserName" class="form-control" readonly /> <!-- Hiển thị tên người dùng -->
+                        <input type="hidden" asp-for="UserId" /> <!-- Giữ lại ID người dùng -->
+                        <span asp-validation-for="UserId" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        Ngày đăng ký
+                        <input asp-for="NgayDangKy" class="form-control" type="date" readonly />
+                        <span asp-validation-for="NgayDangKy" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        Ngày tổ chức
+                        <input asp-for="NgayToChuc" class="form-control" type="date"/>
+                        <span asp-validation-for="NgayToChuc" class="text-danger"></span>
+                    </div>
+                    @* <div class="form-group">
+                        <label asp-for="TrangThaiDangKy" class="control-label"></label>
+                        <select asp-for="TrangThaiDangKy" class="form-control"></select>
+                        <span asp-validation-for="TrangThaiDangKy" class="text-danger"></span>
+                    </div> *@
+                    <div class="form-group">
+                        <label for="TrangThaiDangKy">Trạng Thái Đăng Ký</label>
+                        @Html.DropDownListFor(model => model.TrangThaiDangKy,
+                                 new SelectList(ViewBag.TrangThaiDangKyList, "Value", "Text"),
+                                 "Chọn trạng thái",
+                                 new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        Địa chỉ tổ chức
+                        <input asp-for="DchiToChuc" class="form-control" />
+                        <span asp-validation-for="DchiToChuc" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        Ghi chú
+                        <input asp-for="GhiChu" class="form-control" />
+                        <span asp-validation-for="GhiChu" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input class="btn flosun-button secondary-btn theme-color rounded-0" type="submit" value="Lưu" />
+                        <a class="btn flosun-button secondary-btn theme-color rounded-0" asp-action="Index">Quay lại</a>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <table class="">
+                    <tr class="">
+                        <th class="column-1">Dịch vụ</th>
+                        <th class="column-2"></th>
+                    </tr>
+                    @foreach (var item in Model.DichVu.HinhDVs)
+                    {
+                        <tr class="table_row">
+                            <td class="column-1">
+                                <div class="how-itemcart1">
+                                    <img src="~/images/DichVu/@item.Url" alt="IMG" width="50px" height="50px">
+                                </div>
+                            </td>
+                            <td class="column-2 pl-2">@item.DichVu.TenDV</td>
+                        </tr>
+                    }
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+

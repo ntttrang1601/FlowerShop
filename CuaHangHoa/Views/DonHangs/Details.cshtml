@@ -1,0 +1,103 @@
+﻿@model CuaHangHoa.Models.DonHang
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .star-rating {
+        display: flex;
+        gap: 5px;
+        cursor: pointer;
+    }
+
+        .star-rating .fa-star {
+            font-size: 2rem;
+            color: #ccc; /* Ngôi sao không chọn sẽ xám */
+            transition: color 0.3s ease-in-out;
+        }
+
+            .star-rating .fa-star.selected,
+            .star-rating .fa-star:hover,
+            .star-rating .fa-star:hover ~ .fa-star {
+                color: gold; /* Ngôi sao chọn sẽ vàng */
+            }
+
+</style>
+<div class="myaccount-content">
+    <h3>Chi tiết đơn hàng #@Model.Id</h3>
+    
+    <div class="order-details">
+        <h4>Thông tin đơn hàng</h4>
+        <p><strong>Ngày tạo:</strong> @Model.NgayTao.ToString("dd/MM/yyyy")</p>
+        <p><strong>Người nhận:</strong> @Model.NguoiNhan</p>
+        <p><strong>Địa chỉ giao hàng:</strong> @Model.DchiGiaoHang</p>
+        <p><strong>Tổng tiền:</strong> @Model.TongTien</p>
+        <p><strong>Phí vận chuyển:</strong> @Model.PhiVanChuyen</p>
+        <p><strong>Trạng thái:</strong> @Model.TenTrangThai</p>
+        <p><strong>Cách thanh toán:</strong> @Model.TenCachThanhToan</p>
+        <p><strong>Đã thanh toán:</strong> @(Model.DaThanhToan ? "Có" : "Chưa")</p>
+    </div>
+
+    <h4>Chi tiết sản phẩm</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Tên sản phẩm</th>
+                <th>Số lượng</th>
+                <th>Giá sản phẩm</th>
+                <th>Tổng giá</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.ChiTietDHs)
+            {
+                <tr>
+                    <td>@item.SanPham.Ten</td> <!-- Tên sản phẩm -->
+                    <td>@item.SoLuong</td> <!-- Số lượng -->
+                    <td>@item.GiaSP</td> <!-- Giá sản phẩm -->
+                    <td>@item.TongGia</td> <!-- Tổng giá -->
+
+                </tr>
+            }
+        </tbody>
+
+    </table>
+    <div class="review-info mt-3">
+        <h3>Đánh giá đơn hàng</h3>
+
+        @if (Model.DanhGia != null)
+        {
+            <!-- Hiển thị điểm đánh giá bằng sao -->
+            <p>
+                <span class="star-rating">
+                    @for (int i = 1; i <= Model.DanhGia.Diem; i++)
+                    {
+                        <i class="fa fa-star text-warning"></i> <!-- Sao vàng -->
+                    }
+                    @for (int i = Model.DanhGia.Diem + 1; i <= 5; i++)
+                    {
+                        <i class="fa fa-star text-secondary"></i> <!-- Sao xám -->
+                    }
+                </span>
+            </p>
+
+            <p><strong>Nhận xét: </strong>@Model.DanhGia.NhanXet</p>
+            <p><strong>Ngày đánh giá: </strong>@Model.DanhGia.NgayDanhGia.ToString("dd/MM/yyyy")</p>
+        }
+        else
+        {
+            <p>Chưa có đánh giá nào cho đơn hàng này.</p>
+        }
+    </div>
+    <div>
+        @if (@Model.TenTrangThai == "Đang xử lý" || @Model.TenTrangThai == "Đã xác nhận" || @Model.TenTrangThai == "Đang vận chuyển")
+        {
+            <a class="btn flosun-button secondary-btn theme-color rounded-0" asp-action="Edit" asp-route-id="@Model?.Id">Chỉnh sửa |</a>
+
+        }
+        
+        <a class="btn flosun-button secondary-btn theme-color rounded-0" asp-action="Index">Quay lại</a>
+    </div>
+</div>
+

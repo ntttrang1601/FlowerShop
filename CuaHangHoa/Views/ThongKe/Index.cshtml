@@ -1,0 +1,372 @@
+﻿@model IEnumerable<dynamic>
+@using Newtonsoft.Json
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var labels = Newtonsoft.Json.JsonConvert.SerializeObject(Model.Select(x => x.Thang));
+    var data = Newtonsoft.Json.JsonConvert.SerializeObject(Model.Select(x => x.TongDoanhThu));
+}
+
+<!DOCTYPE html>
+<html>
+    <head>
+
+
+    @* <link href="~/sbadmin/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet"> *@
+
+    <!-- Custom styles for this template-->
+    <link href="~/sbadmin/sb-admin-2.min.css" rel="stylesheet">
+    </head>
+    <body>
+    <!-- Begin Page Content -->
+    <div class="container">
+        <div class="container-fluid">
+
+            <!-- Page Heading -->
+            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                <h1 class="h3 mb-0 text-gray-800">Tổng Quan</h1>
+                @* <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+                    <i class="fa fa-download fa-sm text-white-50"></i> Xuất báo cáo
+                </a> *@
+                <a asp-action="ExportToExcel" asp-route-year="@ViewBag.SelectedYear" class="btn btn-sm btn-primary shadow-sm">
+                    <i class="fa fa-download fa-sm text-white-50"></i> Xuất báo cáo
+                </a>
+            </div>
+
+            <!-- Content Row -->
+            <div class="row">
+
+                <!-- Earnings (Monthly) Card Example -->
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card border-left-primary shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                        Doanh thu
+                                    </div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800">@String.Format("{0:C0}", ViewBag.TotalRevenue)</div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fa fa-dollar"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Earnings (Monthly) Card Example -->
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card border-left-success shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                        Đơn hàng sản phẩm
+                                    </div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800">@ViewBag.TotalOrders</div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fa fa-file"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Earnings (Monthly) Card Example -->
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card border-left-danger shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
+                                        Đơn hàng dịch vụ
+                                    </div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800">@ViewBag.TotalServices</div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pending Requests Card Example -->
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card border-left-warning shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                        Khách hàng
+                                    </div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800">@ViewBag.TotalCustomers</div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fa fa-user"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Row -->
+
+            <div class="row">
+
+                <!-- Area Chart -->
+                <div class="col-xl-8 col-lg-7">
+                    <div class="card shadow mb-4">
+                        <!-- Card Header - Dropdown -->
+                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                            <h6 class="m-0 font-weight-bold text-primary">Doanh thu</h6>
+                            
+                        </div>
+                        <!-- Card Body -->
+                        
+                        <div class="card-body">
+                            <!-- Form chọn năm -->
+                            @* <form method="get" asp-action="Index" class="form-inline">
+                                <label for="nam" class="mr-2">Chọn Năm:</label>
+                                <select id="nam" name="year" asp-items="ViewBag.Years" class="form-control" onchange="this.form.submit()">
+                                    <!-- Dùng asp-items để binding với SelectList -->
+                                </select>
+                            </form> *@
+                            <form method="get" asp-action="Index" class="form-inline">
+                                <label for="nam" class="mr-2">Chọn Năm:</label>
+                                <select id="nam" name="year" asp-items="ViewBag.Years" class="form-control" onchange="this.form.submit()">
+                                    <!-- Dùng asp-items để binding SelectList -->
+                                </select>
+                            </form>
+                            @* <canvas id="doanhThuChart" width="800" height="400"></canvas> *@
+                            <div class="chart-container">
+                                <canvas id="doanhThuChart" width="800" height="400"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pie Chart -->
+                <!-- Pie Chart -->
+                <div class="col-xl-4 col-lg-5">
+                    <div class="card shadow mb-4">
+                        <!-- Card Header - Dropdown -->
+                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                            <h6 class="m-0 font-weight-bold text-primary">Sản phẩm bán chạy</h6>
+                        </div>
+                        <!-- Card Body -->
+                        <div class="card-body">
+                            <div class="chart-pie pt-4 pb-2">
+                                <canvas id="topChart" width="400" height="400"></canvas>
+                            </div>
+
+                            <script>
+                                $(document).ready(function () {
+                                    // Lấy dữ liệu từ ViewBag
+                                    var topProducts = @Html.Raw(JsonConvert.SerializeObject(ViewBag.TopProductDetails));
+
+                                    // Dữ liệu cho biểu đồ
+                                    var labels = topProducts.map(item => item.ProductName); // Tên sản phẩm
+                                    var data = topProducts.map(item => item.TotalQuantity); // Số lượng bán
+
+                                    // Cập nhật hoặc tạo biểu đồ Pie Chart
+                                    var ctx = document.getElementById('topChart').getContext('2d');
+                                    if (window.pieChart) {
+                                        // Nếu biểu đồ đã tồn tại, cập nhật dữ liệu
+                                        window.pieChart.data.labels = labels;
+                                        window.pieChart.data.datasets[0].data = data;
+                                        window.pieChart.update();
+                                    } else {
+                                        // Nếu chưa có, tạo mới
+                                        window.pieChart = new Chart(ctx, {
+                                            type: 'pie',
+                                            data: {
+                                                labels: labels,
+                                                datasets: [{
+                                                    label: 'Số lượng bán',
+                                                    data: data,
+                                                    backgroundColor: ['#FF5733', '#33FF57', '#3357FF'], // Tùy chỉnh màu
+                                                    borderColor: ['#FF5733', '#33FF57', '#3357FF'], // Màu viền
+                                                    borderWidth: 1
+                                                }]
+                                            },
+                                            options: {
+                                                responsive: true,
+                                                plugins: {
+                                                    legend: { position: 'top' },
+                                                    title: {
+                                                        display: true,
+                                                        text: 'Top 3 sản phẩm bán chạy theo số lượng'
+                                                    }
+                                                }
+                                            }
+                                        });
+                                    }
+                                });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+                @* <div class="col-xl-4 col-lg-5">
+                    <div class="card shadow mb-4">
+                        <!-- Card Header - Dropdown -->
+                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                            <h6 class="m-0 font-weight-bold text-primary">Sản phẩm bán chạy</h6>
+                            
+                        </div>
+                        <!-- Card Body -->
+                        <div class="card-body">
+                            <div class="chart-pie pt-4 pb-2">
+                                <canvas id="topChart" width="400" height="400"></canvas>
+                            </div>
+                            
+                            <script>
+                                
+                                $(document).ready(function () {
+                                    // Lấy dữ liệu từ ViewBag
+                                    var productNames = @Html.Raw(JsonConvert.SerializeObject(ViewBag.TopProductNames));
+                                    var productPercentages = @Html.Raw(JsonConvert.SerializeObject(ViewBag.ProductPercentages));
+
+                                    // Dữ liệu cho biểu đồ
+                                    var labels = productPercentages.map(item => item.ProductName);
+                                    var data = productPercentages.map(item => item.Percentage);
+
+                                    // Cập nhật hoặc tạo biểu đồ Pie Chart
+                                    var ctx = document.getElementById('topChart').getContext('2d');
+                                    if (window.pieChart) {
+                                        // Nếu biểu đồ đã tồn tại, cập nhật dữ liệu
+                                        window.pieChart.data.labels = labels;
+                                        window.pieChart.data.datasets[0].data = data;
+                                        window.pieChart.update();
+                                    } else {
+                                        // Nếu chưa có, tạo mới
+                                        window.pieChart = new Chart(ctx, {
+                                            type: 'pie',
+                                            data: {
+                                                labels: labels,
+                                                datasets: [{
+                                                    label: 'Tỷ lệ doanh thu theo sản phẩm',
+                                                    data: data,
+                                                    backgroundColor: ['#FF5733', '#33FF57', '#3357FF'], // Tùy chỉnh màu
+                                                    borderColor: ['#FF5733', '#33FF57', '#3357FF'], // Màu viền
+                                                    borderWidth: 1
+                                                }]
+                                            },
+                                            options: {
+                                                responsive: true,
+                                                plugins: {
+                                                    legend: { position: 'top' },
+                                                    title: {
+                                                        display: true,
+                                                        text: 'Tỷ lệ doanh thu từ 3 sản phẩm bán chạy nhất'
+                                                    }
+                                                }
+                                            }
+                                        });
+                                    }
+                                });
+                            </script>
+
+
+                        </div>
+                    </div>
+                </div> *@
+            </div>
+
+        </div>
+
+    </div>
+    <!-- /.container-fluid -->
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="~/sbadmin/jquery.min.js"></script>
+    <script src="~/sbadmin/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="~/sbadmin/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="~/sbadmin/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="~/sbadmin/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="~/sbadmin/chart-area-demo.js"></script>
+    <script src="~/sbadmin/chart-pie-demo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </body>
+</html>
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        var labels = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.Select(x => x.Thang)));
+        var data = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.Select(x => x.TongDoanhThu)));
+
+        var ctx = document.getElementById('doanhThuChart').getContext('2d');
+        // var doanhThuChart = new Chart(ctx, {
+        //     type: 'bar',
+        //     data: {
+        //         labels: labels,
+        //         datasets: [{
+        //             label: 'Doanh thu (VND)',
+        //             data: data,
+        //             backgroundColor: 'rgba(54, 162, 235, 0.5)',
+        //             borderColor: 'rgba(54, 162, 235, 1)',
+        //             borderWidth: 1
+        //         }]
+        //     },
+        //     options: {
+        //         scales: {
+        //             y: {
+        //                 beginAtZero: true
+        //             }
+        //         }
+        //     }
+        // });
+
+        var doanhThuChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Doanh thu (VND)',
+                    data: data,
+                    backgroundColor: 'rgba(75, 192, 192, 0.5)', // Màu sắc mềm hơn
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top', // Vị trí của chú thích
+                    },
+                    title: {
+                        display: true,
+                        text: 'Doanh thu theo tháng'
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: function (value) {
+                                return value.toLocaleString('vi-VN') + ' VND';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        
+    </script>
+}
+

@@ -1,0 +1,116 @@
+﻿@model CuaHangHoa.ViewModels.DVuViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!doctype html>
+<html class="no-js" lang="zxx">
+<body>
+    <!-- Breadcrumb Area Start Here -->
+    <div class="breadcrumbs-area position-relative">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="breadcrumb-content position-relative section-content">
+                        <h3 class="title-3">Dịch vụ của cửa hàng</h3>
+                        <ul>
+                            <li><a href="@Url.Action("Index", "Home")">Trang chủ</a></li>
+                            <li>Dịch vụ</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb Area End Here -->
+    <!-- Shop Main Area Start Here -->
+    <div class="shop-main-area">
+        <div class="container container-default custom-area">
+            <div class="row flex-row-reverse">
+                <div class="col-12 col-custom widget-mt">
+                    <!--shop toolbar start-->
+                    <div class="shop_toolbar_wrapper mb-30">
+                        <div class="shop_toolbar_btn">
+                            <button data-role="grid_4" type="button" class="active btn-grid-4" title="Grid-4"><i class="fa fa-th"></i></button>
+                            <button data-role="grid_3" type="button" class="btn-grid-3" title="Grid-3"> <i class="fa fa-th-large"></i></button>
+                        </div>
+                        @* <div class="shop-select">
+                            <form class="d-flex flex-column w-100" action="#">
+                                <div class="form-group">
+                                    <select class="form-control nice-select w-100">
+                                    <option selected value="1">Alphabetically, A-Z</option>
+                                    <option value="2">Sort by popularity</option>
+                                    <option value="3">Sort by newness</option>
+                                    <option value="4">Sort by price: low to high</option>
+                                    <option value="5">Sort by price: high to low</option>
+                                    <option value="6">Product Name: Z</option>
+                                    </select>
+                                    
+                                </div>
+                            </form>
+
+                        </div> *@
+                    </div>
+                    <div class="bg0 m-t-23 p-b-140">
+                        <div class="container">
+                            <!--shop toolbar end-->
+                            <!-- Shop Wrapper Start -->
+                            <div class="row shop_wrapper grid_4">
+                                @foreach (var sv in Model.HinhCuaDVs)
+                                {
+                                    <div class="col-lg-3 col-md-6 col-sm-6  col-custom product-area">
+                                        <div class="product-item">
+                                            <div class="single-product position-relative mr-0 ml-0">
+                                                <div class="product-image">
+                                                    <a class="d-block" href="@Url.Action("ServiceDetail", "Service", new { id = sv.DichVu.Id })">
+                                                        <img src="~/images/DichVu/@Url.Content(sv.Url)" alt="" class="product-image-1 w-100" width="300px" height="350px">
+                                                    </a>
+                                                    <div class="add-action d-flex flex-column position-absolute">
+                                                        @* <a href="compare.html" title="Compare">
+                                                    <i class="lnr lnr-sync" data-toggle="tooltip" data-placement="left" title="Compare"></i>
+                                                    </a>
+                                                    <a href="wishlist.html" title="Add To Wishlist">
+                                                    <i class="lnr lnr-heart" data-toggle="tooltip" data-placement="left" title="Wishlist"></i>
+                                                    </a> *@
+                                                        <a href="@Url.Action("ServiceDetail", "Service", new { id = sv.DichVu.Id })" title="Xem">
+                                                            <i class="lnr lnr-eye" data-toggle="tooltip" data-placement="left" title="Xem"></i>
+                                                        </a>
+
+                                                    </div>
+                                                </div>
+                                                <div class="product-content">
+                                                    <div class="product-title">
+                                                        <h4 class="title-2"> <a href="@Url.Action("ServiceDetail", "Service", new { id = sv.DichVu.Id })">@sv.DichVu.TenDV</a></h4>
+                                                    </div>
+                                                    @* <div class="product-rating">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                    </div> *@
+                                                    @* <div class="price-box">
+                                                        <span class="regular-price ">@sv.DichVu.Gia.ToString("#,##") đ</span>
+                                                    </div> *@
+                                                    <a href="@Url.Action("ServiceDetail", "Service", new { id = sv.DichVu.Id })" class="btn product-cart">Đăng ký</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                            
+                            <!-- Shop Wrapper End -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Shop Main Area End Here -->
+
+</body>
+
+
+<!-- Mirrored from htmldemo.net/flosun/flosun/shop-fullwidth.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 Dec 2022 05:03:18 GMT -->
+</html>
+
+

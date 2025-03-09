@@ -1,0 +1,37 @@
+﻿@model CuaHangHoa.Models.User
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="myaccount-content">
+    <h2>Khóa tài khoản nhân viên</h2>
+    <div class="account-details-form">
+        <h3>Bạn có chắc muốn khóa tài khoản này không?</h3>
+        <div>
+            <h4>Thông tin nhân viên:</h4>
+            <dl class="row">
+                <dt class="col-sm-2">Tên đăng nhập</dt>
+                <dd class="col-sm-10">@Model.UserName</dd>
+
+                <dt class="col-sm-2">Họ và tên</dt>
+                <dd class="col-sm-10">@Model.FirstName @Model.LastName</dd>
+
+                <dt class="col-sm-2">Email</dt>
+                <dd class="col-sm-10">@Model.Email</dd>
+
+                <dt class="col-sm-2">Thành phố</dt>
+                <dd class="col-sm-10">@Model.City</dd>
+            </dl>
+            <!-- Truyền id vào form -->
+            <form asp-action="DeleteConfirmed" method="post">
+                <input type="hidden" name="id" value="@Model.Id" />
+                <button type="submit" class="btn flosun-button secondary-btn theme-color rounded-0">Khóa</button>
+                <a asp-action="Index" class="btn flosun-button secondary-btn theme-color rounded-0">Hủy bỏ</a>
+            </form>
+        </div>
+    </div>
+</div>
+
+

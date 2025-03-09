@@ -1,0 +1,166 @@
+﻿@model IEnumerable<dynamic>
+@using Newtonsoft.Json
+@{
+    ViewData["Title"] = "ThongKeSanPham";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    #chartCanvas {
+    width: 800px;
+    height: 400px;
+}
+
+</style>
+<div class="container">
+    <h2>Thống kê sản phẩm bán chạy</h2>
+    <div class="form-group">
+        <label for="year">Chọn năm</label>
+        @Html.DropDownList("year", ViewBag.Years as SelectList, "Chọn năm", new { @class = "form-control", id = "year" })
+    </div>
+
+    <div class="form-group">
+        <label for="month">Chọn tháng</label>
+        @Html.DropDownList("month", ViewBag.Months as SelectList, "Chọn tháng", new { @class = "form-control", id = "month" })
+    </div>
+    <button id="btnThongKe" class="btn flosun-button secondary-btn theme-color rounded-0">Xem thống kê</button>
+
+    <div id="chartContainer">
+        <canvas id="chartCanvas" width="400" height="200"></canvas>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#year').change(function () {
+            var selectedYear = $(this).val();
+            if (selectedYear) {
+                $.ajax({
+                    url: '@Url.Action("GetMonths", "ThongKe")',
+                    data: { year: selectedYear },
+                    type: 'GET',
+                    success: function (data) {
+                        console.log(data); // Xem dữ liệu trả về từ server
+                        $('#month').empty();
+                        $('#month').append('<option value="">Chọn tháng</option>');
+
+                        if (data && data.months && data.months.length > 0) {
+                            $.each(data.months, function (index, item) {
+                                console.log(item); // In ra từng phần tử để kiểm tra
+                                if (item && item.text) {
+                                    $('#month').append('<option value="' + item.value + '">' + item.text + '</option>');
+                                } else {
+                                    console.error('Tên tháng không được định nghĩa', item);
+                                }
+                            });
+
+                        } else {
+                            $('#month').append('<option value="">Không có tháng nào</option>');
+                        }
+                    },
+                    error: function () {
+                        alert('Không thể tải danh sách tháng.');
+                    }
+                });
+            }
+        });
+
+        $('#btnThongKe').click(function () {
+            var selectedYear = $('#year').val();
+            var selectedMonth = $('#month').val();
+
+            if (selectedYear && selectedMonth) {
+                $.ajax({
+                    url: '@Url.Action("GetTopProducts", "ThongKe")',
+                    data: { year: selectedYear, month: selectedMonth },
+                    type: 'GET',
+                    success: function (data) {
+                        console.log('Dữ liệu trả về từ server:', data);
+                        if (data && data.topProducts && data.topProducts.length > 0) {
+                            console.log('Top Products:', data.topProducts);
+
+                            var labels = data.topProducts.map(tp => tp.productName);
+                            console.log('Labels:', labels);
+
+                            // Kiểm tra từng phần tử để thấy thuộc tính nào bị lỗi
+                            data.topProducts.forEach((tp, index) => {
+                                console.log('Item ' + index + ':', tp);
+                            });
+
+                            var dataValues = data.topProducts.map(tp => tp.totalSold);
+                            console.log('Data Values:', dataValues);
+
+                            if (labels.length > 0 && dataValues.length > 0) {
+                                var ctx = document.getElementById('chartCanvas').getContext('2d');
+
+                                // Xóa biểu đồ cũ nếu đã tồn tại
+                                if (window.myChart) {
+                                    window.myChart.destroy();
+                                }
+
+                                // Tạo biểu đồ mới với loại pie
+                                window.myChart = new Chart(ctx, {
+                                    type: 'pie', // Hoặc 'doughnut'
+                                    data: {
+                                        labels: labels,
+                                        datasets: [{
+                                            label: 'Số lượng bán',
+                                            data: dataValues,
+                                            backgroundColor: [
+                                                'rgba(75, 192, 192, 0.2)',
+                                                'rgba(255, 99, 132, 0.2)',
+                                                'rgba(54, 162, 235, 0.2)',
+                                                'rgba(255, 206, 86, 0.2)',
+                                                'rgba(153, 102, 255, 0.2)'
+                                            ],
+                                            borderColor: [
+                                                'rgba(75, 192, 192, 1)',
+                                                'rgba(255, 99, 132, 1)',
+                                                'rgba(54, 162, 235, 1)',
+                                                'rgba(255, 206, 86, 1)',
+                                                'rgba(153, 102, 255, 1)'
+                                            ],
+                                            borderWidth: 1
+                                        }]
+                                    },
+                                    options: {
+                                        responsive: true,
+                                        maintainAspectRatio: false, // Giữ nguyên tỉ lệ hiển thị
+                                        plugins: {
+                                            legend: {
+                                                position: 'top',
+                                            },
+                                            tooltip: {
+                                                callbacks: {
+                                                    label: function (context) {
+                                                        var label = context.label || '';
+                                                        var value = context.raw || 0;
+                                                        return label + ': ' + value + ' sản phẩm';
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                });
+
+                            } else {
+                                alert('Dữ liệu không hợp lệ hoặc rỗng.');
+                            }
+                        } else {
+                            alert('Không có dữ liệu để hiển thị.');
+                        }
+                    },
+
+
+                    error: function () {
+                        alert('Không thể tải dữ liệu thống kê.');
+                    }
+                });
+            } else {
+                alert('Vui lòng chọn năm và tháng để xem thống kê.');
+            }
+        });
+    });
+
+</script>
+

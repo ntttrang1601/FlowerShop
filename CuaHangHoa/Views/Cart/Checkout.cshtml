@@ -1,0 +1,332 @@
+﻿@model IEnumerable<CuaHangHoa.Models.ChiTietGioHang>
+@{
+    ViewData["Title"] = "Checkout";
+}
+
+
+<!-- Mirrored from htmldemo.net/flosun/flosun/checkout.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 Dec 2022 05:03:26 GMT -->
+<head>
+    <link rel="stylesheet" href="~/css/checkout.css">
+</head>
+<body>
+
+    <!-- Breadcrumb Area Start Here -->
+    <div class="breadcrumbs-area position-relative">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="breadcrumb-content position-relative section-content">
+                        <h3 class="title-3">Thanh toán</h3>
+                        <ul>
+                            <li><a href="@Url.Action("Index","Home")">Trang chủ</a></li>
+                            <li>Thanh toán</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb Area End Here -->
+    <div class="page-wrapper">
+        <div class="checkout shopping">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="product-checkout-details">
+                            <div class="block">
+                                <h4 class="widget-title">Tóm tắt đơn hàng</h4>
+                                @{
+                                    double subtotal = 0;
+                                    foreach (var item in Model)
+                                    {
+                                        <div class="media product-card">
+                                            <img class="media-object" src="~/images/SanPham/@item.SanPham.Hinhs.First().Url" alt="Image" />
+                                            <div class="media-body">
+                                                <h4 class="media-heading"><a href="product-single.html">@item.SanPham.Ten</a></h4>
+                                                <p class="price">
+                                                    @item.SoLuong x @{
+                                                        var price = item.SanPham.PhanTramGiamGia > 0 ? item.SanPham.GiaSauGiamGia : item.SanPham.Dongia;
+                                                        Write(price.ToString("#,##"));
+                                                    } &#x0111
+                                                </p>
+                                            </div>
+                                        </div>
+                                        subtotal += item.SoLuong * (item.SanPham.PhanTramGiamGia > 0 ? item.SanPham.GiaSauGiamGia : item.SanPham.Dongia);
+
+                                    }
+                                }
+
+                                <ul class="summary-prices">
+                                    <li>
+                                        <span>Tổng cộng:</span>
+                                        <span class="price">@subtotal.ToString("#,##") &#x0111</span>
+                                    </li>
+                                    <li>
+                                        <span>Phí vận chuyển:</span>
+                                        <span>@ViewBag.ShippingFee.ToString("#,##") &#x0111</span>
+                                    </li>
+                                </ul>
+                                <div class="summary-total">
+                                    <span>Thành tiền</span>
+                                    <span>@ViewBag.Total.ToString("#,##") &#x0111</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+                        <form class="checkout-form" action="/Cart/ProcessCheckoutCOD" method="post">
+                            <div class="block">
+                                <h4 class="widget-title">Người nhận</h4>
+                                <div class="form-group">
+                                    <label for="name">Họ và tên</label>
+                                    <input name="name" class="form-control" id="name" value="@ViewBag.Name" />
+                                    <span class="text-danger name"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Số điện thoại</label>
+                                    <input name="phone" class="form-control" id="phone" value="@ViewBag.Phone" />
+                                    <span class="text-danger phone"></span>
+                                </div>
+                            </div>
+                            <div class="block">
+                                <h4 class="widget-title">Địa chỉ giao hàng</h4>
+                                @{
+                                    if (!string.IsNullOrEmpty(ViewBag.Address) && ViewBag.Address.Split(";").Length > 1)
+                                    {
+                                        string[] add = ViewBag.Address.Split(";");
+
+                                        <div class="form-group">
+                                            <select name="city" class="form-control" id="city">
+                                                <option value="-1">Tỉnh/Thành phố</option>
+                                                <option class="temp" value="@add[add.Length - 1]" selected>@add[add.Length - 1]</option>
+                                            </select>
+                                            <span class="text-danger city"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <select name="district" class="form-control" id="district">
+                                                <option value="-1">Quận/Huyện</option>
+                                                <option class="temp" value="@add[add.Length - 2]" selected>@add[add.Length - 2]</option>
+                                            </select>
+                                            <span class="text-danger district"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <select name="ward" class="form-control" id="ward">
+                                                <option value="-1">Phường/Xã</option>
+                                                <option class="temp" value="@add[add.Length - 3]" selected>@add[add.Length - 3]</option>
+                                            </select>
+                                            <span class="text-danger ward"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="address">Địa chỉ cụ thể</label>
+                                            <input name="address" value="@add[add.Length - 4]" class="form-control" id="address" />
+                                            <span class="text-danger address"></span>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <div class="form-group">
+                                            <select name="city" class="form-control" id="city">
+                                                <option value="-1">Tỉnh/Thành phố</option>
+                                            </select>
+                                            <span class="text-danger city"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <select name="district" class="form-control" id="district">
+                                                <option value="-1">Quận/Huyện</option>
+                                            </select>
+                                            <span class="text-danger district"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <select name="ward" class="form-control" id="ward">
+                                                <option value="-1">Phường/Xã</option>
+                                            </select>
+                                            <span class="text-danger ward"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="address">Địa chỉ cụ thể</label>
+                                            <input name="address" class="form-control" id="address" />
+                                            <span class="text-danger address"></span>
+                                        </div>
+                                    }
+                                }
+                            </div>
+                            <div class="block">
+                                <h4 class="widget-title">Phương thức thanh toán</h4>
+                                <div>
+                                    <div class="checkout-product-details">
+                                        <div class="payment">
+                                            <div class="card-details">
+                                                @Html.AntiForgeryToken()
+                                                <div class="row px-3">
+                                                    <button type="button" onclick="changeVNPayMethod(false)" class="col cod border border-primary rounded d-flex justify-content-center align-items-center">
+                                                        Thanh toán khi nhận hàng
+                                                    </button>
+                                                    <button type="button" onclick="changeVNPayMethod(true)" class="col vnpay verified-icon border rounded d-flex justify-content-center align-items-center">
+                                                        <img src="~/images/icon/vnpay.png">
+                                                    </button>
+                                                </div>
+                                                <div class="row pt-5">
+                                                    <div class="col d-flex justify-content-center align-items-center">
+                                                        <button type="submit" class="btn flosun-button secondary-btn theme-color rounded-0">
+                                                            Xác nhận đặt hàng
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="coupon-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form asp-controller="Cart" asp-action="ProcessCheckout" method="post">
+                        <div class="form-group">
+                            <!-- Các trường dữ liệu khác nếu cần -->
+                        </div>
+                        <button type="submit" class="btn flosun-button secondary-btn theme-color rounded-0">Xác nhận mua hàng</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+@section Scripts {
+    <script>
+        var paySubmit = $('.paySubmit')
+        var checkoutForm = $('.checkout-form')
+        var itemCOD = $('.cod')
+        var itemVNPay = $('.vnpay')
+
+        function changeVNPayMethod(vnpay) {
+            if (vnpay) {
+                itemVNPay.addClass('border-primary')
+                itemCOD.removeClass('border-primary')
+                checkoutForm.attr('action', '/Cart/ProcessCheckoutVNPay')
+                paySubmit.html("Thanh toán ngay")
+            }
+            else {
+                itemCOD.addClass('border-primary')
+                itemVNPay.removeClass('border-primary')
+                checkoutForm.attr('action', '/Cart/ProcessCheckoutCOD')
+                paySubmit.html("Xác nhận đặt hàng")
+            }
+        }
+        var host = 'https://online-gateway.ghn.vn/shiip/public-api';
+        var token = '364d8aa8-8d67-11ef-9b94-5ef2ee6a743d';
+        var city = $("#city");
+        var district = $('#district');
+        var ward = $('#ward');
+        var address = $('#address');
+
+        // Danh sách các tỉnh cần hiển thị
+        const allowedCities = ['Vĩnh Long', 'Sóc Trăng', 'Tiền Giang', 'Cần Thơ', 'Bến Tre', 'Hậu Giang', 'Đồng Tháp'];
+
+        // Lấy danh sách tỉnh thành
+        $.ajax({
+            url: host + '/master-data/province',
+            type: 'POST',
+            headers: {
+                'Token': token
+            },
+            success: (res) => {
+                res.data.forEach((val) => {
+                    if (allowedCities.includes(val.ProvinceName)) {
+                        city.append(`<option data-city=${val.ProvinceID} value='${val.ProvinceName}'>${val.ProvinceName}</option>`);
+                    }
+                });
+
+                // Chọn tỉnh Cần Thơ mặc định nếu có trong danh sách
+                if (allowedCities.includes('Cần Thơ')) {
+                    city.val('Cần Thơ').trigger('change');
+                }
+            },
+            error: () => {
+                city.replaceWith('<input name="city" class="form-control" placeholder="Nhập tỉnh/thành phố" />');
+                district.replaceWith('<input name="district" class="form-control" placeholder="Nhập quận/huyện" />');
+                ward.replaceWith('<input name="ward" class="form-control" placeholder="Nhập phường/xã" />');
+            }
+        });
+
+        // Khi thay đổi tỉnh/thành, lấy danh sách quận/huyện
+        city.on("change", () => {
+            if (city.is("select")) {  // Chỉ thực hiện nếu là select
+                $('.temp').remove();
+                district.empty().append("<option value='-1'>Quận/Huyện</option>");
+                $('.city').text('');
+                ward.empty().append("<option value='-1'>Phường/Xã</option>");
+
+                $.ajax({
+                    url: host + '/master-data/district',
+                    type: 'POST',
+                    headers: {
+                        'Token': token
+                    },
+                    data: JSON.stringify({
+                        "province_id": city.find(":selected").data("city")
+                    }),
+                    contentType: "application/json",
+                    success: (res) => {
+                        res.data.forEach((val) => {
+                            district.append(`<option data-district=${val.DistrictID} value='${val.DistrictName}'>${val.DistrictName}</option>`);
+                        });
+
+                        // Chọn huyện mặc định nếu có sẵn trong dữ liệu
+                        if (district.find('option').length > 1) {
+                            district.val(district.find('option').eq(1).val()).trigger('change');
+                        }
+                    },
+                    error: () => {
+                        district.replaceWith('<input name="district" class="form-control" placeholder="Nhập quận/huyện" />');
+                    }
+                });
+            }
+        });
+
+        // Khi thay đổi quận/huyện, lấy danh sách xã/phường
+        district.on("change", () => {
+            if (district.is("select")) {  // Chỉ thực hiện nếu là select
+                ward.empty().append("<option value='-1'>Phường/Xã</option>");
+
+                $.ajax({
+                    url: host + '/master-data/ward',
+                    type: 'POST',
+                    headers: {
+                        'Token': token
+                    },
+                    data: JSON.stringify({
+                        "district_id": district.find(":selected").data("district")
+                    }),
+                    contentType: "application/json",
+                    success: (res) => {
+                        res.data.forEach((val) => {
+                            ward.append(`<option value='${val.WardName}'>${val.WardName}</option>`);
+                        });
+
+                        // Chọn phường/xã mặc định nếu có sẵn trong dữ liệu
+                        if (ward.find('option').length > 1) {
+                            ward.val(ward.find('option').eq(1).val());
+                        }
+                    },
+                    error: () => {
+                        ward.replaceWith('<input name="ward" class="form-control" placeholder="Nhập phường/xã" />');
+                    }
+                });
+            }
+        });
+
+
+
+    </script>
+}

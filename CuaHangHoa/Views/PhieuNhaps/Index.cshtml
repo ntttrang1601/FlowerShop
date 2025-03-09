@@ -1,0 +1,134 @@
+﻿@model CuaHangHoa.ViewModels.PhieuNhapListViewModel
+@using Microsoft.AspNetCore.Identity
+@inject UserManager<CuaHangHoa.Models.User> UserManager
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    var currentUser = await UserManager.GetUserAsync(User);
+    bool isAdmin = currentUser != null && await UserManager.IsInRoleAsync(currentUser, "Admin");
+}
+<style>
+    .pagination {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+        .pagination a {
+            padding: 8px 16px;
+            text-decoration: none;
+            background-color: #f1f1f1;
+            border: 1px solid #ddd;
+            color: #000;
+        }
+
+            .pagination a:hover {
+                background-color: #ddd;
+            }
+
+        .pagination .current-page {
+            font-weight: bold;
+            background-color: #000;
+            color: white;
+        }
+
+</style>
+<div class="myaccount-content">
+    <h3>Danh sách phiếu nhập</h3>
+    <div class="account-details-form">
+        <p>
+            @* <a href="@Url.Action("Index","NhaCungcaps")" class="btn flosun-button secondary-btn theme-color rounded-0"></>Quản lý Nhà cung cấp</a> *@
+            <a asp-action="Create" class="btn flosun-button secondary-btn theme-color rounded-0">Thêm phiếu nhập</a>
+        </p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        Nhà cung cấp
+                    </th>
+                    <th>
+                        Ngày nhập
+                    </th>
+                    <th>
+                        Số lượng
+                    </th>
+                    <th>
+                        Tổng tiền
+                    </th>
+                    <th>
+                        Ghi chú
+                    </th>
+                    <th>Người nhập</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.PhieuNhaps)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NhaCungCap.Ten)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NgayNhap)
+                            
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SoLuongMatHang)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TongTien)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.GhiChu)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.User.LastName)
+                            @Html.DisplayFor(modelItem => item.User.FirstName)
+                            (@Html.DisplayFor(modelItem => item.User.UserName))
+
+                        </td>
+                        <td>
+                            <a asp-action="Details" asp-route-id="@item.Id">Chi tiết</a>
+                            @* @if (item.User.UserName == "Admin")
+                            {
+                                <a asp-action="Delete" asp-route-id="@item.Id">| Xóa</a>
+                            } *@
+                            @* @if (await UserManager.IsInRoleAsync(item.User, "Admin"))
+                            {
+                                <a asp-action="Delete" asp-route-id="@item.Id">| Xóa</a>
+                            } *@
+                            @if (isAdmin)
+                            {
+                                <a asp-action="Delete" asp-route-id="@item.Id">| Xóa</a>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <!-- Phân trang -->
+        <div class="pagination">
+            @if (Model.CurrentPage > 1)
+            {
+                <a href="@Url.Action("Index", new { page = Model.CurrentPage - 1 })">Trước</a>
+            }
+
+            @for (int i = 1; i <= Model.TotalPages; i++)
+            {
+                <a href="@Url.Action("Index", new { page = i })" class="@(i == Model.CurrentPage ? "current-page" : "")">@i</a>
+            }
+
+            @if (Model.CurrentPage < Model.TotalPages)
+            {
+                <a href="@Url.Action("Index", new { page = Model.CurrentPage + 1 })">Sau</a>
+            }
+        </div>
+    </div>
+</div>
+
+

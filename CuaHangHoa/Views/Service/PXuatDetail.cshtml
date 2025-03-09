@@ -1,0 +1,93 @@
+﻿@model CuaHangHoa.Models.PhieuXuat
+@{
+    ViewData["Title"] = "PXuatDetail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="myaccount-content">
+    <div class="account-details-form">
+        <h3>Chi tiết phiếu xuất</h3>
+        <div>
+            <h4>Thông tin phiếu xuất</h4>
+            <dl class="row">
+                <dt class="col-sm-2">
+                    Người đặt
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.DangKyDichVu.User.UserName)
+                </dd>
+                <dt class="col-sm-2">
+                    Tên dịch vụ
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.DangKyDichVu.DichVu.TenDV)
+                </dd>
+                <dt class="col-sm-2">
+                    Tổng số lượng
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.SoLuongMatHang)
+                </dd>
+                <dt class="col-sm-2">
+                    Ngày xuất
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.NgayXuat)
+                </dd>
+                <dt class="col-sm-2">
+                    Phụ thu
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.PhiPhatSinh)
+                </dd>
+                <dt class="col-sm-2">
+                    Tổng tiền
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.TongTien)
+                </dd>
+                <dt class="col-sm-2">
+                    Ghi chú
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.GhiChu)
+                </dd>
+                <dt class="col-sm-2">
+                    Người xuất
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Staff.LastName)
+                    @Html.DisplayFor(model => model.Staff.FirstName)
+                    @Html.DisplayFor(model => model.Staff.UserName)
+                </dd>
+            </dl>
+
+            <h4>Danh sách sản phẩm đã nhập</h4>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>@Html.DisplayName("Tên sản phẩm")</th>
+                        <th>@Html.DisplayName("Số lượng")</th>
+                        <th>@Html.DisplayName("Đơn giá")</th>
+                        <th>@Html.DisplayName("Thành tiền")</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.CTPhieuXuats)
+                    {
+                        <tr>
+                            <td>@item.SanPham.Ten</td>
+                            <td>@item.SoLuong</td>
+                            <td>@String.Format("{0:C0}", item.GiaSP)</td>
+                            <td>@String.Format("{0:C0}", item.SoLuong * item.GiaSP)</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <hr />
+            <a class="btn flosun-button secondary-btn theme-color rounded-0" asp-action="RServiceList">Quay lại</a>
+        </div>
+    </div>
+</div>
+
+
+

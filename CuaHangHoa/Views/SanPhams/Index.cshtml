@@ -1,0 +1,241 @@
+﻿@model CuaHangHoa.ViewModels.ProductListViewModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .navbar {
+        display: flex;
+        justify-content: right; /* Căn đều các mục trong thanh điều hướng */
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #f8f9fa;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .pagination {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+        .pagination a {
+            padding: 8px 16px;
+            text-decoration: none;
+            background-color: #f1f1f1;
+            border: 1px solid #ddd;
+            color: #000;
+        }
+
+            .pagination a:hover {
+                background-color: #ddd;
+            }
+
+        .pagination .current-page {
+            font-weight: bold;
+            background-color: #000;
+            color: white;
+        }
+
+    .search-results {
+        position: absolute;
+        background: white;
+        border: 1px solid #ddd;
+        max-height: 200px;
+        overflow-y: auto;
+        width: 100%;
+        z-index: 1000;
+    }
+
+        .search-results a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+        }
+
+            .search-results a:hover {
+                background-color: #f1f1f1;
+            }
+
+</style>
+<div class="myaccount-content">
+    <h3>Sản phẩm</h3>
+    <div class="account-details-form">
+        <p>
+            <a href="@Url.Action("Index","LoaiSPs")" class="btn flosun-button secondary-btn theme-color rounded-0"></>Quản lý loại sản phẩm</a>
+            <a asp-action="Create" class="btn flosun-button secondary-btn theme-color rounded-0">Thêm sản phẩm</a>
+            <div class="navbar">
+                <!-- Các mục khác -->
+                <div class="search-bar-container">
+                    <div class="search-bar">
+                        <input id="search-box" type="text" placeholder="Tìm kiếm sản phẩm..." value="@Model.SearchQuery" />
+                        <div id="search-results" class="search-results"></div>
+                    </div>
+                </div>
+            </div>
+        </p>
+        <!-- Hiển thị danh sách sản phẩm -->
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Ảnh</th>
+                    <th>
+                        Tên sản phẩm
+                    </th>
+                    <th>
+                        Mô tả
+                    </th>
+                    <th>
+                        Đơn vị tính
+                    </th>
+                    <th>
+                        Giá bán
+                    </th>
+                    <th>
+                        Số lượng kho
+                    </th>
+                    <th>
+                        Ngừng bán
+                    </th>
+                    <th>
+                        Phần trăm giảm giá
+                    </th>
+                    <th>
+                        Giá giảm
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="product-list">
+                @foreach (var item in Model.SanPhams)
+                {
+                    <tr>
+                        <td>
+                            <div class="how-itemcart1">
+                                @{
+                                    var img = item.Hinhs.FirstOrDefault();
+                                    if (img != null)
+                                    {
+                                        <img src="~/images/SanPham/@img.Url" alt="IMG" width="50px" height="50px">
+                                    }
+                                    else
+                                    {
+                                        <img alt="Chưa có ảnh">
+                                    }
+                                }
+
+                            </div>
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Ten)
+                        </td>
+                        <td>
+                            @{
+                                if (item.Mota != null)
+                                {
+                                    if (item.Mota.Length > 150)
+                                    {
+                                        Write(item.Mota.Substring(0, 150) + "...");
+                                    }
+                                    else
+                                    {
+                                        Write(item.Mota);
+                                    }
+                                }
+                            }
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Donvitinh)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Dongia)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Soluongkho)
+                        </td>
+                        <td>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="Ngungban" disabled value="true" @(item.Ngungban ? "checked" : "")>
+                                @* <label class="custom-control-label" for="Ngungban" ></label> *@
+                            </div>
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PhanTramGiamGia)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.GiaSauGiamGia)
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Id">Chỉnh sửa</a> |
+                            <a asp-action="Details" asp-route-id="@item.Id">Chi tiết</a> |
+                            <a asp-action="Delete" asp-route-id="@item.Id">Xóa</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            @for (int i = 1; i <= Model.TotalPages; i++)
+            {
+                <a href="@Url.Action("Index", new { page = i, searchQuery = Model.SearchQuery })" class="@(i == Model.CurrentPage ? "current-page" : "")">@i</a>
+            }
+        </div>
+
+        <script>
+            // Lắng nghe sự kiện gõ phím và gửi yêu cầu tìm kiếm
+            document.getElementById('search-box').addEventListener('keyup', function () {
+                const searchQuery = this.value;
+
+                fetch(`@Url.Action("Index")?searchQuery=${searchQuery}`)
+                    .then(response => response.text())
+                    .then(html => {
+                        const parser = new DOMParser();
+                        const doc = parser.parseFromString(html, 'text/html');
+                        const newProductList = doc.getElementById('product-list');
+                        document.getElementById('product-list').innerHTML = newProductList.innerHTML;
+                    });
+            });
+        </script>
+
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('#search-box').on('input', function () {
+            const query = $(this).val();
+            if (query.length > 2) {
+                $.ajax({
+                    url: '@Url.Action("SearchProducts", "SanPhams")', // Controller Action
+                    type: 'GET',
+                    data: { searchQuery: query },
+                    success: function (data) {
+                        let results = '';
+                        data.forEach(product => {
+                            results += `<a href="/SanPhams/Details/${product.id}">${product.ten}</a>`;
+                        });
+                        $('#search-results').html(results).show();
+                    },
+                    error: function () {
+                        $('#search-results').hide();
+                    }
+                });
+            } else {
+                $('#search-results').hide();
+            }
+        });
+
+        // Ẩn gợi ý khi nhấn ra ngoài
+        $(document).click(function (e) {
+            if (!$(e.target).closest('#search-box, #search-results').length) {
+                $('#search-results').hide();
+            }
+        });
+    });
+</script>
+
+
